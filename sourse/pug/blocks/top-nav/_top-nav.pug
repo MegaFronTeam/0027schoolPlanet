@@ -21,13 +21,32 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
+			+e.row.row
+				.col.col-lg-auto
+					+e.logo(href="#")
+						+img('img/logo.png')
+				.col-auto
+					+e.link(href='#')
+						+icon('search')
+						span.d-none.d-xl-block поиск
+				.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
+				.col-auto
+					+e.link(href='#')
+						+icon('tel')
+						span.d-none.d-xl-block задать вопрос
+				.col-auto
+					+e.link(href='#')
+						+icon('login')
+						span.d-none.d-xl-block войти
+				.col-auto
+					+e.link.active(href='#')
+						+e.icon-wrap
+							+icon('cart')
+						span.d-none.d-xl-block корзина
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

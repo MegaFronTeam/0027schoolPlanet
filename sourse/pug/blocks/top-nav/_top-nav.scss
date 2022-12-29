@@ -1,25 +1,67 @@
 .top-nav {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	padding: rem(10) 0;
+	background-color: $primary;
+	@include media-breakpoint-up(lg) {
+		padding: 0;
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
-	}
-	.section-title{
+		--bs-gutter-x: #{rem(5)};
+		// --bs-gutter-y: var(--bs-gutter-x);
 		
+		align-items: center;
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(30)};
+		}
 	}
-	&__col{
-
+	&__logo {
+		display: block;
+		max-width: rem(139);
+		@include media-breakpoint-up(md) {
+			max-width: rem(227);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(260);
+		}
+		img {
+			width: 100%;
+		}
 	}
-	&__item{
-
+	&__link {
+		color: #fff;
+		font-size: rem(14);
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		&:hover {
+			color: $gray-200;
+		}
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(20);
+			margin-right: rem(5);
+		}
+		&.active {
+			.top-nav__icon-wrap {
+				&:before {
+					background-color: $red;
+				}
+			}
+		}
 	}
-	&__slide{
-		height: auto;
+	&__icon-wrap {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 7px;
+			height: 7px;
+			background-color: transparent;
+			top: 0;
+			right: 3px;
+			border-radius: 50%;
+		}
 	}
-
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

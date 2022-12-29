@@ -3,8 +3,12 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		align-items: center;
+		// @include roww(20px);
 		flex-wrap: wrap;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-end;
+		}
 	}
 
 	list-style: none;
@@ -16,19 +20,70 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		position: relative;
+		&:hover {
+			a, span {
+				background-color: rgba($color: #fff, $alpha: .9);
+				color: $body-color;
+			}
+			.sub-menu {
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
 	}
-	a{
+	a, span{
+		@include mt;
+		color: #fff;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		font-size: rem(14);
+		text-transform: uppercase;
+		padding: rem(22) rem(7);
+		cursor: pointer;
+		@include media-breakpoint-up(xxl) {
+			padding: rem(22) rem(15);
+		}
+		&:hover {
+			color: $gray-200;
+		}
 	}
 }
 
-
+.sub-menu {
+	@include mt;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	list-style-type: none;
+	background-color: #fff;
+	border: 1px solid $gray-100;
+	box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.15);
+	border-radius: 0px 0px 10px 10px;
+	min-width: rem(333);
+	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		opacity: 0;
+		pointer-events: none;
+	}
+	li {
+		a {
+			padding: rem(20);
+			color: $body-color;
+			text-align: left;
+			&:hover {
+				background-color: $primary;
+				color: #fff;
+			}
+		}
+	}
+}
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: #{rem(2)};
+	--color: #fff;
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: transparent;
 	}
@@ -38,9 +93,9 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	height: calc(var(--h)* 10);
 	position: relative; 
-	font-size: 32px;
+	font-size: 20px;
 	width: 1em;
 	cursor: pointer;
 	span:after,

@@ -8,7 +8,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -18,8 +20,19 @@
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<div class="row">
-							<div class="col order-lg-0 order-last">
+						<div class="top-nav__row row">
+							<div class="col col-lg-auto">
+								<a class="top-nav__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg><span class="d-none d-xl-block">поиск</span>
+								</a>
+							</div>
+							<div class="col-auto col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -35,6 +48,29 @@
 										</nav>
 									</div>
 								</div>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<svg class="icon icon-tel ">
+										<use xlink:href="img/svg/sprite.svg#tel"></use>
+									</svg><span class="d-none d-xl-block">задать вопрос</span>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<svg class="icon icon-login ">
+										<use xlink:href="img/svg/sprite.svg#login"></use>
+									</svg><span class="d-none d-xl-block">войти</span>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link active" href="#">
+									<div class="top-nav__icon-wrap">
+										<svg class="icon icon-cart ">
+											<use xlink:href="img/svg/sprite.svg#cart"></use>
+										</svg>
+									</div><span class="d-none d-xl-block">корзина</span>
+								</a>
 							</div>
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
