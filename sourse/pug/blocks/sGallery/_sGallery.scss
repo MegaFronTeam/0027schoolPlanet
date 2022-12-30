@@ -1,0 +1,26 @@
+// start .sGallery
+.sGallery {
+	--sPT: #{rem(22.5)};
+	--sPB: #{rem(22.5)};
+	--sTPB: #{rem(20)};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(30)};
+
+	}
+	.section-title{
+		h2 {
+			margin-bottom: 0;
+			line-height: 1.35em;
+		}
+	}
+	
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sGallery

@@ -111,3 +111,107 @@
 	width: auto;
 	margin-right: rem(32);
 }
+
+.btn-base {
+	--bs-btn-padding-x: #{rem(32)};
+	--bs-btn-padding-y: #{rem(11)};
+	--bs-btn-font-size: #{rem(14)};
+	--bs-btn-font-weight: 700;
+	--bs-btn-line-height: 1.4;
+	--bs-btn-border-width: 0;
+
+	--bs-btn-color: #078922;
+	--bs-btn-bg: #05a14f;
+	--bs-btn-border-color: transparent;
+
+	@include mt;
+	background-image: linear-gradient(180deg, #C8E68E 0%, #05A950 100%);
+	border-radius: 60px;
+	text-transform: uppercase;
+	box-shadow: 0 3px 0px 0px #0e8733 !important;
+	&:hover {
+		box-shadow: none !important;
+		transform: translateY(3px);
+	}
+}
+
+.news-item {
+	position: relative;
+	overflow: hidden;
+	&:hover {
+		.news-item {
+			&__btn-wrap {
+				max-height: 100%;
+				a {
+					transform: translateY(0);
+				}
+			}
+			&__full-size {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(367, 276);
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+		display: block;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #333333 100%);
+		}
+	}
+	&__content {
+		@include a-cent();
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		width: 100%;
+		height: 100%;
+		padding: rem(20);
+		.h4 {
+			color: #fff;
+			line-height: 1.4em;
+			font-size: rem(16);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(18);
+			}
+		}
+	}
+	&__btn-wrap {
+		@include mt;
+		max-height: 0;
+		a {
+			transform: translateY(120px);
+		}
+	}
+	&__full-size {
+		@include mt;
+		position: absolute;
+		padding: rem(7);
+		border-radius: 5px;
+		background-color: rgba($color: $body-color, $alpha: .5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		top: rem(20);
+		right: rem(20);
+		opacity: 0;
+		pointer-events: none;
+		cursor: pointer;
+		.icon {
+			font-size: rem(21);
+			color: #fff;
+		}
+	}
+}

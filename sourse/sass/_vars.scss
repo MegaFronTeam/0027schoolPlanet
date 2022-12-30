@@ -25,7 +25,7 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #EFEEEE;
-$gray-200: #e9ecef !default;
+$gray-200: #F7F7F9;
 $gray-300: #E0DEDE;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
@@ -425,7 +425,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $gray-200 !default;
 $body-color:                $gray-900 !default;
 $body-text-align:           null !default;
 
@@ -593,12 +593,12 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                rem(26) !default;
+$h2-font-size:                rem(26) !default;
+$h3-font-size:                rem(22) !default;
+$h4-font-size:                rem(18) !default;
+$h5-font-size:                rem(16) !default;
+$h6-font-size:                rem(14) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -616,8 +616,8 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        700 !default;
+$headings-line-height:        1.35em !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 

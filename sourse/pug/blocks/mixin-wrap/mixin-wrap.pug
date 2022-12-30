@@ -45,3 +45,15 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin news-item(data)
+	+b.news-item
+		+e.full-size(data-src=`img/${data.imgLg}` data-fancybox=`gallery-${data.fancybox}`)
+			+icon('fullscreen')
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${data.img}`, 'bg')
+		+e.content
+			.h4!= data.title
+			+e.btn-wrap
+				a(href='#').btn.btn-primary.btn-base подробнее

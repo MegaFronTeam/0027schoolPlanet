@@ -382,7 +382,16 @@ function eventHandler() {
 	});
 
 	// modal window
-
+	let menuHasChildrens = document.querySelectorAll('.menu-item-has-children');
+	if (menuHasChildrens) {
+		for (let menuHasChildren of menuHasChildrens) {
+			menuHasChildren.querySelector('span').addEventListener('click', function () {
+				if (window.matchMedia("(max-width: 992px)").matches) {
+					menuHasChildren.querySelector('.sub-menu').classList.toggle('active');
+				}
+			})
+		}
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
