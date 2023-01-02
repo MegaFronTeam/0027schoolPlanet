@@ -1,0 +1,40 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '02-categories.jpg'
+
+block title
+	- let  title= 'Ванная мебель'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+sCatalog('Ванная мебель', '', 'Товары (опт)', 'Мебель', 'Ванная мебель')
+			+e.inner-row.row
+				.col-sm-6.col-md-4.col-xxl-3
+					+product-item(31, 'Вешалки для полотенц')
+				.col-sm-6.col-md-4.col-xxl-3
+					+product-item(32, 'Унитазы, раковины, горшки')
+				.col-sm-6.col-md-4.col-xxl-3
+					+product-item(33, 'Шкафы для горшков')
+	+footer()
+      
+
+
+

@@ -1,41 +1,20 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
+mixin product-item(i, t)
+	+b.product-item(href="#")
+		+e.img-wrap
 			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
 			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+				+img(`img/product-item-${i}.png`)
+		+e.title!= t
 	// /.product-item
 
-mixin sCatalog(data)
+mixin sCatalog(title, btns, ...items)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
 			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+				.col-lg-4.col-xxl-3
+					+filter
+				.col-lg-8.col-xxl-9
+					+page-head(title, btns, ...items)
+					block
 	// end sCatalog

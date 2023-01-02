@@ -38,13 +38,25 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
+mixin page-head(t, btns, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
 
 			h1= t
+			if btns
+				+e.row.row
+					.col-auto
+						+e.btn.btn.btn-outline-secondary.active(href='#') Все товары
+					.col-auto
+						+e.btn.btn.btn-outline-secondary(href='#') 
+							+icon('kindergarten')
+							| Для детского сада
+					.col-auto
+						+e.btn.btn.btn-outline-secondary(href='#') 
+							+icon('book')
+							| Для школы
 
 mixin gallery-item(data)
 	+b.gallery-item
@@ -70,3 +82,76 @@ mixin news-item(data)
 			a.h4(href="#")!= data.title
 			+e.date!= data.date
 			+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') Подробнее
+
+mixin filter()
+	+b.filter
+		+ddGroup
+			+ddGroupItem('Товары (опт)', 'active')
+				+ddGroupItem('Мебель', 'active')
+					+ddGroupItem('Ванная мебель', 'active')
+						+in-c('checkbox', 'Вешалки для полотенц', 'product')
+						+in-c('checkbox', 'Унитазы, раковины, горшки', 'product')
+						+in-c('checkbox', 'Шкафы для горшков', 'product')
+					+in-c('checkbox', 'Вешалки', 'product')
+					+ddGroupItem('Ванная мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Кровати')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Мебель для библиотеки', 'product')
+					+ddGroupItem('Мебель для гардероба')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Мебель для столовой', 'product')
+					+ddGroupItem('Металлическая мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Мягкая мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Наклейки для шкафчиков', 'product')
+					+ddGroupItem('Скамьи, стулья')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Столы')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Текстиль')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Уличное оборудование')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Учебный кабинет')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Шкафы, стеллажи, тумбы')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Школьные доски, мольберты', 'product')
+						
+				//- +ddGroupItem('Точка роста', 'active')
+			+ddGroupItem('Услуги (опт)')
+				+ddGroupItem('Мебель', 'active')
+					+ddGroupItem('Ванная мебель', 'active')
+						+in-c('checkbox', 'Вешалки для полотенц', 'product')
+						+in-c('checkbox', 'Унитазы, раковины, горшки', 'product')
+						+in-c('checkbox', 'Шкафы для горшков', 'product')
+					+in-c('checkbox', 'Вешалки', 'product')
+					+ddGroupItem('Ванная мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Кровати')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Мебель для библиотеки', 'product')
+					+ddGroupItem('Мебель для гардероба')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Мебель для столовой', 'product')
+					+ddGroupItem('Металлическая мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Мягкая мебель')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Наклейки для шкафчиков', 'product')
+					+ddGroupItem('Скамьи, стулья')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Столы')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Текстиль')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Уличное оборудование')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Учебный кабинет')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+ddGroupItem('Шкафы, стеллажи, тумбы')
+						+in-c('checkbox', 'Игровая мебель', 'product')
+					+in-c('checkbox', 'Школьные доски, мольберты', 'product')
+			+e.link(href='#') Частным лицам (розница)
