@@ -1,25 +1,97 @@
 .footer {
-		
+	background-color: #006b33;
 	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	padding-top: rem(40);
+	padding-bottom: 0;
+	border-top: 12px solid #e9eaee;
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
-	}
-	.section-title{
-		
-	}
-	&__col{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(30)};
 
 	}
 	&__item{
-
+		p {
+			font-size: rem(13);
+			color: #fff;
+			margin-bottom: 0;
+			max-width: rem(187);
+		}
+		ul {
+			list-style-type: none;
+			margin-bottom: 0;
+			li {
+				font-size: rem(13);
+				color: #fff;
+				a {
+					color: #b7d8c8;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
 	}
-	&__slide{
-		height: auto;
+	&__title {
+		color: #b7d8c8;
+		font-size: rem(13);
+		text-transform: uppercase;
+		margin-bottom: rem(28);
+		display: inline-block;
+		&[href] {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(19)};
+    --bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+		--bs-btn-color: #fff;
+    --bs-btn-border-color: #fff;
+		--bs-btn-border-radius: 0;
+
+		display: inline-flex;
+		align-items: center;
+		.icon {
+			flex: 0 0 auto;
+			margin-right: rem(3);
+			font-size: rem(16);
+		}
+	}
+	&__tel {
+		display: block;
+		color: #fff;
+		font-size: rem(13);
+		&:hover {
+			color: #b7d8c8;
+		}
+	}
+	&__link {
+		font-size: rem(13);
+		color: #fff;
+		a {
+			color: #b7d8c8;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	&__bottom {
+		font-family: 'Roboto', sans-serif;
+		background-color: #00411e;
+		border-top: 1px solid #4b4c4d;
+		margin-top: rem(40);
+		padding-top: rem(18);
+		padding-bottom: rem(16);
+		text-align: center;
+		font-size: rem(12);
+		color: #fff;
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
 	}
 // 
 @include media-breakpoint-up(xl) {}

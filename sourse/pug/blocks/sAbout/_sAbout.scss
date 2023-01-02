@@ -9,7 +9,7 @@
 	}
 	&__inner-row {
 		--bs-gutter-x: #{rem(30)};
-		--bs-gutter-y: #{rem(30)};
+		--bs-gutter-y: #{rem(31)};
 	}
 	&__item{
 		position: relative;
@@ -52,12 +52,12 @@
 		@include media-breakpoint-up(sm) {
 			padding: rem(40);
 		}
-		h2 {
+		h1 {
 			margin-bottom: rem(20);
 			line-height: 1.35em;
 		}
 		p {
-			margin-bottom: rem(20);
+			margin-bottom: rem(21);
 			line-height: 1.55em;
 		}
 		h3 {

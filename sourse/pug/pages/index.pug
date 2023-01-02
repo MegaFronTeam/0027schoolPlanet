@@ -12,11 +12,12 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sForSuppliers/_sForSuppliers.pug
 include ../blocks/sGallery/_sGallery.pug
+include ../blocks/sNews/_sNews.pug
 include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'Главная'
@@ -33,6 +34,7 @@ block pagecontent
 		+sAbout
 		+sForSuppliers
 		+sGallery
+		+sNews
 	+footer()
       
 

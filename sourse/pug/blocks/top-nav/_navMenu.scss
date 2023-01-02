@@ -63,6 +63,7 @@
 	border-radius: 0px 0px 10px 10px;
 	min-width: rem(333);
 	overflow: hidden;
+	z-index: 3;
 	@include media-breakpoint-up(lg) {
 		opacity: 0;
 		pointer-events: none;

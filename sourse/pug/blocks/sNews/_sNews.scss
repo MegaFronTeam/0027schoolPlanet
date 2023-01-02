@@ -1,19 +1,16 @@
-// start .sGallery
-.sGallery {
+// start .sNews
+.sNews {
 	--sPT: #{rem(22.5)};
-	--sPB: #{rem(22.5)};
-	--sTPB: #{rem(20)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(24.800)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(100)};
+	}
 	&__row{
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(10)};
 
 		margin-bottom: rem(30);
-	}
-	.section-title{
-		h2 {
-			margin-bottom: 0;
-			line-height: 1.35em;
-		}
 	}
 	&__btn {
 		display: block;
@@ -28,4 +25,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sGallery
+} // end.sNews

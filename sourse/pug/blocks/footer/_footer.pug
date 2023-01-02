@@ -1,9 +1,57 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-sm-6.col-lg
+					+e.item
+						+e.title КОМПАНИЯ РОССКЛАСС
+						p Офис работает с понедельника по пятницу с 9:00 до 17:00 (+8 МСК)
+						+e.btn.btn.btn-outline-light(href='#')
+							+icon('phone')
+							| Задать вопрос
+				.col-sm-6.col-lg
+					+e.item
+						+e.title ГОЛОВНОЙ ОФИС
+						p Россия, ДВФО<br>г. Южно-Сахалинск ул. Хабаровская, 84-б
+						+e.tel(href="tel:+74242500408") +7 (4242) 500-408
+						+e.tel(href="tel:+74242500069") +7 (4242) 500-069
+						+e.link
+							| e-mail: 
+							a(href="mailto:rossclass@inbox.ru") rossclass@inbox.ru
+				.col-sm-6.col-lg
+					+e.item
+						+e.title АДРЕСА СКЛАДОВ
+						ul
+							li г. Владивосток,
+							li - ул. Выселковая, 54-А
+							li - ул. Снеговая, 71
+							li г. Хабаровск,
+							li - ул.Центральная, 38
+							li - ул.Зелёная, 1, склад №1<br>(база "Материальные ресурсы")
+							li г. Южно-Сахалинск,
+							li - ул. Украинская, 77
+				.col-sm-6.col-lg
+					+e.item
+						+e.title(href='#') ЦЕНЫ И СЕРВИС
+						ul
+							li
+								a(href="#") - Доставка и сборка
+							li
+								a(href="#") - Оплата
+							li
+								a(href="#") - Как сделать заказ
+				.col-sm-6.col-lg
+					+e.item
+						+e.title(href='#') О КОМПАНИИ
+						ul
+							li
+								a(href="#") - Услуги
+							li
+								a(href="#") - Контакты
+							li
+								a(href="#") - Фотогалерея
+							li
+								a(href="#") - Отзывы
+		+e.bottom
+			.container
+				+e.bottom-text &copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-#[span ]&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Дизайн интернет-магазина KANAYAN&nbsp;&mdash; Retail &amp;&nbsp;Development Consulting

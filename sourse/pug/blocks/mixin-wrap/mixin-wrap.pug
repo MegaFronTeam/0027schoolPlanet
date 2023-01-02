@@ -46,8 +46,8 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin news-item(data)
-	+b.news-item
+mixin gallery-item(data)
+	+b.gallery-item
 		+e.full-size(data-src=`img/${data.imgLg}` data-fancybox=`gallery-${data.fancybox}`)
 			+icon('fullscreen')
 		+e.img-wrap
@@ -57,3 +57,16 @@ mixin news-item(data)
 			.h4!= data.title
 			+e.btn-wrap
 				a(href='#').btn.btn-primary.btn-base подробнее
+
+mixin news-item(data)
+	+b.news-item
+		+e.img-wrap(href='#')
+			.img-wrap-center
+				+img(`img/${data.img}`, 'bg')
+		+e.content
+			+e.breadcrumbs
+				+e.item(href='#') Новости
+				+e.item.active!= data.item
+			a.h4(href="#")!= data.title
+			+e.date!= data.date
+			+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') Подробнее

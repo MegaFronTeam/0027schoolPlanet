@@ -10,10 +10,10 @@
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -89,13 +89,7 @@
 			<!-- end header-->
 			<main>
 				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>headerBlock ds dfsdfdsfsd</h2>
-						</div>
-						<div class="row"></div>
-					</div>
+				<div class="headerBlock section bg-wrap" id="headerBlock"><img src="img/headerBlock-bg-1.jpg" alt="" loading="lazy"/>
 				</div>
 				<!-- end headerBlock-->
 				<!-- start sAbout-->
@@ -144,7 +138,7 @@
 							</div>
 							<div class="col-lg-5 col-xl-4">
 								<div class="sAbout__content">
-									<h2>О компании</h2>
+									<h1>О компании</h1>
 									<p>&laquo;РОССКЛАСС&raquo; является одним из&nbsp;крупнейших дистрибьюторов на&nbsp;Сахалине и&nbsp;в&nbsp;Дальневосточном Федеральном округе, занимается комплексным оснащением детских образовательных учреждений, школ и&nbsp;государственных предприятий. Мы&nbsp;всегда готовы предложить нашим клиентам большой ассортимент разнообразной продукции, которая создаст комфортные условия для учебного процесса, полноценного отдыха и&nbsp;активного развития творческих способностей.</p>
 									<h3>Доставим в короткие сроки</h3>
 									<p>Наличие собственных складов является неоспоримым преимуществом, как для нас, но также и для наших клиентов, поскольку это делает нашу компанию более надежным поставщиком. Вы можете всегда быть уверены в том, что...</p><a class="btn btn-primary btn-base" href="#">подробнее</a>
@@ -186,89 +180,258 @@
 						</div>
 						<div class="sGallery__row row">
 							<div class="col-md-6 col-xl-4 col-xxl-3">
-								<div class="news-item">
-									<div class="news-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-1">
+								<div class="gallery-item">
+									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-1">
 										<svg class="icon icon-fullscreen ">
 											<use xlink:href="img/svg/sprite.svg#fullscreen"></use>
 										</svg>
 									</div>
-									<div class="news-item__img-wrap">
+									<div class="gallery-item__img-wrap">
 										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-1.jpg" alt="" loading="lazy"/>
 										</div>
 									</div>
-									<div class="news-item__content">
+									<div class="gallery-item__content">
 										<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-										<div class="news-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+										<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-xl-4 col-xxl-3">
-								<div class="news-item">
-									<div class="news-item__full-size" data-src="img/news-item-img-lg-2.png" data-fancybox="gallery-2">
+								<div class="gallery-item">
+									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-2.png" data-fancybox="gallery-2">
 										<svg class="icon icon-fullscreen ">
 											<use xlink:href="img/svg/sprite.svg#fullscreen"></use>
 										</svg>
 									</div>
-									<div class="news-item__img-wrap">
+									<div class="gallery-item__img-wrap">
 										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-2.jpg" alt="" loading="lazy"/>
 										</div>
 									</div>
-									<div class="news-item__content">
+									<div class="gallery-item__content">
 										<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-										<div class="news-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+										<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-xl-4 col-xxl-3">
-								<div class="news-item">
-									<div class="news-item__full-size" data-src="img/news-item-img-lg-3.png" data-fancybox="gallery-3">
+								<div class="gallery-item">
+									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-3.png" data-fancybox="gallery-3">
 										<svg class="icon icon-fullscreen ">
 											<use xlink:href="img/svg/sprite.svg#fullscreen"></use>
 										</svg>
 									</div>
-									<div class="news-item__img-wrap">
+									<div class="gallery-item__img-wrap">
 										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-3.jpg" alt="" loading="lazy"/>
 										</div>
 									</div>
-									<div class="news-item__content">
+									<div class="gallery-item__content">
 										<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-										<div class="news-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+										<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6 col-xl-4 col-xxl-3">
-								<div class="news-item">
-									<div class="news-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-4">
+								<div class="gallery-item">
+									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-4">
 										<svg class="icon icon-fullscreen ">
 											<use xlink:href="img/svg/sprite.svg#fullscreen"></use>
 										</svg>
 									</div>
-									<div class="news-item__img-wrap">
+									<div class="gallery-item__img-wrap">
 										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-4.jpg" alt="" loading="lazy"/>
 										</div>
 									</div>
-									<div class="news-item__content">
+									<div class="gallery-item__content">
 										<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-										<div class="news-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+										<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<a class="sGallery__btn btn btn-outline-secondary btn-base-secondary" href="#">
+							 Перейти в фотогалерею
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
 					</div>
 				</section>
 				<!-- end sGallery-->
+				<!-- start sNews-->
+				<section class="sNews section" id="sNews">
+					<div class="container">
+						<div class="section-title">
+							<h2>Обзоры и новости</h2>
+						</div>
+						<div class="sNews__row row">
+							<div class="col-sm-6 col-xl-4 col-xxl-3">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-4.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__breadcrumbs">
+											<a class="news-item__item" href="#">Новости
+											</a>
+											<div class="news-item__item active">Дизайн, концепты и стройка
+											</div>
+										</div><a class="h4" href="#">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</a>
+										<div class="news-item__date">4 декабря 2022
+										</div>
+										<a class="news-item__btn btn btn-outline-secondary btn-base-secondary" href="#">Подробнее
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-xl-4 col-xxl-3">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-4.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__breadcrumbs">
+											<a class="news-item__item" href="#">Новости
+											</a>
+											<div class="news-item__item active">Дизайн, концепты и стройка
+											</div>
+										</div><a class="h4" href="#">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</a>
+										<div class="news-item__date">4 декабря 2022
+										</div>
+										<a class="news-item__btn btn btn-outline-secondary btn-base-secondary" href="#">Подробнее
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-xl-4 col-xxl-3">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-4.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__breadcrumbs">
+											<a class="news-item__item" href="#">Новости
+											</a>
+											<div class="news-item__item active">Дизайн, концепты и стройка
+											</div>
+										</div><a class="h4" href="#">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</a>
+										<div class="news-item__date">4 декабря 2022
+										</div>
+										<a class="news-item__btn btn btn-outline-secondary btn-base-secondary" href="#">Подробнее
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-xl-4 col-xxl-3">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-4.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__breadcrumbs">
+											<a class="news-item__item" href="#">Новости
+											</a>
+											<div class="news-item__item active">Дизайн, концепты и стройка
+											</div>
+										</div><a class="h4" href="#">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</a>
+										<div class="news-item__date">4 декабря 2022
+										</div>
+										<a class="news-item__btn btn btn-outline-secondary btn-base-secondary" href="#">Подробнее
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="sNews__btn btn btn-outline-secondary btn-base-secondary" href="#">
+							 Перейти в обзоры и новости
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
+					</div>
+				</section>
+				<!-- end sNews-->
 			</main>
 			<footer class="footer section">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="footer__row row">
+						<div class="col-sm-6 col-lg">
+							<div class="footer__item">
+								<div class="footer__title">КОМПАНИЯ РОССКЛАСС
+								</div>
+								<p>Офис работает с понедельника по пятницу с 9:00 до 17:00 (+8 МСК)</p>
+								<a class="footer__btn btn btn-outline-light" href="#">
+									<svg class="icon icon-phone ">
+										<use xlink:href="img/svg/sprite.svg#phone"></use>
+									</svg>Задать вопрос
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__item">
+								<div class="footer__title">ГОЛОВНОЙ ОФИС
+								</div>
+								<p>Россия, ДВФО<br>г. Южно-Сахалинск ул. Хабаровская, 84-б</p>
+								<a class="footer__tel" href="tel:+74242500408">+7 (4242) 500-408
+								</a>
+								<a class="footer__tel" href="tel:+74242500069">+7 (4242) 500-069
+								</a>
+								<div class="footer__link">e-mail: <a href="mailto:rossclass@inbox.ru">rossclass@inbox.ru</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__item">
+								<div class="footer__title">АДРЕСА СКЛАДОВ
+								</div>
+								<ul>
+									<li>г. Владивосток,</li>
+									<li>- ул. Выселковая, 54-А</li>
+									<li>- ул. Снеговая, 71</li>
+									<li>г. Хабаровск,</li>
+									<li>- ул.Центральная, 38</li>
+									<li>- ул.Зелёная, 1, склад №1<br>(база "Материальные ресурсы")</li>
+									<li>г. Южно-Сахалинск,</li>
+									<li>- ул. Украинская, 77</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__item">
+								<a class="footer__title" href="#">ЦЕНЫ И СЕРВИС
+								</a>
+								<ul>
+									<li><a href="#">- Доставка и сборка</a></li>
+									<li><a href="#">- Оплата</a></li>
+									<li><a href="#">- Как сделать заказ</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg">
+							<div class="footer__item">
+								<a class="footer__title" href="#">О КОМПАНИИ
+								</a>
+								<ul>
+									<li><a href="#">- Услуги</a></li>
+									<li><a href="#">- Контакты</a></li>
+									<li><a href="#">- Фотогалерея</a></li>
+									<li><a href="#">- Отзывы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="container">
+						<div class="footer__bottom-text">&copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-<span></span>&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Дизайн интернет-магазина KANAYAN&nbsp;&mdash; Retail &amp;&nbsp;Development Consulting
+						</div>
 					</div>
 				</div>
 			</footer>

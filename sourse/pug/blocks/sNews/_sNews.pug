@@ -1,39 +1,39 @@
-mixin sGallery(data)
-	// start sGallery
-	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Фотогалерея
+				h2 Обзоры и новости
 			+e.row.row
-				.col-md-6.col-xl-4.col-xxl-3
-					+gallery-item({
-						img: 'news-item-img-1.jpg',
+				.col-sm-6.col-xl-4.col-xxl-3
+					+news-item({
+						img: 'news-item-img-4.png',
+						item: 'Дизайн, концепты и стройка',
 						title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
-						fancybox: 1,
-						imgLg: 'news-item-img-lg-1.jpg'
+						date: '4 декабря 2022',
 					})
-				.col-md-6.col-xl-4.col-xxl-3
-					+gallery-item({
-						img: 'news-item-img-2.jpg',
+				.col-sm-6.col-xl-4.col-xxl-3
+					+news-item({
+						img: 'news-item-img-4.png',
+						item: 'Дизайн, концепты и стройка',
 						title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
-						fancybox: 2,
-						imgLg: 'news-item-img-lg-2.png'
+						date: '4 декабря 2022',
 					})
-				.col-md-6.col-xl-4.col-xxl-3
-					+gallery-item({
-						img: 'news-item-img-3.jpg',
+				.col-sm-6.col-xl-4.col-xxl-3
+					+news-item({
+						img: 'news-item-img-4.png',
+						item: 'Дизайн, концепты и стройка',
 						title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
-						fancybox: 3,
-						imgLg: 'news-item-img-lg-3.png'
+						date: '4 декабря 2022',
 					})
-				.col-md-6.col-xl-4.col-xxl-3
-					+gallery-item({
-						img: 'news-item-img-4.jpg',
+				.col-sm-6.col-xl-4.col-xxl-3
+					+news-item({
+						img: 'news-item-img-4.png',
+						item: 'Дизайн, концепты и стройка',
 						title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
-						fancybox: 4,
-						imgLg: 'news-item-img-lg-1.jpg'
+						date: '4 декабря 2022',
 					})
 			+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') 
-				| Перейти в фотогалерею
+				| Перейти в обзоры и новости
 				+icon('chevron-right')
-	// end sGallery
+	// end sNews

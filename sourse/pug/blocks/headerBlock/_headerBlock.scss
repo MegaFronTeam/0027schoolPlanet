@@ -1,10 +1,10 @@
 // start .headerBlock
 .headerBlock {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()}; 
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	
 	
 	&__row{
@@ -24,7 +24,10 @@
 	&__slide{
 		height: auto;
 	}
-
+	img {
+		width: 100%;
+		height: auto;
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

@@ -307,6 +307,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+	JSCCommon.getCurrentYear('.footer span');
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
