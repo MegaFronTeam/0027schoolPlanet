@@ -39,13 +39,22 @@ mixin search()
 				+icon("search")
 				| Найти
 
-mixin page-head(t, btns, download, settings, ...items)
+mixin page-head(t, btns, download, settings, caption, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
-			+breadcrumb('Главная',...items)
+			if l > 0
+				+breadcrumb('Главная',...items)
 
 			h1= t
+			if caption
+				+e.caption-row.row
+					.col-md
+						+e.caption После оформления заказа с Вами свяжется менеджер для уточнения деталей отправки заказа и озвучит стоимость заказа.
+					.col-md-auto
+						+e.download(href='#')
+							+img('img/svg/xls.svg')
+							| Выгрузить в Excel
 			if settings
 				+e.settings
 					+e.settings-row.row

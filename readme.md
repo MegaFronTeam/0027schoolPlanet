@@ -5,3 +5,4 @@
 2. <https://megafronteam.github.io/0027schoolPlanet/public/02-categories-2.html>
 2. <https://megafronteam.github.io/0027schoolPlanet/public/02-categories-3.html>
 2. <https://megafronteam.github.io/0027schoolPlanet/public/03-catalog.html>
+2. <https://megafronteam.github.io/0027schoolPlanet/public/04-basket.html>
