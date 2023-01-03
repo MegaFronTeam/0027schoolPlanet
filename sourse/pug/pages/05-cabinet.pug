@@ -7,15 +7,15 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sBasket/_sBasket.pug
+include ../blocks/sCabinet/_sCabinet.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'basket-page' 
+	- let  mainPage= 'cabinet-page' 
 	- let  bg= '02-categories.jpg'
 
 block title
-	- let  title= 'Корзина'
+	- let  title= 'Мои заказы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -25,8 +25,7 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('Ваша корзина', '', '', '', 'true')
-		+sBasket()
+		+sCabinet()
 	+footer()
       
 

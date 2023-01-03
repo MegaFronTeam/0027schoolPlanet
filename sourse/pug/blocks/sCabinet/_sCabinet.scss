@@ -1,0 +1,228 @@
+// start .sCabinet
+.sCabinet {
+	--sPT: #{rem(30)};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(100)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__nav {
+		background-color: #FFFFFF;
+		border: 1px solid $gray-100;
+		border-radius: 10px;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			max-width: rem(338);
+		}
+	}
+	&__link {
+		position: relative;
+		display: block;
+		padding: rem(18.5) rem(20);
+		line-height: 1.25em;
+		color: $body-color;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-100;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 3px;
+			height: rem(40);
+			background-color: transparent;
+			border-radius: 0px 5px 5px 0px;
+		}
+		.icon {
+			color: $primary;
+			font-size: rem(20);
+			margin-right: rem(10);
+		}
+		&:hover {
+			color: $primary;
+		}
+		&.active {
+			font-weight: 700;
+			&:before {
+				background-color: $primary;
+			}
+		}
+	}
+	.dd-group {
+		--bs-gutter-y: #{rem(10)};
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		&__item {
+			overflow: hidden;
+			border: 1px solid $gray-100;
+			border-radius: 10px;
+			&.active {
+				.dd-group__head {
+					span {
+						transform: translateY(-50%) rotate(-45deg);
+						&::before, &::after {
+							background-color: #ADACAC;
+						}
+					}
+				}
+			}
+		}
+		&__head {
+			position: relative;
+			background-color: $gray-200;
+			padding: rem(20);
+			font-weight: 700;
+			line-height: 1.25em;
+			cursor: pointer;
+			span {
+				@include mt;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: rem(20);
+				width: rem(30);
+				height: rem(30);
+				border-radius: 50%;
+				background-color: #fff;
+				&::before, &::after {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					@include a-cent;
+					width: rem(16);
+					height: 2px;
+					background-color: $primary;
+					border-radius: 3px;
+				}
+				&::after {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+		&__content {
+			display: none;
+			&.active {
+				display: block;
+			}
+			img {
+				flex: 0 0 auto;
+				margin-right: rem(20);
+				width: 100%;
+				max-width: rem(40);
+				object-fit: cover;
+			}
+			p {
+				margin-bottom: rem(10);
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 0;
+					margin-right: rem(10);
+				}
+			}
+			.h5 {
+				margin-bottom: 0;
+				@include media-breakpoint-up(xl) {
+					margin-left: auto;
+					min-width: rem(90);
+				}
+			}
+		}
+		&__wrap {
+			padding: rem(15) rem(20);
+			border-top: 1px solid $gray-100;
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			@include media-breakpoint-up(xl) {
+				align-items: center;
+			}
+		}
+		&__text {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			@include media-breakpoint-up(xl) {
+				align-items: center;
+				flex-direction: row;
+			}
+		}
+		&__footer {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			border-top: 1px solid $gray-100;
+			padding: rem(20);
+		}
+		&__price {
+			width: 100%;
+			font-weight: 700;
+			color: $primary;
+			margin-bottom: rem(10);
+			@include media-breakpoint-up(lg) {
+				margin-left: auto;
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+		&__date {
+			width: 100%;
+			line-height: 1.25em;
+			color: $gray-600;
+			margin-bottom: rem(5);
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(20);
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+		&__delivery {
+			width: 100%;
+			margin-bottom: rem(5);
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(20);
+				width: auto;
+				margin-bottom: 0;
+			}
+			span {
+				color: $primary;
+			}
+		}
+		&__report {
+			width: 100%;
+			line-height: 1.25em;
+			color: $gray-600;
+			@include media-breakpoint-up(lg) {
+				width: auto;
+			}
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCabinet
