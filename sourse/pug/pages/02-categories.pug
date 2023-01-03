@@ -7,7 +7,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCategories/_sCategories.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -25,34 +25,34 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCatalog('Товары (ОПТ)', 'true', 'Товары (опт)')
+		+sCategories('Товары (ОПТ)', 'true', '', '', 'Товары (опт)')
 			+e.inner-row.row
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(1, 'Мебель')
+					+categories-item(1, 'Мебель')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(2, 'Точка роста')
+					+categories-item(2, 'Точка роста')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(3, 'Приборы и наглядное оборудование')
+					+categories-item(3, 'Приборы и наглядное оборудование')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(4, 'Технологическое оборудование')
+					+categories-item(4, 'Технологическое оборудование')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(5, 'Спортивное оборудование и инвентарь')
+					+categories-item(5, 'Спортивное оборудование и инвентарь')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(6, 'Электроника')
+					+categories-item(6, 'Электроника')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(7, 'Санитарная защита')
+					+categories-item(7, 'Санитарная защита')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(8, 'Стенды')
+					+categories-item(8, 'Стенды')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(9, 'Книги и канцелярские товары')
+					+categories-item(9, 'Книги и канцелярские товары')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(10, 'Хозяйские принадлежности и санитария')
+					+categories-item(10, 'Хозяйские принадлежности и санитария')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(11, 'Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)')
+					+categories-item(11, 'Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(12, 'Продукты питания')
+					+categories-item(12, 'Продукты питания')
 				.col-sm-6.col-md-4.col-xxl-3
-					+product-item(13, 'Игры, игрушки, куклы, костюмы')
+					+categories-item(13, 'Игры, игрушки, куклы, костюмы')
 	+footer()
       
 

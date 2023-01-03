@@ -88,11 +88,11 @@
 			</header>
 			<!-- end header-->
 			<main>
-				<!-- start sCatalog-->
-				<div class="sCatalog section">
+				<!-- start sCategories-->
+				<section class="sCategories section" id="sCategories">
 					<div class="container">
-						<div class="sCatalog__row row">
-							<div class="col-lg-4 col-xxl-3">
+						<div class="sCategories__row row">
+							<div class="col-lg-4 col-xxl-3 d-none d-lg-block">
 								<div class="filter">
 									<div class="dd-group dd-group-js">
 										<div class="dd-group__item active">
@@ -357,18 +357,18 @@
 										</nav>
 										<h1>Товары (ОПТ)</h1>
 										<div class="page-head__row row">
-											<div class="col-auto">
+											<div class="col-sm-auto">
 												<a class="page-head__btn btn btn-outline-secondary active" href="#">Все товары
 												</a>
 											</div>
-											<div class="col-auto">
+											<div class="col-sm-auto">
 												<a class="page-head__btn btn btn-outline-secondary" href="#"> 
 													<svg class="icon icon-kindergarten ">
 														<use xlink:href="img/svg/sprite.svg#kindergarten"></use>
 													</svg>Для детского сада
 												</a>
 											</div>
-											<div class="col-auto">
+											<div class="col-sm-auto">
 												<a class="page-head__btn btn btn-outline-secondary" href="#"> 
 													<svg class="icon icon-book ">
 														<use xlink:href="img/svg/sprite.svg#book"></use>
@@ -378,146 +378,396 @@
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__inner-row row">
+								<div class="filter d-block d-lg-none">
+									<div class="dd-group dd-group-js">
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Товары (опт)
+											</div>
+											<div class="dd-group__content dd-content-js active">
+												<div class="dd-group__item active">
+													<div class="dd-group__head dd-head-js">Мебель
+													</div>
+													<div class="dd-group__content dd-content-js active">
+														<div class="dd-group__item active">
+															<div class="dd-group__head dd-head-js">Ванная мебель
+															</div>
+															<div class="dd-group__content dd-content-js active">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Вешалки для полотенц</span>
+																</label>
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Унитазы, раковины, горшки</span>
+																</label>
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Шкафы для горшков</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Вешалки</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Ванная мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Кровати
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Мебель для библиотеки</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Мебель для гардероба
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Мебель для столовой</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Металлическая мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Мягкая мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Наклейки для шкафчиков</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Скамьи, стулья
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Столы
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Текстиль
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Уличное оборудование
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Учебный кабинет
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Шкафы, стеллажи, тумбы
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Школьные доски, мольберты</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dd-group__item">
+											<div class="dd-group__head dd-head-js">Услуги (опт)
+											</div>
+											<div class="dd-group__content dd-content-js">
+												<div class="dd-group__item active">
+													<div class="dd-group__head dd-head-js">Мебель
+													</div>
+													<div class="dd-group__content dd-content-js active">
+														<div class="dd-group__item active">
+															<div class="dd-group__head dd-head-js">Ванная мебель
+															</div>
+															<div class="dd-group__content dd-content-js active">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Вешалки для полотенц</span>
+																</label>
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Унитазы, раковины, горшки</span>
+																</label>
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Шкафы для горшков</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Вешалки</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Ванная мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Кровати
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Мебель для библиотеки</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Мебель для гардероба
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Мебель для столовой</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Металлическая мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Мягкая мебель
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Наклейки для шкафчиков</span>
+														</label>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Скамьи, стулья
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Столы
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Текстиль
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Уличное оборудование
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Учебный кабинет
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<div class="dd-group__item">
+															<div class="dd-group__head dd-head-js">Шкафы, стеллажи, тумбы
+															</div>
+															<div class="dd-group__content dd-content-js">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Игровая мебель</span>
+																</label>
+															</div>
+														</div>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="product" type="checkbox"/><span class="custom-input__text form-check-label">Школьные доски, мольберты</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a class="dd-group__link" href="#">Частным лицам (розница)
+										</a>
+									</div>
+								</div>
+								<div class="sCategories__inner-row row">
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-1.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Мебель
+											<div class="categories-item__title">Мебель
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-2.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Точка роста
+											<div class="categories-item__title">Точка роста
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-3.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Приборы и наглядное оборудование
+											<div class="categories-item__title">Приборы и наглядное оборудование
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-4.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Технологическое оборудование
+											<div class="categories-item__title">Технологическое оборудование
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-5.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Спортивное оборудование и инвентарь
+											<div class="categories-item__title">Спортивное оборудование и инвентарь
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-6.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Электроника
+											<div class="categories-item__title">Электроника
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-7.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Санитарная защита
+											<div class="categories-item__title">Санитарная защита
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-8.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Стенды
+											<div class="categories-item__title">Стенды
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-9.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Книги и канцелярские товары
+											<div class="categories-item__title">Книги и канцелярские товары
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-10.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Хозяйские принадлежности и санитария
+											<div class="categories-item__title">Хозяйские принадлежности и санитария
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-11.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)
+											<div class="categories-item__title">Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-12.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Продукты питания
+											<div class="categories-item__title">Продукты питания
 											</div>
 										</a>
 										<!-- /.product-item-->
 									</div>
 									<div class="col-sm-6 col-md-4 col-xxl-3">
-										<a class="product-item" href="#">
-											<div class="product-item__img-wrap">
+										<a class="categories-item" href="#">
+											<div class="categories-item__img-wrap">
 												<div class="img-wrap-center"> <img src="img/product-item-13.png" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="product-item__title">Игры, игрушки, куклы, костюмы
+											<div class="categories-item__title">Игры, игрушки, куклы, костюмы
 											</div>
 										</a>
 										<!-- /.product-item-->
@@ -526,8 +776,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- end sCatalog-->
+				</section>
+				<!-- end sCategories-->
 			</main>
 			<footer class="footer section">
 				<div class="container">

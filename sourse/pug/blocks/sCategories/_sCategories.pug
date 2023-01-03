@@ -1,0 +1,21 @@
+mixin categories-item(i, t)
+	+b.categories-item(href="#")
+		+e.img-wrap
+			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
+			.img-wrap-center 
+				+img(`img/product-item-${i}.png`)
+		+e.title!= t
+	// /.product-item
+
+mixin sCategories(title, btns, ...items)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4.col-xxl-3.d-none.d-lg-block
+					+filter
+				.col-lg-8.col-xxl-9
+					+page-head(title, btns, ...items)
+					+filter.d-block.d-lg-none
+					block
+	// end sCategories

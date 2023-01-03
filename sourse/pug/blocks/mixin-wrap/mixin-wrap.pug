@@ -34,29 +34,50 @@ mixin addblock()
 mixin search()
 	+b.search-block
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
-			button 
+			input(type="text" placeholder="Начните поиск в этой категории")
+			button.btn.btn-primary
 				+icon("search")
+				| Найти
 
-mixin page-head(t, btns, ...items)
+mixin page-head(t, btns, download, settings, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
 
 			h1= t
+			if settings
+				+e.settings
+					+e.settings-row.row
+						.col-12.order-xxl-1
+							+search
+						.col-auto.order-xxl-3
+							+e.wrap
+								+addblock
+								span -
+								+addblock
+								span.d-none.d-md-block ₽
+						.col-xxl-auto.order-xxl-2
+							+e.choseCity 
+								+icon('pin')
+								| Выбрать регион
 			if btns
 				+e.row.row
-					.col-auto
+					.col-sm-auto
 						+e.btn.btn.btn-outline-secondary.active(href='#') Все товары
-					.col-auto
+					.col-sm-auto
 						+e.btn.btn.btn-outline-secondary(href='#') 
 							+icon('kindergarten')
 							| Для детского сада
-					.col-auto
+					.col-sm-auto
 						+e.btn.btn.btn-outline-secondary(href='#') 
 							+icon('book')
 							| Для школы
+					if download
+						.col-auto.ms-md-auto.ms-lg-0.ms-xl-auto 
+							+e.download(href='#')
+								+img('img/svg/xls.svg')
+								| Выгрузить в Excel
 
 mixin gallery-item(data)
 	+b.gallery-item
@@ -84,7 +105,7 @@ mixin news-item(data)
 			+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') Подробнее
 
 mixin filter()
-	+b.filter
+	+b.filter&attributes(attributes)
 		+ddGroup
 			+ddGroupItem('Товары (опт)', 'active')
 				+ddGroupItem('Мебель', 'active')

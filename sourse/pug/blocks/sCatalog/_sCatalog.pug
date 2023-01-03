@@ -1,20 +1,61 @@
-mixin product-item(i, t)
-	+b.product-item(href="#")
-		+e.img-wrap
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/product-item-${i}.png`)
-		+e.title!= t
+mixin product-item(img, title, city, price)
+	+b.product-item
+		+e.row.row
+			.col-lg-auto
+				+e.img-wrap(href="#")
+					.img-wrap-center
+						+img(`img/${img}`)
+			.col 
+				a.h4(href="#")!= title
+				+e.inner-row.row
+					.col-lg
+						+e.provider
+							| Поставщик: 
+							| 
+							span ООО “Адидас”
+						+e.works Работает по условиям 44ФЗ и 223 ФЗ
+						+e.shipment 
+							| Отгрузка товара:
+							| 
+							span!= city
+					.col-lg-auto
+						+e.wrap.row
+							.col-12.col-lg-auto
+								+e.price
+									| Опт: 
+									span.num!= price
+									span.delivery + доставка
+							.col-auto
+								+addblock()
+							.col-auto
+								+e.btn(href='#').btn.btn-primary.btn-base 
+									+icon('cart')
+									| В корзину
 	// /.product-item
 
-mixin sCatalog(title, btns, ...items)
+mixin sCatalog()
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-4.col-xxl-3
+				.col-lg-4.col-xxl-3.d-none.d-lg-block
 					+filter
 				.col-lg-8.col-xxl-9
-					+page-head(title, btns, ...items)
-					block
+					+page-head('Каталог товаров', 'true', 'true', 'true', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
+					+filter.d-block.d-lg-none
+					+e.inner-row.row
+						.col-12
+							+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽')
+						.col-12
+							+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽')
+						.col-12
+							+product-item('prod-img-3.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '9 990 ₽')
+						.col-12
+							+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽')
+						.col-12
+							+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽')
+						.col-12
+							+product-item('prod-img-3.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '9 990 ₽')
+						.col-12
+							+pugin
 	// end sCatalog

@@ -7,7 +7,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCategories/_sCategories.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -25,42 +25,42 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCatalog('Мебель', '', 'Товары (опт)', 'Мебель')
+		+sCategories('Мебель', '', '', '', 'Товары (опт)', 'Мебель')
 			+e.inner-row.row
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(14, 'Ванная мебель')
+					+categories-item(14, 'Ванная мебель')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(15, 'Вешалки')
+					+categories-item(15, 'Вешалки')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(16, 'Игровая мебель')
+					+categories-item(16, 'Игровая мебель')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(17, 'Кровати')
+					+categories-item(17, 'Кровати')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(18, 'Мебель для библиотеки')
+					+categories-item(18, 'Мебель для библиотеки')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(19, 'Мебель для гардероба')
+					+categories-item(19, 'Мебель для гардероба')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(20, 'Мебель для столовой')
+					+categories-item(20, 'Мебель для столовой')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(21, 'Металлическая мебель')
+					+categories-item(21, 'Металлическая мебель')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(22, 'Мягкая мебель')
+					+categories-item(22, 'Мягкая мебель')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(23, 'Наклейки для шкафчиков')
+					+categories-item(23, 'Наклейки для шкафчиков')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(24, 'Скамьи, стулья')
+					+categories-item(24, 'Скамьи, стулья')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(25, 'Столы')
+					+categories-item(25, 'Столы')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(26, 'Текстиль')
+					+categories-item(26, 'Текстиль')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(27, 'Уличное оборудование')
+					+categories-item(27, 'Уличное оборудование')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(28, 'Учебный кабинет')
+					+categories-item(28, 'Учебный кабинет')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(29, 'Шкафы, стеллажи, тумбы')
+					+categories-item(29, 'Шкафы, стеллажи, тумбы')
 				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+product-item(30, 'Школьные доски, мольберты')
+					+categories-item(30, 'Школьные доски, мольберты')
 	+footer()
       
 
