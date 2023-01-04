@@ -1,0 +1,94 @@
+mixin sGalleryBlock(data)
+	// start sGalleryBlock
+	+b.SECTION.sGalleryBlock.section#sGalleryBlock&attributes(attributes)
+		.container
+			+e.row.row
+				mixin filter()
+					+ddGroup()
+						+ddGroupItem('Развернуть фильтр', '', 'active')
+							+e.link.active(href="#") все
+							+e.link(href="#") Мебель
+							+e.link(href="#") Точка роста
+							+e.link(href="#") Приборы и&nbsp;наглядное оборудование
+							+e.link(href="#") Технологическое оборудование
+							+e.link(href="#") Спортивное оборудование и&nbsp;инвентарь
+							+e.link(href="#") Электроника
+							+e.link(href="#") Санитарная защита
+							+e.link(href="#") Книги и канцелярские товары
+							+e.link(href="#") Стенды
+							+e.link(href="#") Хозяйские принадлежности и&nbsp;санитария
+							+e.link(href="#") Доступная среда и&nbsp;поставщики для ОВЗ (ограниченные возможности здоровья)
+							+e.link(href="#") Продукты питания
+							+e.link(href="#") Игры, игрушки, куклы, костюмы
+				.col-lg-4.col-xxl-3.d-none.d-lg-block
+					+filter()
+				.col-lg-8.col-xxl-9
+					+page-head('Фотогалерея', '', '', '', '', 'Фотогалерея')
+					.d-block.d-lg-none
+						+filter()
+					+e.inner-row.row
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-1.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 1,
+								imgLg: 'news-item-img-lg-1.jpg'
+							})
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-2.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 2,
+								imgLg: 'news-item-img-lg-2.png'
+							})
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-3.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 3,
+								imgLg: 'news-item-img-lg-3.png'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-2.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 4,
+								imgLg: 'news-item-img-lg-2.png'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-3.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 5,
+								imgLg: 'news-item-img-lg-3.png'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-1.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 6,
+								imgLg: 'news-item-img-lg-1.jpg'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-3.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 7,
+								imgLg: 'news-item-img-lg-3.png'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-1.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 8,
+								imgLg: 'news-item-img-lg-1.jpg'
+							})
+						.d-none.d-md-block.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-2.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 9,
+								imgLg: 'news-item-img-lg-2.png'
+							})
+					+pugin
+	// end sGalleryBlock
