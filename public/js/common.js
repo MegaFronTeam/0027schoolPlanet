@@ -403,7 +403,40 @@ function eventHandler() {
 				passInput.type = passInput.type=='password' ? 'text' : 'password';
 			})
 		}
-	}
+	};
+
+	let  sliderWrap = document.querySelectorAll(".sProductCard__slider-wrap");
+	sliderWrap.forEach((element) => {
+		let thumbs = element.querySelector(".sProductCard__slider-thumbs--js");
+		// let loopThumb = (thumbs.querySelector(".swiper-slide").length > 4) ? true : false;
+		var sProductCardswiperThumbs = new Swiper(thumbs, {
+			// init:false,
+			// loop: loopThumb,
+			loop: false,
+			spaceBetween: 8,
+			slidesPerView: 5,
+			freeMode: true,
+			observeParents: true, 
+			watchSlidesProgress: true,
+		});
+		var sProductCardswiper2 = new Swiper(element.querySelector(".sProductCard__slider--js"), {
+			loop: false,
+			spaceBetween: 0,
+			slidesPerView: 1, 
+			loopFillGroupWithBlank: true,
+			// autoplay: {
+			// 	delay: 5000,
+			// },
+			watchOverflow: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			thumbs: {
+				swiper: sProductCardswiperThumbs,
+			}
+		});
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

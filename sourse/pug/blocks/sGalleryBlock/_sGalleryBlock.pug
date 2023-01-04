@@ -3,29 +3,12 @@ mixin sGalleryBlock(data)
 	+b.SECTION.sGalleryBlock.section#sGalleryBlock&attributes(attributes)
 		.container
 			+e.row.row
-				mixin filter()
-					+ddGroup()
-						+ddGroupItem('Развернуть фильтр', '', 'active')
-							+e.link.active(href="#") все
-							+e.link(href="#") Мебель
-							+e.link(href="#") Точка роста
-							+e.link(href="#") Приборы и&nbsp;наглядное оборудование
-							+e.link(href="#") Технологическое оборудование
-							+e.link(href="#") Спортивное оборудование и&nbsp;инвентарь
-							+e.link(href="#") Электроника
-							+e.link(href="#") Санитарная защита
-							+e.link(href="#") Книги и канцелярские товары
-							+e.link(href="#") Стенды
-							+e.link(href="#") Хозяйские принадлежности и&nbsp;санитария
-							+e.link(href="#") Доступная среда и&nbsp;поставщики для ОВЗ (ограниченные возможности здоровья)
-							+e.link(href="#") Продукты питания
-							+e.link(href="#") Игры, игрушки, куклы, костюмы
 				.col-lg-4.col-xxl-3.d-none.d-lg-block
-					+filter()
+					+filter2()
 				.col-lg-8.col-xxl-9
 					+page-head('Фотогалерея', '', '', '', '', 'Фотогалерея')
 					.d-block.d-lg-none
-						+filter()
+						+filter2()
 					+e.inner-row.row
 						.col-md-6.col-xl-6.col-xxl-4
 							+gallery-item({

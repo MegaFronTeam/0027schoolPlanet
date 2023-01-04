@@ -12,3 +12,4 @@
 10. <https://megafronteam.github.io/0027schoolPlanet/public/06-forget-pass.html>
 11. <https://megafronteam.github.io/0027schoolPlanet/public/06-forget-pass-2.html>
 12. <https://megafronteam.github.io/0027schoolPlanet/public/07-gallery.html>
+13. <https://megafronteam.github.io/0027schoolPlanet/public/08-product-card.html>

@@ -1,0 +1,91 @@
+mixin sProductCard(data)
+	// start sProductCard
+	+b.SECTION.sProductCard.section#sProductCard&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4.col-xxl-3.d-none.d-lg-block
+					+filter2()
+				.col-lg-8.col-xxl-9
+					+page-head('', '', '', '', '', 'Фотогалерея', 'Мебель', 'Спортивный зал школы')
+					.d-block.d-lg-none
+						+filter2()
+					+e.wrap
+						+e.inner-row.row
+							+e.inner-col.col
+								+e.slider-wrap
+									+e.slider--js.swiper
+										+e.full-size(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											+icon('fullscreen')
+										.swiper-wrapper
+											mixin slide2()
+												+e.slide.swiper-slide
+													+e.img-wrap
+														//- img(src=`img/card-md-1.jpg` alt='')
+														.img-wrap-center
+															+img(`img/sProductCard-img-1.jpg`, `bg`)
+											+slide2()
+											+slide2()
+											+slide2()
+											+slide2()
+											+slide2()
+										+arrow
+									+e.slider-thumbs--js.swiper
+										.swiper-wrapper
+											mixin slide(i)
+												+e.slide.swiper-slide
+													+e.img-wrap--thumbs
+														.img-wrap-center
+															+img(`img/sProductCard-img-sm-${i}.jpg`, `bg`)
+														//- img(src=`img/@2x/sProject-sm-${i}.jpg` alt='')
+											+slide(1)
+											+slide(2)
+											+slide(3)
+											+slide(4)
+											+slide(5)
+							.col
+								+e.content
+									h1 Спортивный зал школы
+									h5 Задача:
+									p Комплектация спортзала согласно проектной документации и Приказа.
+									h5 Поставщик:
+									+e.company
+										+e.company-img-wrap
+											.img-wrap-center
+												+img('img/company-logo.jpg')
+										div
+											p Торговая компания МИХКО
+											span Ростов-на-Дону
+									.row
+										.col-lg
+											+e.btn.btn.btn-primary.btn-base(href='#') хочу также
+										.col-lg
+											+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') задать вопрос
+					+e.news-row.row
+						.col-12
+							h2 Похожие проекты
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-1.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 1,
+								imgLg: 'news-item-img-lg-1.jpg'
+							})
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-2.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 2,
+								imgLg: 'news-item-img-lg-2.png'
+							})
+						.col-md-6.col-xl-6.col-xxl-4
+							+gallery-item({
+								img: 'news-item-img-3.jpg',
+								title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+								fancybox: 3,
+								imgLg: 'news-item-img-lg-3.png'
+							})
+	// end sProductCard

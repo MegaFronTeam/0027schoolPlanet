@@ -1,0 +1,190 @@
+// start .sProductCard
+.sProductCard {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(100)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	&__wrap {
+		background-color: #FFFFFF;
+		border: 1px solid $gray-100;
+		border-radius: 10px;
+		padding: rem(20);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+			padding: rem(45) rem(60) rem(64) rem(45);
+		}
+	}
+	&__inner-row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(10)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(30)};
+		}
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(60)};
+		}
+	}
+	&__inner-col {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(650);
+		}
+	}
+	&__slider-thumbs{
+
+		width: 100%;
+	}
+	&__slider {
+		margin-bottom: rem(8);
+		flex-grow: 1;
+		width: 100%;
+	}
+	&__slider-wrap {
+		display: flex;
+		flex-direction: column;
+		// margin-bottom: rem(20);
+		height: calc(100% - #{rem(20)});
+		@include media-breakpoint-up(lg) {
+			// margin-bottom: rem(0);
+			height: calc(100%);
+		}
+	}
+	.swiper-slide-thumb-active {
+		.sProductCard__img-wrap--thumbs {
+			opacity: 1;
+		}
+	}
+	&__img-wrap {
+		@include block(280, 240);
+		min-height: 100%;
+		@include media-breakpoint-up(sm) {
+			--ratio: 400/650;
+		}
+		&--thumbs {
+			opacity: 0.5;
+			picture {
+				@include block(118, 72);
+			}
+		}
+	}
+	&__content {
+		h1 {
+			margin-bottom: rem(20);
+			line-height: 1.35em;
+		}
+		p {
+			line-height: 1.55em;
+			margin-bottom: rem(15);
+		}
+		h5 {
+			margin-bottom: rem(10);
+			line-height: 1.25em;
+		}
+		.row {
+			--bs-gutter-x: #{rem(10)};
+			--bs-gutter-y: #{rem(10)};
+		}
+	}
+	&__company {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(30);
+		p {
+			display: block;
+			line-height: 1.25em;
+			margin-bottom: rem(10);
+		}
+		span {
+			// display: inline-block;
+			font-size: rem(14);
+			line-height: 1;
+			background-color: $gray-200;
+			border-radius: 5px;
+			padding: rem(6) rem(10);
+		}
+	}
+	&__company-img-wrap {
+		flex: 0 0 auto;
+		background-color: #FFFFFF;
+		border: 1px solid $gray-300;
+		border-radius: 10px;
+		@include block(60, 60);
+		width: 100%;
+		max-width: rem(60);
+		margin-right: rem(15);
+	}
+	&__btn {
+		--bs-btn-font-size: #{rem(14)};
+
+		width: 100%;
+		&.btn-base-secondary {
+			--bs-btn-padding-y: #{rem(12.75)};
+			--bs-btn-font-weight: 700;
+			--bs-btn-border-radius: 60px;
+
+			text-transform: uppercase;
+		}
+	}
+	&__news-row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(10)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(30)};
+		}
+	}
+	&__full-size {
+		@include mt;
+		position: absolute;
+		padding: rem(7);
+		border-radius: 5px;
+		background-color: rgba($color: $body-color, $alpha: .5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		top: rem(15);
+		right: rem(15);
+		// opacity: 0;
+		// pointer-events: none;
+		cursor: pointer;
+		@include media-breakpoint-up(sm) {
+			top: rem(30);
+			right: rem(30);
+		}
+		.icon {
+			font-size: rem(21);
+			color: #fff;
+		}
+	}
+	.swiper-button-hand {
+		--swiperArrowPosition: #{rem(15)};
+		--swiperBgDef: #{$primary};
+		--swiperColorDef: #fff;
+		--swiperArrowSize: #{rem(40)};
+
+		border: none;
+		@include media-breakpoint-up(sm) {
+			--swiperArrowPosition: #{rem(30)};
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+			font-size: rem(20);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProductCard
