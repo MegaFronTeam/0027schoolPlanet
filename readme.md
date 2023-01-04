@@ -9,3 +9,4 @@
 7. <https://megafronteam.github.io/0027schoolPlanet/public/04-basket.html>
 8. <https://megafronteam.github.io/0027schoolPlanet/public/05-cabinet.html>
 9. <https://megafronteam.github.io/0027schoolPlanet/public/05-cabinet-2.html>
+9. <https://megafronteam.github.io/0027schoolPlanet/public/06-forget-pass.html>

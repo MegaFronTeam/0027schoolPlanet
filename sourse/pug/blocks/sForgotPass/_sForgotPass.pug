@@ -1,0 +1,25 @@
+mixin sForgotPass(data)
+	// start sForgotPass
+	+b.SECTION.sForgotPass.section#sForgotPass&attributes(attributes)
+		.container
+			+e.wrap
+				+e.row.row
+					.col-sm
+						h1 Восстановление пароля
+					.col-sm-auto
+						p Вспомнили пароль?
+							a(href="#")  Войти
+				p Введите ваш email и мы вышлем новый пароль на вашу электронную почту
+				+form-wrap
+					+input('Введите ваш email', 'email', 'Email')
+					+e.btn.btn.btn-primary.btn-base(type='submit') Продолжить
+	// end sForgotPass
+
+mixin sForgotPass2(data)
+	// start sForgotPass
+	+b.SECTION.sForgotPass.section#sForgotPass&attributes(attributes)
+		.container
+			+e.wrap
+				h1 Восстановление пароля
+				p Мы отправили пароль на вашу электронную почту, воспользуйтесь им, <br>чтобы войти в свой профиль
+				+e.btn.btn.btn-primary.btn-base(href="#") Войти
