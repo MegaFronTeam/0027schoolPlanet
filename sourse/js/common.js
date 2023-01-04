@@ -392,6 +392,17 @@ function eventHandler() {
 				}
 			})
 		}
+	};
+
+	let passChangers = document.querySelectorAll('.form-wrap__pass-changer');
+	if(passChangers) {
+		for (const passChanger of passChangers) {
+			passChanger.addEventListener('click', function() {
+				let passInput = this.previousSibling;
+				this.classList.toggle('active');
+				passInput.type = passInput.type=='password' ? 'text' : 'password';
+			})
+		}
 	}
 };
 if (document.readyState !== 'loading') {

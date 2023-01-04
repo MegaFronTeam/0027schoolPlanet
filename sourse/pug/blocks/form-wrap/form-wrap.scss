@@ -1,12 +1,18 @@
 .form-wrap{
  	&__input-wrap{
-			// @extend .form-group;
-			
-		}
-		&__input{
-			// @extend .form-control;
-		//  outline: 0 !important;
-		 resize: none;
+		// @extend .form-group;
+		
+	}
+	&__input-title {
+		display: block;
+		line-height: 1.25em;
+		margin-bottom: rem(10);
+	}
+	&__input{
+		// @extend .form-control;
+	//  outline: 0 !important;
+		resize: none;
+		text-align: center;
  	}
  	&__btn{
  		cursor: pointer;
@@ -15,6 +21,9 @@
  		width: 100%;
  		display: block;
  	}
+	textarea {
+		min-height: rem(90);
+	}
 }
 
 

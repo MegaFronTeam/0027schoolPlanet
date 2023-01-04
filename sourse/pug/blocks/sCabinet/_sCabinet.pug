@@ -1,19 +1,21 @@
+mixin cabinetNav()
+	+e.nav
+		mixin link(icon, text, activeClass)
+			+e.link(class=(activeClass=='true' ? 'active' : "") href="#")
+				+icon(icon)
+				!= text
+		+link('orders', 'Заказы', 'true')
+		+link('user', 'Мой профиль')
+		+link('pass', 'Сменить пароль')
+		+link('store', 'Для поставщиков')
+		+link('logOut', 'Выйти')
 mixin sCabinet(data)
 	// start sCabinet
 	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
 		.container
 			+e.row.row
 				.col-lg-3
-					+e.nav
-						mixin link(icon, text, activeClass)
-							+e.link(class=(activeClass=='true' ? 'active' : "") href="#")
-								+icon(icon)
-								!= text
-						+link('orders', 'Заказы', 'true')
-						+link('user', 'Мой профиль')
-						+link('pass', 'Сменить пароль')
-						+link('store', 'Для поставщиков')
-						+link('logOut', 'Выйти')
+					+cabinetNav
 				.col-lg-9 
 					+page-head('Мои заказы', '', '', '', '')
 					+ddGroup
@@ -33,7 +35,7 @@ mixin sCabinet(data)
 								+e.date 10 декабря 2022 16:30
 								+e.delivery Поставщик: 
 									span ООО “Адидас”
-								+e.report(href='#') Пожаловаться на поставщика
+								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 						+ddGroupItem('Заказ №72597', 'true', 'active')
 							+e.wrap
 								+img('img/sCabinet-img-1.png')
@@ -50,7 +52,7 @@ mixin sCabinet(data)
 								+e.date 10 декабря 2022 16:30
 								+e.delivery Поставщик: 
 									span ООО “Адидас”
-								+e.report(href='#') Пожаловаться на поставщика
+								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 						+ddGroupItem('Заказ №72597', 'true')
 							+e.wrap
 								+img('img/sCabinet-img-1.png')
@@ -67,7 +69,7 @@ mixin sCabinet(data)
 								+e.date 10 декабря 2022 16:30
 								+e.delivery Поставщик: 
 									span ООО “Адидас”
-								+e.report(href='#') Пожаловаться на поставщика
+								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 						+ddGroupItem('Заказ №72597', 'true')
 							+e.wrap
 								+img('img/sCabinet-img-1.png')
@@ -84,5 +86,26 @@ mixin sCabinet(data)
 								+e.date 10 декабря 2022 16:30
 								+e.delivery Поставщик: 
 									span ООО “Адидас”
-								+e.report(href='#') Пожаловаться на поставщика
+								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 	// end sCabinet
+
+mixin sCabinet2(data)
+	// start sCabinet
+	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-3
+					+cabinetNav
+				.col-lg-9
+					+page-head('Сменить пароль', '', '', '', '')
+					+form-wrap
+						+input('Ввведите старый пароль', 'password', 'Старый пароль')
+							+e.SPAN.pass-changer
+								+icon('eye')
+						+input('Ввведите новый пароль', 'password', 'Новый пароль')
+							+e.SPAN.pass-changer
+								+icon('eye')
+						+input('Повторите новый пароль', 'password', 'Повторить пароль')
+							+e.SPAN.pass-changer
+								+icon('eye')
+						+e.btn.btn.btn-primary.btn-base(type='submit') Применить

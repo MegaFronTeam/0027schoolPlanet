@@ -6,15 +6,26 @@
 	padding: 0;
 	max-width: 100%;
 }
+.fancybox__slide {
+	@include media-breakpoint-down(md) {
+		&::before {
+			content: unset;
+		}
+	}
+}
+
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(500);
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: rem(30) rem(20);
+	border-radius: 10px;
+	@include media-breakpoint-up(md) {
+		padding: rem(30) rem(60);
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -24,6 +35,53 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	.after-headline {
+		color: $gray-600;
+		margin-bottom: rem(30);
+		line-height: 1.25em;
+	}
+	&__btn {
+		--bs-btn-padding-y: #{rem(9.5)};
+		--bs-btn-color: #fff;
+		--bs-btn-hover-color: #fff;
+		--bs-btn-active-color: #fff;
+
+		width: 100%;
+	}
+	.form-wrap {
+		&__title {
+			margin-bottom: rem(15);
+			line-height: 1.35em;
+		}
+		&__input-wrap {
+			margin-bottom: rem(10);
+			&:last-of-type {
+				margin-bottom: rem(20);
+			}
+		}
+		&__btn {
+			--bs-btn-padding-y: #{rem(9.5)};
+			--bs-btn-color: #fff;
+			--bs-btn-hover-color: #fff;
+			--bs-btn-active-color: #fff;
+
+			width: 100%;
+		}
+	}
+}
+
+.fancybox__content>.carousel__button.is-close {
+	--fancybox-color: #ADACAC;
+	--carousel-button-width: #{rem(20)};
+	--carousel-button-height: #{rem(20)};
+
+	top: rem(20);
+	right: rem(20);
+	svg {
+		--carousel-button-svg-width: #{rem(20)};
+		--carousel-button-svg-height: #{rem(20)};
+		--carousel-button-svg-filter: none;
 	}
 }
 
