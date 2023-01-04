@@ -69,9 +69,7 @@
 		}
 		&--thumbs {
 			opacity: 0.5;
-			picture {
-				@include block(118, 72);
-			}
+			cursor: pointer;
 		}
 	}
 	&__content {
