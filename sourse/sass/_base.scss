@@ -544,6 +544,9 @@ iframe {
 
 .basket-page {
 	background-color: #fff;
+	.container {
+		--bs-gutter-x: #{rem(14)};
+	}
 	.page-head {
 		padding-top: rem(40);
 	}
@@ -551,4 +554,12 @@ iframe {
 
 .cabinet-page {
 	background-color: #fff;
+}
+
+.prod-card-page {
+	.page-head {
+		.breadcrumb {
+			margin-bottom: 0;
+		}
+	}
 }

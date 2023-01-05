@@ -355,10 +355,47 @@
 	&__btn {
 		--bs-btn-padding-x: #{rem(14)};
 	}
+	&--horizontal {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			.news-item {
+				&__img-wrap {
+					flex: 0 0 auto;
+					--ratio: 260/367;
+					width: 100%;
+					max-width: rem(367);
+					border-radius: 10px 0 0 10px;
+				}
+				&__content {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					border-radius: 0 10px 10px 0;
+					flex-grow: 1;
+				}
+				&__btn {
+					margin-top: auto;
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			.news-item__img-wrap {
+				max-width: rem(255);
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			.news-item__img-wrap {
+				max-width: rem(367);
+			}
+		}
+	}
 }
 
 .page-head {
 	padding-bottom: rem(31.600);
+	.container {
+		--bs-gutter-x: 0;
+	}
 	.breadcrumb {
 		margin-bottom: rem(15);
 		flex-wrap: nowrap;
@@ -541,6 +578,54 @@
 	}
 	&__caption {
 		line-height: 1.35em;
+	}
+	&__text {
+		display: flex;
+		align-items: center;
+		line-height: 1.25em;
+		margin-bottom: rem(5);
+		.icon {
+			flex: 0 0 auto;
+			margin-right: rem(10);
+			font-size: rem(20);
+			color: $primary;
+		}
+	}
+	&__inner-row {
+		--bs-gutter-y: #{rem(20)};
+		.innerFilter .dd-group {
+			margin-bottom: 0;
+		}
+	}
+	&__search-wrap {
+		.search-block {
+			input {
+				padding: rem(9.5) rem(45) rem(9.5) rem(20);
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 0;
+				}
+				@include media-breakpoint-up(xxl) {
+					min-width: rem(378);
+				}
+			}
+			button {
+				--bs-btn-padding-x: #{rem(11.5)};
+				@include media-breakpoint-down(sm) {
+					height: 100%;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: auto;
+				}
+			}
+			.icon {
+				font-size: rem(20);
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 2px;
+				margin-right: 0;
+			}
+		}
 	}
 }
 
@@ -743,7 +828,7 @@
 		}
 		&__item {
 			&.active {
-				.dd-group__head {
+				& > .dd-group__head {
 					&:after {
 						transform: translateY(-50%) rotate(-180deg);
 						background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 8.5L9.5 11.5L6.5 8.5' stroke='%2305a14f' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -785,6 +870,22 @@
 			display: none;
 			&.active {
 				display: block;
+			}
+			.dd-group__head {
+				text-transform: uppercase;
+				padding-left: rem(18);
+				border-top: 1px solid $gray-100;
+				@include media-breakpoint-up(lg) {
+					display: block;
+				}
+				&:before {
+					content: unset;
+				}
+			}
+			.dd-group__link:first-child {
+				@include media-breakpoint-up(lg) {
+					border-top: 1px solid $gray-100;
+				}
 			}
 		}
 		&__link {
