@@ -14,3 +14,4 @@
 12. <https://megafronteam.github.io/0027schoolPlanet/public/07-gallery.html>
 13. <https://megafronteam.github.io/0027schoolPlanet/public/08-product-card.html>
 14. <https://megafronteam.github.io/0027schoolPlanet/public/09-news.html>
+15. <https://megafronteam.github.io/0027schoolPlanet/public/10-content.html>

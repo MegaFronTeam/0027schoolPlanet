@@ -194,7 +194,7 @@ mixin filter()
 			+e.link(href='#') Частным лицам (розница)
 
 mixin filter2(isSecondVariant)
-	+b.innerFilter
+	+b.innerFilter&attributes(attributes)
 		+ddGroup()
 			if isSecondVariant
 				+ddGroupItem('Развернуть фильтр', '', 'active')
