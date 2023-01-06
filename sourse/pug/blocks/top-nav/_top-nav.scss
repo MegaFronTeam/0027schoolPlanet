@@ -8,7 +8,7 @@
 		--bs-gutter-x: #{rem(5)};
 		// --bs-gutter-y: var(--bs-gutter-x);
 		
-		align-items: center;
+		align-items: stretch;
 		@include media-breakpoint-up(xxl) {
 			--bs-gutter-x: #{rem(30)};
 		}
@@ -16,6 +16,7 @@
 	&__logo {
 		display: block;
 		max-width: rem(139);
+		align-self: center;
 		@include media-breakpoint-up(md) {
 			max-width: rem(227);
 		}
@@ -32,13 +33,41 @@
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
+		padding: 0 5px;
+		position: relative;
+		z-index: 1;
+		@include media-breakpoint-down(lg) {
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: calc(100% + 20px);
+				left: 0;
+				top: -10px;
+				background-color: transparent;
+				z-index: -1;
+			}
+		}
 		&:hover {
-			color: $gray-200;
+			color: $primary;
+			@include media-breakpoint-down(lg) {
+				&:before {
+					background-color: rgba($color: #ffff, $alpha: .9);
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				background-color: rgba($color: #ffff, $alpha: .9);
+			}
 		}
 		.icon {
 			flex: 0 0 auto;
 			font-size: rem(20);
-			margin-right: rem(5);
+			// margin-right: rem(5);
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(5);
+			}
 		}
 		&.active {
 			.top-nav__icon-wrap {

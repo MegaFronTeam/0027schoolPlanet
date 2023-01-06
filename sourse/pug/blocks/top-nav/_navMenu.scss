@@ -85,6 +85,7 @@
 	--h: #{rem(2)};
 	--color: #fff;
 	--position: calc(var(--h) * 3);
+	align-self: center;
 	&.on span {
 		--color: transparent;
 	}
