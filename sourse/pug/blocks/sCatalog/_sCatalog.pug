@@ -33,7 +33,7 @@ mixin product-item(img, title, city, price)
 									| В корзину
 	// /.product-item
 
-mixin sCatalog(isSecondVariant)
+mixin sCatalog(isSecondVariant, isThirdVariant)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
@@ -43,9 +43,26 @@ mixin sCatalog(isSecondVariant)
 				.col-lg-8.col-xxl-9
 					if isSecondVariant
 						+page-head('Каталог товаров', 'true', '', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
+					if isThirdVariant
+						+page-head('Каталог товаров', 'true', '', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
 					else
 						+page-head('Каталог товаров', 'true', 'true', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
 					+filter.d-block.d-lg-none
+					+e.find-row.row
+						.col-lg-auto.order-lg-last
+							+ddGroup
+								+ddGroupItem('Все категории')
+									ul
+										li
+											a(href="#") Все категории
+										li
+											a(href="#") Товары (опт)
+										li
+											a(href="#") Услуги (опт)
+										li
+											a(href="#") Частным лицам (розница)
+						.col-lg
+							p Найдено 30 результатов по запросу “Стол”
 					if isSecondVariant
 						+e.nothing По вашему запросу ничего не найдено, пожалуйста скорректируйте запрос.
 					else

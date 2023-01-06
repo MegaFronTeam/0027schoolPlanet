@@ -6,6 +6,8 @@
 4. <https://megafronteam.github.io/0027schoolPlanet/public/02-categories-2.html>
 5. <https://megafronteam.github.io/0027schoolPlanet/public/02-categories-3.html>
 6. <https://megafronteam.github.io/0027schoolPlanet/public/03-catalog.html>
+6. <https://megafronteam.github.io/0027schoolPlanet/public/03-catalog-2.html>
+6. <https://megafronteam.github.io/0027schoolPlanet/public/03-catalog-3.html>
 7. <https://megafronteam.github.io/0027schoolPlanet/public/04-basket.html>
 8. <https://megafronteam.github.io/0027schoolPlanet/public/05-cabinet.html>
 9. <https://megafronteam.github.io/0027schoolPlanet/public/05-cabinet-2.html>
