@@ -457,17 +457,8 @@ function eventHandler() {
 				});
 			})
 			cityOption.querySelector('.custom-input').addEventListener('click', function() {
-				function isChecked() {
-					return cityOption.querySelector('.custom-input input').checked;
-				}
-				if(isChecked() == true) {
-					for (const cityOptionInnerInput of cityOptionInnerInputs) {
-						cityOptionInnerInput.checked = 'checked';
-					}
-				} else {
-					for (const cityOptionInnerInput of cityOptionInnerInputs) {
-						cityOptionInnerInput.checked = '';
-					}
+				for (const cityOptionInnerInput of cityOptionInnerInputs) {
+					cityOption.querySelector('.custom-input input').checked == true ? cityOptionInnerInput.checked = 'checked' : cityOptionInnerInput.checked = '';
 				};
 			});
 		}

@@ -42,7 +42,7 @@ mixin search(placeholder="Начните поиск в этой категори
 				else
 					+icon("chevron-right")
 
-mixin page-head(t, btns, download, settings, caption, ...items)
+mixin page-head(t, btns, download, settings, caption, inputs=true, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
@@ -58,19 +58,21 @@ mixin page-head(t, btns, download, settings, caption, ...items)
 						+e.download(href='#')
 							+img('img/svg/xls.svg')
 							| Выгрузить в Excel
+			block
 			if settings
 				+e.settings
 					+e.settings-row.row
 						.col-12.order-xxl-1
 							+search
-						.col-lg-auto.order-xxl-3
-							+e.wrap
-								+addblock
-								span -
-								+addblock
-								span.d-none.d-md-block ₽
+						if inputs
+							.col-lg-auto.order-xxl-3
+								+e.wrap
+									+addblock
+									span -
+									+addblock
+									span.d-none.d-md-block ₽
 						.col-xxl-auto.order-xxl-2
-							+e.choseCity 
+							+e.choseCity(data-src="modal-city" data-fancybox="modal")
 								+icon('pin')
 								| Выбрать регион
 			if btns

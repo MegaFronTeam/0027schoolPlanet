@@ -15,6 +15,14 @@
 		// --bs-gutter-x: #{rem(20)};
 		// --bs-gutter-y: #{rem(20)};
 	}
+	.page-head {
+		h1 {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
+		}
+	}
 	.section-title{
 		
 	}

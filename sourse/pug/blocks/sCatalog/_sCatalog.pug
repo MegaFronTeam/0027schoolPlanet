@@ -43,11 +43,13 @@ mixin sCatalog(isSecondVariant, isThirdVariant)
 				.col-lg-8.col-xxl-9
 					if isSecondVariant
 						+page-head('Каталог товаров', 'true', '', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
+							+filter.d-block.d-lg-none
 					else if isThirdVariant
 						+page-head('Каталог товаров', 'true', '', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
+							+filter.d-block.d-lg-none
 					else
 						+page-head('Каталог товаров', 'true', 'true', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
-					+filter.d-block.d-lg-none
+							+filter.d-block.d-lg-none
 					if isThirdVariant
 						+e.find-row.row
 							.col-lg-auto.order-lg-last
