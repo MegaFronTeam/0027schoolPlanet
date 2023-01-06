@@ -437,6 +437,41 @@ function eventHandler() {
 			}
 		});
 	});
+
+	let cityOptions = document.querySelectorAll('.modal-win__wrap');
+	if (cityOptions) {
+		for (const cityOption of cityOptions) {
+			let cityOptionInnerInputs = cityOption.querySelectorAll('.modal-win__inner input');
+			let mainCheckbox =  cityOption.querySelector('.modal-win__item input');
+			cityOption.querySelector('.modal-win__plus').addEventListener('click', function() {
+				$(this).toggleClass('active');
+				let cityOptionInner = cityOption.querySelector('.modal-win__inner');
+				$(cityOptionInner).slideToggle();
+				cityOption.querySelector('.modal-win__inner').addEventListener('click', function() {
+					let arrOfChekedPos = [];
+					for (const cityOptionInnerInput of cityOptionInnerInputs) {
+						arrOfChekedPos.push(cityOptionInnerInput.checked);
+					}
+					let checker = arr => arr.every(v => v === true);
+					checker(arrOfChekedPos) == true ? (mainCheckbox.checked = true) : (mainCheckbox.checked = false);
+				});
+			})
+			cityOption.querySelector('.custom-input').addEventListener('click', function() {
+				function isChecked() {
+					return cityOption.querySelector('.custom-input input').checked;
+				}
+				if(isChecked() == true) {
+					for (const cityOptionInnerInput of cityOptionInnerInputs) {
+						cityOptionInnerInput.checked = 'checked';
+					}
+				} else {
+					for (const cityOptionInnerInput of cityOptionInnerInputs) {
+						cityOptionInnerInput.checked = '';
+					}
+				};
+			});
+		}
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
