@@ -63,4 +63,22 @@ mixin modal()
 						+e.btn.btn.btn-outline-light(href='#') Очистить
 					.col-lg-auto
 						+e.btn.btn.btn-primary(href='#') Готово
+
+	div(id="modal-call"  style="display: none" )
+		+b.modal-win--call
+			+form-wrap
+				.text-center
+					+e.title.form-data.h2 Обратный звонок
+					p.after-headline Оставьте ваш номер телефона и вам перезвонят
+
+				+input("Ваш номер телефона", 'tel')(required)
+				+input("Ваш регион")(required)
+				+e.BUTTON.btn.btn.btn-primary(type="submit" ) Отправить
+
+	div(id="modal-call-send"  style="display: none" )
+		+b.modal-win--call
+			.text-center
+				+e.title.form-data.h2 Заявка отправлена
+				p.after-headline Поставщик свяжется с Вами в ближайшее время
+			+e.BUTTON.btn.btn.btn-primary.modal-close-js Закрыть
 	// end modals

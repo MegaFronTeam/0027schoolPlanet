@@ -191,6 +191,12 @@
 			}
 		}
 	}
+	&--call {
+		padding: rem(30) rem(20) rem(40);
+		@include media-breakpoint-up(md) {
+			padding: rem(30) rem(60) rem(60);
+		}
+	}
 }
 
 .fancybox__content>.carousel__button.is-close {

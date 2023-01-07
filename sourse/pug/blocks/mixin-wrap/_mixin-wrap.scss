@@ -958,3 +958,75 @@
 		}
 	}
 }
+
+.message {
+	@include mt;
+	position: fixed;
+	padding: rem(12) rem(50) rem(12) rem(20);
+	border-radius: 0px 5px 5px 0px;
+	background-color: $gray-200;
+	bottom: rem(30);
+	width: calc(100% - rem(40));
+	right: rem(20);
+	z-index: 1;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 3px;
+		background-color: $primary;
+		border-radius: 0px 5px 5px 0px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		background-color: rgba($color: $primary, $alpha: .1);
+	}
+	&.hide {
+		opacity: 0;
+		pointer-events: none;
+	}
+	@include media-breakpoint-up(md) {
+		right: rem(60);
+		width: auto;
+	}
+	span {
+		position: absolute;
+		width: rem(20);
+		height: rem(20);
+		top: 50%;
+		right: rem(20);
+		transform: translateY(-50%);
+		cursor: pointer;
+		&::before, &:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: rem(20);
+			height: 2px;
+			background-color: #ADACAC;
+			@include a-cent;
+			@include mt;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+		&:hover {
+			&::before, &:after {
+				background-color: $body-color;
+			}
+		}
+	}
+}

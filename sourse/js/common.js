@@ -462,6 +462,13 @@ function eventHandler() {
 				};
 			});
 		}
+	};
+
+	let message = document.querySelector('.message');
+	if(message) {
+		message.querySelector('span').addEventListener('click', function() {
+			$(message).addClass('hide');
+		})
 	}
 };
 if (document.readyState !== 'loading') {
