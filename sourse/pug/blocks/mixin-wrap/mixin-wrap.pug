@@ -48,8 +48,8 @@ mixin page-head(t, btns, download, settings, caption, inputs=true, ...items)
 		.container
 			if l > 0
 				+breadcrumb('Главная',...items)
-
-			h1= t
+			if t
+				h1= t
 			if caption
 				+e.caption-row.row
 					.col-md

@@ -1,0 +1,27 @@
+mixin sSendMessage(data)
+	// start sSendMessage
+	+b.SECTION.sSendMessage.section#sSendMessage&attributes(attributes)
+		.container
+			+e.item
+				+e.head
+					+img('img/svg/telegram.svg')
+					h1.h4 Отправить сообщение
+				+e.body
+					+e.fill Пожалуйста, заполните необходимые поля анкеты и нажмите кнопку «Отправить».
+					+e.customer Кому: 
+						span Торговая компания МИХКО
+					+form-wrap
+						+e.row.row
+							.col-md-12
+								+input('Введите ваш запрос', 'textarea', 'Ваше сообщение')
+							.col-md-6
+								+input('Введите имя', 'text', 'Ваше имя')
+							.col-md-6
+								+input('Введите телефон', 'tel', 'Ваш телефон')
+							.col-md-6
+								+input('Введите email', 'email', 'Ваш email')
+							.col-md-6
+								+input('Введите город', 'text', 'Ваш город')
+						+policy
+						button.btn.btn-primary.btn-base отправить
+	// end sSendMessage

@@ -469,6 +469,21 @@ function eventHandler() {
 		message.querySelector('span').addEventListener('click', function() {
 			$(message).addClass('hide');
 		})
+	};
+
+	const swipertabs = new Swiper('.sVendor__tabs-wrap--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+
+	let vendorList = document.querySelector('.sVendor__list');
+	if(vendorList) {
+		vendorList.querySelector('a').addEventListener('click', function(e) {
+			e.preventDefault();
+			$(this).hide();
+			$('.sVendor__list li:hidden').slideDown();
+		});
 	}
 };
 if (document.readyState !== 'loading') {

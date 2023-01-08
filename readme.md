@@ -19,3 +19,5 @@
 15. <https://megafronteam.github.io/0027schoolPlanet/public/10-content.html>
 16. <https://megafronteam.github.io/0027schoolPlanet/public/11-card-item.html>
 16. <https://megafronteam.github.io/0027schoolPlanet/public/12-services.html>
+17. <https://megafronteam.github.io/0027schoolPlanet/public/13-vendor.html>
+18. <https://megafronteam.github.io/0027schoolPlanet/public/14-send-messages.html>
