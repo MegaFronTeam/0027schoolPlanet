@@ -14,8 +14,6 @@ mixin sCabinet(data)
 	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-3
-					+cabinetNav
 				.col-lg-9 
 					+page-head('Мои заказы', '', '', '', '')
 					+ddGroup
@@ -87,6 +85,8 @@ mixin sCabinet(data)
 								+e.delivery Поставщик: 
 									span ООО “Адидас”
 								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
+				.col-lg-3.order-lg-first
+					+cabinetNav
 	// end sCabinet
 
 mixin sCabinet2(data)
@@ -94,8 +94,6 @@ mixin sCabinet2(data)
 	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-3
-					+cabinetNav
 				.col-lg-9
 					+page-head('Сменить пароль', '', '', '', '')
 					+form-wrap
@@ -109,3 +107,5 @@ mixin sCabinet2(data)
 							+e.SPAN.pass-changer
 								+icon('eye')
 						+e.btn.btn.btn-primary.btn-base(type='submit') Применить
+				.col-lg-3.order-lg-first
+					+cabinetNav

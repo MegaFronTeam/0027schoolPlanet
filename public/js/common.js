@@ -388,6 +388,7 @@ function eventHandler() {
 		for (let menuHasChildren of menuHasChildrens) {
 			menuHasChildren.querySelector('span').addEventListener('click', function () {
 				if (window.matchMedia("(max-width: 992px)").matches) {
+					menuHasChildren.querySelector('span').classList.toggle('active');
 					menuHasChildren.querySelector('.sub-menu').classList.toggle('active');
 				}
 			})
@@ -467,7 +468,7 @@ function eventHandler() {
 	let message = document.querySelector('.message');
 	if(message) {
 		message.querySelector('span').addEventListener('click', function() {
-			$(message).addClass('hide');
+			$(message).removeClass('active');
 		})
 	};
 

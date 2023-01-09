@@ -19,7 +19,7 @@
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
-			padding: rem(45) rem(60) rem(64) rem(45);
+			padding: rem(45) rem(45) rem(64) rem(45);
 		}
 	}
 	&__inner-row {
@@ -33,7 +33,7 @@
 		}
 	}
 	&__inner-col {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			max-width: rem(650);
 		}
 	}
@@ -62,7 +62,7 @@
 		}
 	}
 	&__img-wrap {
-		@include block(280, 240);
+		@include block(280, 172);
 		min-height: 100%;
 		@include media-breakpoint-up(sm) {
 			--ratio: 400/650;

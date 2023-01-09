@@ -39,7 +39,10 @@
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item menu-item-has-children"><span>каталог</span>
+												<li class="menu-item menu-item-has-children"><span>каталог
+														<svg class="icon icon-chevron-down ">
+															<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+														</svg></span>
 													<ul class="sub-menu">
 														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">товары (опт)</a></li>
 														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">услуги (опт)</a></li>
@@ -55,7 +58,7 @@
 								</div>
 							</div>
 							<div class="col-auto d-flex">
-								<a class="top-nav__link" href="#">
+								<a class="top-nav__link" href="#" data-src="modal-call" data-fancybox="modal">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg><span class="d-none d-xl-block">задать вопрос</span>
@@ -92,35 +95,6 @@
 				<section class="sCabinet section" id="sCabinet">
 					<div class="container">
 						<div class="sCabinet__row row">
-							<div class="col-lg-3">
-								<div class="sCabinet__nav">
-									<a class="sCabinet__link active" href="#">
-										<svg class="icon icon-orders ">
-											<use xlink:href="img/svg/sprite.svg#orders"></use>
-										</svg>Заказы
-									</a>
-									<a class="sCabinet__link" href="#">
-										<svg class="icon icon-user ">
-											<use xlink:href="img/svg/sprite.svg#user"></use>
-										</svg>Мой профиль
-									</a>
-									<a class="sCabinet__link" href="#">
-										<svg class="icon icon-pass ">
-											<use xlink:href="img/svg/sprite.svg#pass"></use>
-										</svg>Сменить пароль
-									</a>
-									<a class="sCabinet__link" href="#">
-										<svg class="icon icon-store ">
-											<use xlink:href="img/svg/sprite.svg#store"></use>
-										</svg>Для поставщиков
-									</a>
-									<a class="sCabinet__link" href="#">
-										<svg class="icon icon-logOut ">
-											<use xlink:href="img/svg/sprite.svg#logOut"></use>
-										</svg>Выйти
-									</a>
-								</div>
-							</div>
 							<div class="col-lg-9"> 
 								<div class="page-head">
 									<div class="container">
@@ -242,6 +216,35 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-lg-3 order-lg-first">
+								<div class="sCabinet__nav">
+									<a class="sCabinet__link active" href="#">
+										<svg class="icon icon-orders ">
+											<use xlink:href="img/svg/sprite.svg#orders"></use>
+										</svg>Заказы
+									</a>
+									<a class="sCabinet__link" href="#">
+										<svg class="icon icon-user ">
+											<use xlink:href="img/svg/sprite.svg#user"></use>
+										</svg>Мой профиль
+									</a>
+									<a class="sCabinet__link" href="#">
+										<svg class="icon icon-pass ">
+											<use xlink:href="img/svg/sprite.svg#pass"></use>
+										</svg>Сменить пароль
+									</a>
+									<a class="sCabinet__link" href="#">
+										<svg class="icon icon-store ">
+											<use xlink:href="img/svg/sprite.svg#store"></use>
+										</svg>Для поставщиков
+									</a>
+									<a class="sCabinet__link" href="#">
+										<svg class="icon icon-logOut ">
+											<use xlink:href="img/svg/sprite.svg#logOut"></use>
+										</svg>Выйти
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -255,7 +258,7 @@
 								<div class="footer__title">КОМПАНИЯ РОССКЛАСС
 								</div>
 								<p>Офис работает с понедельника по пятницу с 9:00 до 17:00 (+8 МСК)</p>
-								<a class="footer__btn btn btn-outline-light" href="#">
+								<a class="footer__btn btn btn-outline-light" href="#" data-src="modal-call" data-fancybox="modal">
 									<svg class="icon icon-phone ">
 										<use xlink:href="img/svg/sprite.svg#phone"></use>
 									</svg>Задать вопрос

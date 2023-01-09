@@ -27,7 +27,7 @@ mixin sVendor(data)
 								.tabs__btn.swiper-slide Статьи/обзоры
 						+e.row.row
 							.col-xxl
-								.tabs__content
+								.tabs__content.active
 									+e.inner-row.row
 										.col-12
 											+e.list
@@ -126,7 +126,7 @@ mixin sVendor(data)
 														.h5 Тип компании
 														a.sVendor__link(href="tel:88004447610") 8 (800) 444-76-10
 														a.sVendor__link(href="tel:88004447074") 8 (800) 444-70-74
-														a(href="#") Попросить перезвонить
+														a(href="#" data-src='modal-call' data-fancybox="modal") Попросить перезвонить
 													li(style='--itemIcon: url("../img/svg/email.svg")')
 														.h5 Email
 														a.sVendor__link(href="mailto:info@mikho.ru") info@mikho.ru
@@ -158,7 +158,7 @@ mixin sVendor(data)
 															a(href='#').btn.btn-primary.btn-base отправить
 														.col-md-auto
 															a.btn.btn-outline-secondary(href='#') запросить прайс-лист
-								.tabs__content.active
+								.tabs__content
 									+e.products
 										.h3 Товары
 										+e.products-caption В каталоге указаны розничные цены. Оптовые цены уточняйте у менеджера при оформлении заказа.
@@ -194,13 +194,13 @@ mixin sVendor(data)
 									+e.tel(href='tel:88004447074')
 										+icon('tel')
 										strong 8 (800) 444-70-74
-									+e.call-back(href='#') Попросить перезвонить
+									+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
 									+e.link(href="mailto:info@mikho.ru") 
 										+icon('mail')
 										| info@mikho.ru
 									+e.link(href="https://mikho.ru" target='_blank') 
 										+icon('www')
 										| mikho.ru
-									a(href='#').btn.btn-primary.btn-base написать поставщику
+									a(href='#' data-src='modal-call' data-fancybox="modal").btn.btn-primary.btn-base написать поставщику
 
 	// end sVendor

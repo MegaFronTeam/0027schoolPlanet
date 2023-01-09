@@ -81,6 +81,12 @@
 		margin-bottom: rem(15);
 		display: inline-block;
 	}
+	.tabs__content {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 	.tabs__caption {
 		.tabs__btn {
 			@include mt;

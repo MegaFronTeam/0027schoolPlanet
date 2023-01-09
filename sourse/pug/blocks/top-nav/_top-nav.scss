@@ -1,6 +1,9 @@
 .top-nav {
 	padding: rem(10) 0;
 	background-color: $primary;
+	min-height: rem(49);
+	display: flex;
+	align-items: center;
 	@include media-breakpoint-up(lg) {
 		padding: 0;
 	}

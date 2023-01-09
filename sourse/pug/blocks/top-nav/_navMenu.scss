@@ -49,6 +49,33 @@
 			color: $gray-200;
 		}
 	}
+	&-item {
+		&-has-children {
+			span {
+				position: relative;
+				.icon {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: rem(20);
+					fill: none;
+					stroke: currentColor;
+					stroke-width: 2px;
+					font-size: rem(21);
+					@include media-breakpoint-up(lg) {
+						display: none;
+					}
+				}
+				&.active {
+					background-color: $primary !important;
+					color: #fff !important;
+					.icon {
+						transform: translateY(-50%) rotate(180deg);
+					}
+				}
+			}
+		}
+	}
 }
 
 .sub-menu {
@@ -59,14 +86,16 @@
 	list-style-type: none;
 	background-color: #fff;
 	border: 1px solid $gray-100;
-	box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.15);
-	border-radius: 0px 0px 10px 10px;
+	// box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.15);
+	// border-radius: 0px 0px 10px 10px;
 	min-width: rem(333);
 	overflow: hidden;
 	z-index: 3;
 	@include media-breakpoint-up(lg) {
 		opacity: 0;
 		pointer-events: none;
+		box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.15);
+		border-radius: 0px 0px 10px 10px;
 	}
 	li {
 		a {
@@ -74,8 +103,8 @@
 			color: $body-color;
 			text-align: left;
 			&:hover {
-				background-color: $primary;
-				color: #fff;
+				background-color: $gray-200;
+				color: $body-color;
 			}
 		}
 	}

@@ -10,12 +10,16 @@
 	&__inner-row {
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(31)};
+
+		height: calc(100% + var(--bs-gutter-y));
 	}
 	&__item{
 		position: relative;
 		border-radius: 10px;
 		overflow: hidden;
-		display: block;
+		display: flex;
+    flex-direction: column;
+    height: 100%;
 		&:hover {
 			img {
 				transform: scale(1.1);
@@ -40,6 +44,7 @@
 	}
 	&__img-wrap {
 		@include block(500, 295);
+		height: 100%;
 		img {
 			@include mt;
 		}
@@ -49,6 +54,7 @@
 		border-radius: 10px;
 		background-color: #fff;
 		padding: rem(20);
+		height: 100%;
 		@include media-breakpoint-up(sm) {
 			padding: rem(40);
 		}

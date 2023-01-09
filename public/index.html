@@ -39,7 +39,10 @@
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item menu-item-has-children"><span>каталог</span>
+												<li class="menu-item menu-item-has-children"><span>каталог
+														<svg class="icon icon-chevron-down ">
+															<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+														</svg></span>
 													<ul class="sub-menu">
 														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">товары (опт)</a></li>
 														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">услуги (опт)</a></li>
@@ -55,7 +58,7 @@
 								</div>
 							</div>
 							<div class="col-auto d-flex">
-								<a class="top-nav__link" href="#">
+								<a class="top-nav__link" href="#" data-src="modal-call" data-fancybox="modal">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg><span class="d-none d-xl-block">задать вопрос</span>
@@ -96,9 +99,9 @@
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
 						<div class="sAbout__row row">
-							<div class="col-lg-7 col-xl-8">
+							<div class="col-xl-8">
 								<div class="sAbout__inner-row row">
-									<div class="col-md-6 col-lg-12 col-xl-6">
+									<div class="col-md-6">
 											<a class="sAbout__item" href="#">
 												<div class="sAbout__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-img-1.jpg" alt="" loading="lazy"/>
@@ -107,7 +110,7 @@
 												<p>Товары (опт)</p>
 											</a>
 									</div>
-									<div class="col-md-6 col-lg-12 col-xl-6">
+									<div class="col-md-6">
 											<a class="sAbout__item" href="#">
 												<div class="sAbout__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-img-2.jpg" alt="" loading="lazy"/>
@@ -116,7 +119,7 @@
 												<p>Товары (опт)</p>
 											</a>
 									</div>
-									<div class="col-md-6 col-lg-12 col-xl-6">
+									<div class="col-md-6">
 											<a class="sAbout__item" href="#">
 												<div class="sAbout__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-img-3.jpg" alt="" loading="lazy"/>
@@ -125,7 +128,7 @@
 												<p>частным лицам (розничная торговля)</p>
 											</a>
 									</div>
-									<div class="col-md-6 col-lg-12 col-xl-6">
+									<div class="col-md-6">
 											<a class="sAbout__item" href="#">
 												<div class="sAbout__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-img-4.jpg" alt="" loading="lazy"/>
@@ -136,7 +139,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5 col-xl-4">
+							<div class="col-xl-4">
 								<div class="sAbout__content">
 									<h1>О компании</h1>
 									<p>&laquo;РОССКЛАСС&raquo; является одним из&nbsp;крупнейших дистрибьюторов на&nbsp;Сахалине и&nbsp;в&nbsp;Дальневосточном Федеральном округе, занимается комплексным оснащением детских образовательных учреждений, школ и&nbsp;государственных предприятий. Мы&nbsp;всегда готовы предложить нашим клиентам большой ассортимент разнообразной продукции, которая создаст комфортные условия для учебного процесса, полноценного отдыха и&nbsp;активного развития творческих способностей.</p>
@@ -179,7 +182,7 @@
 							<h2>Фотогалерея</h2>
 						</div>
 						<div class="sGallery__row row">
-							<div class="col-md-6 col-xl-4 col-xxl-3">
+							<div class="col-md-6 col-xl-3 col-xxl-3">
 								<div class="gallery-item">
 									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-1">
 										<svg class="icon icon-fullscreen ">
@@ -197,7 +200,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 col-xl-4 col-xxl-3">
+							<div class="col-md-6 col-xl-3 col-xxl-3">
 								<div class="gallery-item">
 									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-2.png" data-fancybox="gallery-2">
 										<svg class="icon icon-fullscreen ">
@@ -215,7 +218,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 col-xl-4 col-xxl-3">
+							<div class="col-md-6 col-xl-3 col-xxl-3">
 								<div class="gallery-item">
 									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-3.png" data-fancybox="gallery-3">
 										<svg class="icon icon-fullscreen ">
@@ -233,7 +236,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 col-xl-4 col-xxl-3">
+							<div class="col-md-6 col-xl-3 col-xxl-3">
 								<div class="gallery-item">
 									<div class="gallery-item__full-size" data-src="img/news-item-img-lg-1.jpg" data-fancybox="gallery-4">
 										<svg class="icon icon-fullscreen ">
@@ -367,7 +370,7 @@
 								<div class="footer__title">КОМПАНИЯ РОССКЛАСС
 								</div>
 								<p>Офис работает с понедельника по пятницу с 9:00 до 17:00 (+8 МСК)</p>
-								<a class="footer__btn btn btn-outline-light" href="#">
+								<a class="footer__btn btn btn-outline-light" href="#" data-src="modal-call" data-fancybox="modal">
 									<svg class="icon icon-phone ">
 										<use xlink:href="img/svg/sprite.svg#phone"></use>
 									</svg>Задать вопрос
@@ -435,7 +438,7 @@
 					</div>
 				</div>
 			</footer>
-			<div class="message">Ваше сообщение отправлено! Поставщик свяжется с Вами в ближайшее время<span></span>
+			<div class="message active">Ваше сообщение отправлено! Поставщик свяжется с Вами в ближайшее время<span></span>
 			</div>
 		</div>
 		<!--  start modals-->

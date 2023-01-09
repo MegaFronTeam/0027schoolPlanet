@@ -3,7 +3,7 @@ mixin sAbout(data)
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-7.col-xl-8
+				.col-xl-8
 					mixin item(img, text)
 						+e.item(href="#")
 							+e.img-wrap
@@ -11,15 +11,15 @@ mixin sAbout(data)
 									+img(`img/${img}`, 'bg')
 							p!= text
 					+e.inner-row.row
-						.col-md-6.col-lg-12.col-xl-6
+						.col-md-6
 							+item('sAbout-img-1.jpg', 'Товары (опт)')
-						.col-md-6.col-lg-12.col-xl-6
+						.col-md-6
 							+item('sAbout-img-2.jpg', 'Товары (опт)')
-						.col-md-6.col-lg-12.col-xl-6
+						.col-md-6
 							+item('sAbout-img-3.jpg', 'частным лицам (розничная торговля)')
-						.col-md-6.col-lg-12.col-xl-6
+						.col-md-6
 							+item('sAbout-img-4.jpg', 'Каталог поставщиков товаров и услуг')
-				.col-lg-5.col-xl-4
+				.col-xl-4
 					+e.content
 						h1 О компании
 						p &laquo;РОССКЛАСС&raquo; является одним из&nbsp;крупнейших дистрибьюторов на&nbsp;Сахалине и&nbsp;в&nbsp;Дальневосточном Федеральном округе, занимается комплексным оснащением детских образовательных учреждений, школ и&nbsp;государственных предприятий. Мы&nbsp;всегда готовы предложить нашим клиентам большой ассортимент разнообразной продукции, которая создаст комфортные условия для учебного процесса, полноценного отдыха и&nbsp;активного развития творческих способностей.

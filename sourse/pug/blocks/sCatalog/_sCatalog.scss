@@ -191,6 +191,12 @@
 	.h4 {
 		display: block;
 		margin-bottom: rem(10);
+		a {
+			color: $body-color;
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 	&__wrap {
 		--bs-gutter-x: #{rem(20)};
@@ -264,6 +270,9 @@
 					background-size: 10px;
 					background-position: center;
 					background-repeat: no-repeat;
+				}
+				&:focus {
+					box-shadow: none;
 				}
 			}
 			&__text {

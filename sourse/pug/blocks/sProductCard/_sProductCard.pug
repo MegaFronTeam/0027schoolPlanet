@@ -11,10 +11,11 @@ mixin sProductCard(data)
 						+filter2()
 					+e.wrap
 						+e.inner-row.row
-							+e.inner-col.col
+							+e.inner-col.col-xl-6.col-xxl
 								+e.slider-wrap
 									+e.slider--js.swiper
 										+e.full-size(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
 											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
 											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
 											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
@@ -27,6 +28,7 @@ mixin sProductCard(data)
 														//- img(src=`img/card-md-1.jpg` alt='')
 														.img-wrap-center
 															+img(`img/sProductCard-img-1.jpg`, `bg`)
+											+slide2()
 											+slide2()
 											+slide2()
 											+slide2()
@@ -46,6 +48,7 @@ mixin sProductCard(data)
 											+slide(3)
 											+slide(4)
 											+slide(5)
+											+slide(5)
 							.col
 								+e.content
 									h1 Спортивный зал школы
@@ -61,9 +64,9 @@ mixin sProductCard(data)
 											span Ростов-на-Дону
 									.row
 										.col-lg
-											+e.btn.btn.btn-primary.btn-base(href='#') хочу также
+											+e.btn.btn.btn-primary.btn-base(href='#' data-src='modal-call' data-fancybox="modal") хочу также
 										.col-lg
-											+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') задать вопрос
+											+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#' data-src='modal-call' data-fancybox="modal") задать вопрос
 					+e.news-row.row
 						.col-12
 							h2 Похожие проекты
