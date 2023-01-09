@@ -14,16 +14,11 @@ mixin sProductCard(data)
 							+e.inner-col.col-xl-6.col-xxl
 								+e.slider-wrap
 									+e.slider--js.swiper
-										+e.full-size(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
-											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
-											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
-											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
-											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
-											div(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
+										+e.full-size
 											+icon('fullscreen')
 										.swiper-wrapper
 											mixin slide2()
-												+e.slide.swiper-slide
+												+e.slide.swiper-slide(data-src=`img/sProductCard-img-1.jpg` data-fancybox=`sCard-gallery`)
 													+e.img-wrap
 														//- img(src=`img/card-md-1.jpg` alt='')
 														.img-wrap-center
