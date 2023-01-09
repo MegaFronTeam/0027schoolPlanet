@@ -242,3 +242,18 @@ mixin filter2(isSecondVariant)
 mixin message()
 	+b.message.active Ваше сообщение отправлено! Поставщик свяжется с Вами в ближайшее время
 		span
+
+mixin tags()
+	+b.tags-wrap&attributes(attributes)
+		h5 Тэги
+		+e.tags-row.row
+			.col-auto
+				+e.tag(href='#') Школа
+			.col-auto
+				+e.tag(href='#') Amazon
+			.col-auto
+				+e.tag(href='#') Выставка
+			.col-auto
+				+e.tag(href='#') Amazon
+			.col-auto
+				+e.tag(href='#') Выставка

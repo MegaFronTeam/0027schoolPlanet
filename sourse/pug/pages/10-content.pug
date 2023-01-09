@@ -25,7 +25,41 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sContent()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter2('true')
+						+tags()
+					.col-lg-8.col-xxl-9
+						+page-head('РОССКЛАСС представляет электронное расписание для школы', '', '', '', '', '', 'Новости и обзоры', 'РОССКЛАСС представляет электронное расписание для школы')
+						+filter2('true').d-lg-none
+						+sContent()
+						+tags().d-lg-none
+						+e.inner-row.row
+							.col-12 
+								h2 Похожие новости и обзоры
+							.col-sm-6.col-xxl-4
+								+news-item({
+									img: 'news-item-img-4.png',
+									item: 'Дизайн, концепты и стройка',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									date: '4 декабря 2022',
+								})
+							.col-sm-6.col-xxl-4
+								+news-item({
+									img: 'news-item-img-4.png',
+									item: 'Дизайн, концепты и стройка',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									date: '4 декабря 2022',
+								})
+							.col-sm-6.col-xxl-4
+								+news-item({
+									img: 'news-item-img-4.png',
+									item: 'Дизайн, концепты и стройка',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									date: '4 декабря 2022',
+								})
 	+footer()
       
 

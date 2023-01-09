@@ -101,7 +101,8 @@ body {
 .main-wrapper { 
 	position: relative;
 	width: 100%;
-	// overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column; 
 // /	overflow: scroll;
