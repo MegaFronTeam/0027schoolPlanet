@@ -1,11 +1,12 @@
 // start .sCabinet
 .sCabinet {
-	--sPT: #{rem(30)};
-	// --sPB: #{rem()};
+	// --sPT: #{rem(30)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(50)};
-	@include media-breakpoint-up(lg) {
-		--sTPB: #{rem(100)};
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	--sTPB: #{rem(100)};
+	// }
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(20)};
@@ -19,51 +20,6 @@
 	}
 	&__item{
 
-	}
-	&__nav {
-		background-color: #FFFFFF;
-		border: 1px solid $gray-100;
-		border-radius: 10px;
-		width: 100%;
-		@include media-breakpoint-up(lg) {
-			max-width: rem(338);
-		}
-	}
-	&__link {
-		position: relative;
-		display: block;
-		padding: rem(18.5) rem(20);
-		line-height: 1.25em;
-		color: $body-color;
-		&:not(:last-child) {
-			border-bottom: 1px solid $gray-100;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			top: 50%;
-			transform: translateY(-50%);
-			left: 0;
-			width: 3px;
-			height: rem(40);
-			background-color: transparent;
-			border-radius: 0px 5px 5px 0px;
-		}
-		.icon {
-			color: $primary;
-			font-size: rem(20);
-			margin-right: rem(10);
-		}
-		&:hover {
-			color: $primary;
-		}
-		&.active {
-			font-weight: 700;
-			&:before {
-				background-color: $primary;
-			}
-		}
 	}
 	.dd-group {
 		--bs-gutter-y: #{rem(10)};
@@ -260,3 +216,49 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCabinet
+
+.cabinetNav-nav {
+	background-color: #FFFFFF;
+	border: 1px solid $gray-100;
+	border-radius: 10px;
+	width: 100%;
+	@include media-breakpoint-up(lg) {
+		max-width: rem(338);
+	}
+	&__link {
+		position: relative;
+		display: block;
+		padding: rem(18.5) rem(20);
+		line-height: 1.25em;
+		color: $body-color;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-100;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 3px;
+			height: rem(40);
+			background-color: transparent;
+			border-radius: 0px 5px 5px 0px;
+		}
+		.icon {
+			color: $primary;
+			font-size: rem(20);
+			margin-right: rem(10);
+		}
+		&:hover {
+			color: $primary;
+		}
+		&.active {
+			font-weight: 700;
+			&:before {
+				background-color: $primary;
+			}
+		}
+	}
+}

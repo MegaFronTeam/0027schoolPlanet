@@ -567,10 +567,17 @@ iframe {
 	background-color: #fff;
 }
 
-.prod-card-page, .card-item-page {
+.prod-card-page, .card-item-page, .vendor-page {
 	.page-head {
 		.breadcrumb {
 			margin-bottom: 0;
+		}
+	}
+}
+.card-item-page {
+	.main-content-wrapper .filter {
+		@include media-breakpoint-down(lg) {
+			margin-top: 0;
 		}
 	}
 }

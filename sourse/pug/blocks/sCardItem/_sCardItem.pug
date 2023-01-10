@@ -1,93 +1,85 @@
 mixin sCardItem(data)
 	// start sCardItem
 	+b.SECTION.sCardItem.section#sCardItem&attributes(attributes)
-		.container
-			+e.row.row
-				.col-lg-4.col-xxl-3.d-none.d-lg-block
-					+filter
-				.col-lg-8.col-xxl-9
-					+page-head('','','','','', '', 'Каталог','Товары (опт)','Мебель','Столы', 'Столы длиной 1800 мм', 'Банкетка 3-местная жесткая (1300х400х400 мм, ЛДСП, цвет ольха)')
-					.d-block.d-lg-none
-						+filter()
-					+e.item
-						.row
-							.col-lg.d-none.d-xl-block
-								+e.img-wrap
-									.img-wrap-center
-										+img('img/sCardItem-img-1.jpg')
-							.col-lg-auto
-								+e.content
-									h1 Банкетка 3-местная жесткая (1300х400х400 мм, ЛДСП, цвет ольха)
-									+e.img-wrap.d-xl-none
-										.img-wrap-center
-											+img('img/sCardItem-img-1.jpg')
-									+e.type
-										+icon('book')
-										| Школа
-									+e.delevery Поставщик: 
-										| 
-										span ООО “Адидас” 
-										| 
-										p Работает по условиям 44ФЗ и 223 ФЗ
-									+e.shipment Отгрузка товара:
-										span Ростов-на-Дону
-									+e.UL.list
-										li Ориентировочное время исполнения заказа: 
-											span 60 дней
-										li Ориентировочные транспортные габариты: 
-											span ДхВхШ 20х30х100 см, 50 кг
-										li Регионы поставки: 
-											span Ростовская область, Московская область, Самарская область, Саратовская область
-									+e.price
-										| Опт: 
-										span.num 99 990 ₽
-										span.delivery + доставка
-									+e.inner-row.row
-										.col-auto
-											+addblock()
-										.col-auto
-											+e.btn(href='#').btn.btn-primary.btn-base 
-												+icon('cart')
-												| В корзину
-					.tabs
-						.tabs__caption
-							.tabs__btn.active Описание
-							.tabs__btn Характеристики
-						.tabs__content.active
-							p Среди преимуществ нашего магазина самыми главными являются:
-							ul 
-								li ассортимент продукции, который может удовлетворить любые запросы по&nbsp;цвету, форме или размерам товаров;
-								li самые новые разработки появляются у&nbsp;нас гораздо раньше, ведь мы&nbsp;работаем напрямую с&nbsp;производителями, минуя оптовые склады и&nbsp;перевальные базы;
-								li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
-								li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
-						.tabs__content
-							+e.tabs-row.row
-								.col Длина
-								.col 1300 мм
-							+e.tabs-row.row
-								.col Ширина
-								.col 400 мм
-							+e.tabs-row.row
-								.col Высота
-								.col 400 мм
-							+e.tabs-row.row
-								.col Материал
-								.col ЛДСП с меламиновым покрытием, металлокаркас
-					+e.company
-						h4 Торговая компания МИХКО
-						+e.company-wrap
-							+e.company-row.row
-								+e.company-col.col-sm
-									+e.company-img-wrap
-										.img-wrap-center
-											+img('img/company-logo-2.jpg')
-								.col-sm
-									+e.city Ростов-на-Дону
-									+e.text Мебель, Уличное оборудование, Приборы и наглядное оборудование
-									p #[span Регионы поставки: ] Ростовская область, Московская область, Самарская область, Саратовская область
-									+e.btn-row.row
-										.col-auto
-											+e.company-btn.btn.btn-primary.btn-base(href='#' data-src='modal-call' data-fancybox="modal") написать
-										.col-auto
-											+e.company-btn.btn.btn-outline-secondary.btn-base-secondary(href='#') подробнее
+		+e.item
+			.row
+				.col-lg.d-none.d-xl-block
+					+e.img-wrap
+						.img-wrap-center
+							+img('img/sCardItem-img-1.jpg')
+				.col-lg-auto
+					+e.content
+						h1 Банкетка 3-местная жесткая (1300х400х400 мм, ЛДСП, цвет ольха)
+						+e.img-wrap.d-xl-none
+							.img-wrap-center
+								+img('img/sCardItem-img-1.jpg')
+						+e.type
+							+icon('book')
+							| Школа
+						+e.delevery Поставщик: 
+							| 
+							span ООО “Адидас” 
+							| 
+							p Работает по условиям 44ФЗ и 223 ФЗ
+						+e.shipment Отгрузка товара:
+							span Ростов-на-Дону
+						+e.UL.list
+							li Ориентировочное время исполнения заказа: 
+								span 60 дней
+							li Ориентировочные транспортные габариты: 
+								span ДхВхШ 20х30х100 см, 50 кг
+							li Регионы поставки: 
+								span Ростовская область, Московская область, Самарская область, Саратовская область
+						+e.price
+							| Опт: 
+							span.num 99 990 ₽
+							span.delivery + доставка
+						+e.inner-row.row
+							.col-auto
+								+addblock()
+							.col-auto
+								+e.btn(href='#').btn.btn-primary.btn-base 
+									+icon('cart')
+									| В корзину
+		.tabs
+			.tabs__caption
+				.tabs__btn.active Описание
+				.tabs__btn Характеристики
+			.tabs__content.active
+				p Среди преимуществ нашего магазина самыми главными являются:
+				ul 
+					li ассортимент продукции, который может удовлетворить любые запросы по&nbsp;цвету, форме или размерам товаров;
+					li самые новые разработки появляются у&nbsp;нас гораздо раньше, ведь мы&nbsp;работаем напрямую с&nbsp;производителями, минуя оптовые склады и&nbsp;перевальные базы;
+					li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
+					li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
+			.tabs__content
+				+e.tabs-row.row
+					.col Длина
+					.col 1300 мм
+				+e.tabs-row.row
+					.col Ширина
+					.col 400 мм
+				+e.tabs-row.row
+					.col Высота
+					.col 400 мм
+				+e.tabs-row.row
+					.col Материал
+					.col ЛДСП с меламиновым покрытием, металлокаркас
+		+e.company
+			h4 Торговая компания МИХКО
+			+e.company-wrap
+				+e.company-row.row
+					+e.company-col.col-sm
+						+e.company-img-wrap
+							.img-wrap-center
+								+img('img/company-logo-2.jpg')
+					.col-sm
+						+e.city Ростов-на-Дону
+						+e.text Мебель, Уличное оборудование, Приборы и наглядное оборудование
+						p #[span Регионы поставки: ] Ростовская область, Московская область, Самарская область, Саратовская область
+						+e.btn-row.row
+							.col-auto
+								+e.company-btn.btn.btn-primary.btn-base(href='#' data-src='modal-call' data-fancybox="modal") написать
+							.col-auto
+								+e.company-btn.btn.btn-outline-secondary.btn-base-secondary(href='#') подробнее
 	// end sCardItem

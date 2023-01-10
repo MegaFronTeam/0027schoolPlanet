@@ -256,17 +256,11 @@ const JSCCommon = {
 					$(ChildHeads).each(function () {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement.querySelector('.dd-content-js')).slideToggle(function () {
+							$(this.closest('.dd-group__item')).toggleClass('active');
+							$(this.closest('.dd-group__item').querySelector('.dd-content-js')).slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
-						// else {
-						// 	$(this.parentElement).removeClass('active');
-						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
-						// 		$(this).removeClass('active');
-						// 	});
-						// }
 					});
 
 				});

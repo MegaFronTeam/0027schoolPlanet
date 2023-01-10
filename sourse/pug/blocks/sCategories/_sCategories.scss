@@ -1,11 +1,13 @@
 // start .sCatalog
 .sCategories {
-	--sPT: #{rem(30)};
-	--sPB: #{rem(50)};
+	// --sPT: #{rem(30)};
+	// --sPB: #{rem(50)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
-	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(100)};
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	--sPB: #{rem(100)};
+	// }
 	&__row{
 		--bs-gutter-x: #{rem(7.4)};
 		--bs-gutter-y: var(--bs-gutter-x);

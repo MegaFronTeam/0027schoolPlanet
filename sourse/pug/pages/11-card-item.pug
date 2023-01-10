@@ -25,7 +25,16 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCardItem()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('','','','','', '', 'Каталог','Товары (опт)','Мебель','Столы', 'Столы длиной 1800 мм', 'Банкетка 3-местная жесткая (1300х400х400 мм, ЛДСП, цвет ольха)')
+						.d-block.d-lg-none
+							+filter()
+						+sCardItem()
 	+footer()
       
 

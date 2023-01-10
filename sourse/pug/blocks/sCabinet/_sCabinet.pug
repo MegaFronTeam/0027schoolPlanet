@@ -1,5 +1,5 @@
 mixin cabinetNav()
-	+e.nav
+	+b.cabinetNav-nav
 		mixin link(icon, text, activeClass)
 			+e.link(class=(activeClass=='true' ? 'active' : "") href="#")
 				+icon(icon)
@@ -9,103 +9,93 @@ mixin cabinetNav()
 		+link('pass', 'Сменить пароль')
 		+link('store', 'Для поставщиков')
 		+link('logOut', 'Выйти')
+
+
 mixin sCabinet(data)
 	// start sCabinet
 	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
-		.container
-			+e.row.row
-				.col-lg-9 
-					+page-head('Мои заказы', '', '', '', '')
-					+ddGroup
-						+ddGroupItem('Заказ №72597', 'true')
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.footer
-								+e.price.order-lg-last 99 990 ₽
-								+e.date 10 декабря 2022 16:30
-								+e.delivery Поставщик: 
-									span ООО “Адидас”
-								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
-						+ddGroupItem('Заказ №72597', 'true', 'active')
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.footer
-								+e.price.order-lg-last 99 990 ₽
-								+e.date 10 декабря 2022 16:30
-								+e.delivery Поставщик: 
-									span ООО “Адидас”
-								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
-						+ddGroupItem('Заказ №72597', 'true')
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.footer
-								+e.price.order-lg-last 99 990 ₽
-								+e.date 10 декабря 2022 16:30
-								+e.delivery Поставщик: 
-									span ООО “Адидас”
-								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
-						+ddGroupItem('Заказ №72597', 'true')
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.wrap
-								+img('img/sCabinet-img-1.png')
-								+e.text
-									p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
-									.h5 1 x 99 990 ₽
-							+e.footer
-								+e.price.order-lg-last 99 990 ₽
-								+e.date 10 декабря 2022 16:30
-								+e.delivery Поставщик: 
-									span ООО “Адидас”
-								+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
-				.col-lg-3.order-lg-first
-					+cabinetNav
+		+ddGroup
+			+ddGroupItem('Заказ №72597', 'true')
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.footer
+					+e.price.order-lg-last 99 990 ₽
+					+e.date 10 декабря 2022 16:30
+					+e.delivery Поставщик: 
+						span ООО “Адидас”
+					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
+			+ddGroupItem('Заказ №72597', 'true', 'active')
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.footer
+					+e.price.order-lg-last 99 990 ₽
+					+e.date 10 декабря 2022 16:30
+					+e.delivery Поставщик: 
+						span ООО “Адидас”
+					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
+			+ddGroupItem('Заказ №72597', 'true')
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.footer
+					+e.price.order-lg-last 99 990 ₽
+					+e.date 10 декабря 2022 16:30
+					+e.delivery Поставщик: 
+						span ООО “Адидас”
+					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
+			+ddGroupItem('Заказ №72597', 'true')
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.wrap
+					+img('img/sCabinet-img-1.png')
+					+e.text
+						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						.h5 1 x 99 990 ₽
+				+e.footer
+					+e.price.order-lg-last 99 990 ₽
+					+e.date 10 декабря 2022 16:30
+					+e.delivery Поставщик: 
+						span ООО “Адидас”
+					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 	// end sCabinet
 
 mixin sCabinet2(data)
 	// start sCabinet
-	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
-		.container
-			+e.row.row
-				.col-lg-9
-					+page-head('Сменить пароль', '', '', '', '')
-					+form-wrap
-						+input('Ввведите старый пароль', 'password', 'Старый пароль')
-							+e.SPAN.pass-changer
-								+icon('eye')
-						+input('Ввведите новый пароль', 'password', 'Новый пароль')
-							+e.SPAN.pass-changer
-								+icon('eye')
-						+input('Повторите новый пароль', 'password', 'Повторить пароль')
-							+e.SPAN.pass-changer
-								+icon('eye')
-						+e.btn.btn.btn-primary.btn-base(type='submit') Применить
-				.col-lg-3.order-lg-first
-					+cabinetNav
+	+b.sCabinet.section#sCabinet&attributes(attributes)
+		+form-wrap
+			+input('Ввведите старый пароль', 'password', 'Старый пароль')
+				+e.SPAN.pass-changer
+					+icon('eye')
+			+input('Ввведите новый пароль', 'password', 'Новый пароль')
+				+e.SPAN.pass-changer
+					+icon('eye')
+			+input('Повторите новый пароль', 'password', 'Повторить пароль')
+				+e.SPAN.pass-changer
+					+icon('eye')
+			+e.btn.btn.btn-primary.btn-base(type='submit') Применить

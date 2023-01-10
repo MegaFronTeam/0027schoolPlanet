@@ -1,206 +1,199 @@
 mixin sVendor(data)
 	// start sVendor
 	+b.SECTION.sVendor.section#sVendor&attributes(attributes)
-		.container
-			.row
-				.col-lg-4.col-xxl-3.d-none.d-lg-block
-					+filter
-				.col-lg-8.col-xxl-9
-					+page-head('', '', '', '', '', '', 'Каталог', 'Услуги (опт)', 'Дизайн зданий, помещений, ландшафтный дизайн', 'Торговая компания МИХКО')
-						+filter.d-block.d-lg-none
-					.tabs
-						+e.tabs-content.bg-wrap
-							+img('img/sVendor-bg-1.jpg', 'bg').picture-bg
-							+e.img-wrap
-								.img-wrap-center
-									+img('img/company-logo-2.jpg')
-							+e.content
-								h1 Торговая компания МИХКО
-								+e.city Ростов-на-Дону
-								p #[span Регионы поставки: ] Ростовская область, Московская область, Самарская область, Саратовская область
-						+e.tabs-wrap--js.swiper
-							.tabs__caption.swiper-wrapper
-								.tabs__btn.swiper-slide.active О компании
-								.tabs__btn.swiper-slide Товары
-								.tabs__btn.swiper-slide Контакты
-								.tabs__btn.swiper-slide Фотогалерея
-								.tabs__btn.swiper-slide Статьи/обзоры
-						+e.row.row
-							.col-xxl
-								.tabs__content.active
-									+e.inner-row.row
-										.col-12
-											+e.list
-												p Среди преимуществ нашего магазина самыми главными являются:
-												ul
-													li ассортимент продукции, который может удовлетворить любые запросы по&nbsp;цвету, форме или размерам товаров;
-													li самые новые разработки появляются у&nbsp;нас гораздо раньше, ведь мы&nbsp;работаем напрямую с&nbsp;производителями, минуя оптовые склады и&nbsp;перевальные базы;
-													li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
-													li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
-													li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
-													li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
-												a(href="#") Показать далее
-										mixin item(title, showAll)
-											+e.wrap
-												+e.head
-													.h4!=title 
-													if showAll
-														a(href="#") Все товары
-												+e.body
-													block
-										.col-12
-											+item('Товары', 'true')
-												+e.link-row.row
-													.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
-														+e.item(href="#")
-															+img('img/prod-img-1.png')
-															p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
-													.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
-														+e.item(href="#")
-															+img('img/prod-img-2.png')
-															p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
-													.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
-														+e.item(href="#")
-															+img('img/prod-img-3.png')
-															p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
-										.col-12
-											+item('О компании')
-												+e.UL.item-list
-													li
-														.h5 Тип компании
-														p Поставщик
-													li
-														.h5 Объем поставок
-														ul
-															li Розница
-															li Опт
-													li
-														.h5 Минимальный заказ
-														p Любая сумма
-													li
-														.h5 Юридическое наименование
-														p ИП «Михайлов Константин Денисович<br>Год основания: 2017
-														p ОГРНИП: 317774600404344<br>ИНН: 772032838410
-													li
-														.h5 Условия поставок
-														ul
-															li 44 ФЗ, 223 ФЗ
-															li Предоплата
-															li Отсрочка платежа для государственных и муниципальных организаций
-															li Транспортные и сборку (если есть) будут включены в стоимость товара
-													li
-														.h5 Время выполнения заказа
-														p Ориентировочно 60 рабочих дней
-													li
-														.h5 Варианты оплаты
-														ul
-															li Наличными
-															li Безналичная оплата
-															li Кредитные карты
-													li
-														.h5 Ассортимент
-														ul
-															li Книги и канцелярские товары
-															li Электроника
-															li Мебель
-													li
-														.h5 Способы доставки
-														ul
-															li Самовывоз
-															li Транспортной компанией
-															li Автомобилем
-															li Авиатранспортом
-															li Железной дорогой
-															li Курьером
-													li
-														.h5 Скидки
-														ul
-															li 5% до 10 000 руб
-															li 6% до 30 000 руб
-															li 8% до 50 000 руб
-															li 10% до 100 000 руб
-										.col-12
-											+item('Контакты')
-												+e.UL.contact-list
-													li(style='--itemIcon: url("../img/svg/tel.svg")')
-														.h5 Тип компании
-														a.sVendor__link(href="tel:88004447610") 8 (800) 444-76-10
-														a.sVendor__link(href="tel:88004447074") 8 (800) 444-70-74
-														a(href="#" data-src='modal-call' data-fancybox="modal") Попросить перезвонить
-													li(style='--itemIcon: url("../img/svg/email.svg")')
-														.h5 Email
-														a.sVendor__link(href="mailto:info@mikho.ru") info@mikho.ru
-													li(style='--itemIcon: url("../img/svg/chat.svg")')
-														.h5 Другие контакты
-														a.sVendor__link(href="mailto:sales@mihko.ru") sales@mihko.ru - отдел продаж
-														a.sVendor__link(href="mailto:zakupki@mihko.ru") zakupki@mihko.ru - отдел закупок
-													li(style='--itemIcon: url("../img/svg/delivery.svg")')
-														.h5 Отгрузка товара
-														p г. Москва
-													li(style='--itemIcon: url("../img/svg/adress.svg")')
-														.h5 Адрес
-														p Москва, Россия 117648,микрорайон Северное Чертаново, 4А, 1 этаж, офис 102
-														a(href="#") Посмотреть на карте
-													li(style='--itemIcon: url("../img/svg/clock.svg")')
-														.h5 Время работы
-														p Пн-пт: 10:00 - 18:00<br>Сб-вс: выходной
-													li(style='--itemIcon: url("../img/svg/item.svg")')
-														.h5 Регионы поставок
-														ul
-															li Самарская область
-															li Московская область
-															li Ростовская область
-												+e.send
-													.h5 Отправить сообщение
-													+input('Запрос прайс-листа и условий сотрудничества', 'textarea')
-													.row
-														.col-md-auto
-															a(href='#').btn.btn-primary.btn-base отправить
-														.col-md-auto
-															a.btn.btn-outline-secondary(href='#') запросить прайс-лист
-								.tabs__content
-									+e.products
-										.h3 Товары
-										+e.products-caption В каталоге указаны розничные цены. Оптовые цены уточняйте у менеджера при оформлении заказа.
-										+search('Поиск товаров')
-									+e.info
+		.tabs
+			+e.tabs-content.bg-wrap
+				+img('img/sVendor-bg-1.jpg', 'bg').picture-bg
+				+e.img-wrap
+					.img-wrap-center
+						+img('img/company-logo-2.jpg')
+				+e.content
+					h1 Торговая компания МИХКО
+					+e.city Ростов-на-Дону
+					p #[span Регионы поставки: ] Ростовская область, Московская область, Самарская область, Саратовская область
+			+e.tabs-wrap--js.swiper
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.swiper-slide.active О компании
+					.tabs__btn.swiper-slide Товары
+					.tabs__btn.swiper-slide Контакты
+					.tabs__btn.swiper-slide Фотогалерея
+					.tabs__btn.swiper-slide Статьи/обзоры
+			+e.row.row
+				.col-xxl
+					.tabs__content.active
+						+e.inner-row.row
+							.col-12
+								+e.list
+									p Среди преимуществ нашего магазина самыми главными являются:
+									ul
+										li ассортимент продукции, который может удовлетворить любые запросы по&nbsp;цвету, форме или размерам товаров;
+										li самые новые разработки появляются у&nbsp;нас гораздо раньше, ведь мы&nbsp;работаем напрямую с&nbsp;производителями, минуя оптовые склады и&nbsp;перевальные базы;
+										li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
+										li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
+										li тесное сотрудничество с&nbsp;компаниями, выпускающими продукцию специального назначения, имеет ещё одно преимущество&nbsp;&mdash; приятные цены, что очень нравится нам клиентам;
+										li постоянный диалог с&nbsp;клиентами через переписку или на&nbsp;форуме, где любой желающий может оставить свои вопросы или отзывы о&nbsp;товаре;
+									a(href="#") Показать далее
+							mixin item(title, showAll)
+								+e.wrap
+									+e.head
+										.h4!=title 
+										if showAll
+											a(href="#") Все товары
+									+e.body
+										block
+							.col-12
+								+item('Товары', 'true')
+									+e.link-row.row
+										.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
+											+e.item(href="#")
+												+img('img/prod-img-1.png')
+												p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
+										.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
+											+e.item(href="#")
+												+img('img/prod-img-2.png')
+												p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
+										.col-sm-4.col-lg-12.col-xl-6.col-xxl-4
+											+e.item(href="#")
+												+img('img/prod-img-3.png')
+												p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм ...
+							.col-12
+								+item('О компании')
+									+e.UL.item-list
+										li
+											.h5 Тип компании
+											p Поставщик
+										li
+											.h5 Объем поставок
+											ul
+												li Розница
+												li Опт
+										li
+											.h5 Минимальный заказ
+											p Любая сумма
+										li
+											.h5 Юридическое наименование
+											p ИП «Михайлов Константин Денисович<br>Год основания: 2017
+											p ОГРНИП: 317774600404344<br>ИНН: 772032838410
+										li
+											.h5 Условия поставок
+											ul
+												li 44 ФЗ, 223 ФЗ
+												li Предоплата
+												li Отсрочка платежа для государственных и муниципальных организаций
+												li Транспортные и сборку (если есть) будут включены в стоимость товара
+										li
+											.h5 Время выполнения заказа
+											p Ориентировочно 60 рабочих дней
+										li
+											.h5 Варианты оплаты
+											ul
+												li Наличными
+												li Безналичная оплата
+												li Кредитные карты
+										li
+											.h5 Ассортимент
+											ul
+												li Книги и канцелярские товары
+												li Электроника
+												li Мебель
+										li
+											.h5 Способы доставки
+											ul
+												li Самовывоз
+												li Транспортной компанией
+												li Автомобилем
+												li Авиатранспортом
+												li Железной дорогой
+												li Курьером
+										li
+											.h5 Скидки
+											ul
+												li 5% до 10 000 руб
+												li 6% до 30 000 руб
+												li 8% до 50 000 руб
+												li 10% до 100 000 руб
+							.col-12
+								+item('Контакты')
+									+e.UL.contact-list
+										li(style='--itemIcon: url("../img/svg/tel.svg")')
+											.h5 Тип компании
+											a.sVendor__link(href="tel:88004447610") 8 (800) 444-76-10
+											a.sVendor__link(href="tel:88004447074") 8 (800) 444-70-74
+											a(href="#" data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+										li(style='--itemIcon: url("../img/svg/email.svg")')
+											.h5 Email
+											a.sVendor__link(href="mailto:info@mikho.ru") info@mikho.ru
+										li(style='--itemIcon: url("../img/svg/chat.svg")')
+											.h5 Другие контакты
+											a.sVendor__link(href="mailto:sales@mihko.ru") sales@mihko.ru - отдел продаж
+											a.sVendor__link(href="mailto:zakupki@mihko.ru") zakupki@mihko.ru - отдел закупок
+										li(style='--itemIcon: url("../img/svg/delivery.svg")')
+											.h5 Отгрузка товара
+											p г. Москва
+										li(style='--itemIcon: url("../img/svg/adress.svg")')
+											.h5 Адрес
+											p Москва, Россия 117648,микрорайон Северное Чертаново, 4А, 1 этаж, офис 102
+											a(href="#") Посмотреть на карте
+										li(style='--itemIcon: url("../img/svg/clock.svg")')
+											.h5 Время работы
+											p Пн-пт: 10:00 - 18:00<br>Сб-вс: выходной
+										li(style='--itemIcon: url("../img/svg/item.svg")')
+											.h5 Регионы поставок
+											ul
+												li Самарская область
+												li Московская область
+												li Ростовская область
+									+e.send
+										.h5 Отправить сообщение
+										+input('Запрос прайс-листа и условий сотрудничества', 'textarea')
 										.row
-											.col-md-auto.order-md-last
-												a(href="#")
-													+img('img/svg/xls2.svg')
-													| Скачать товары поставщика
-											.col-md
-												p Всего товаров 545
-									+e.products-row.row
-										.col-12
-											+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽', 'true')
-										.col-12
-											+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽', 'true')
-										.col-12
-											+product-item('prod-img-3.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '9 990 ₽', 'true')
-										.col-12
-											+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽', 'true')
-										.col-12
-											+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽', 'true')
-									+pugin
-								.tabs__content 3
-								.tabs__content 4
-								.tabs__content 5
-							.col-xxl-auto
-								+e.contacts
-									+e.tel(href='tel:88004447610')
-										+icon('tel')
-										strong 8 (800) 444-76-10
-									+e.tel(href='tel:88004447074')
-										+icon('tel')
-										strong 8 (800) 444-70-74
-									+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
-									+e.link(href="mailto:info@mikho.ru") 
-										+icon('mail')
-										| info@mikho.ru
-									+e.link(href="https://mikho.ru" target='_blank') 
-										+icon('www')
-										| mikho.ru
-									a(href='#' data-src='modal-call' data-fancybox="modal").btn.btn-primary.btn-base написать поставщику
+											.col-md-auto
+												a(href='#').btn.btn-primary.btn-base отправить
+											.col-md-auto
+												a.btn.btn-outline-secondary(href='#') запросить прайс-лист
+					.tabs__content
+						+e.products
+							.h3 Товары
+							+e.products-caption В каталоге указаны розничные цены. Оптовые цены уточняйте у менеджера при оформлении заказа.
+							+search('Поиск товаров')
+						+e.info
+							.row
+								.col-md-auto.order-md-last
+									a(href="#")
+										+img('img/svg/xls2.svg')
+										| Скачать товары поставщика
+								.col-md
+									p Всего товаров 545
+						+e.products-row.row
+							.col-12
+								+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽', 'true')
+							.col-12
+								+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽', 'true')
+							.col-12
+								+product-item('prod-img-3.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '9 990 ₽', 'true')
+							.col-12
+								+product-item('prod-img-1.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Ростов-на-Дону', '99 990 ₽', 'true')
+							.col-12
+								+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽', 'true')
+						+pugin
+					.tabs__content 3
+					.tabs__content 4
+					.tabs__content 5
+				.col-xxl-auto
+					+e.contacts
+						+e.tel(href='tel:88004447610')
+							+icon('tel')
+							strong 8 (800) 444-76-10
+						+e.tel(href='tel:88004447074')
+							+icon('tel')
+							strong 8 (800) 444-70-74
+						+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+						+e.link(href="mailto:info@mikho.ru") 
+							+icon('mail')
+							| info@mikho.ru
+						+e.link(href="https://mikho.ru" target='_blank') 
+							+icon('www')
+							| mikho.ru
+						a(href='#' data-src='modal-call' data-fancybox="modal").btn.btn-primary.btn-base написать поставщику
 
 	// end sVendor

@@ -8,14 +8,20 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, icon, activeClasses='')
+mixin ddGroupItem(txt, icon, activeClasses='', menu)
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js
-			=txt
-			if icon
-				span
+		if menu 
+			+e.head
+				a(href="#")!= txt
+				.dd-head-js
+					+icon('chevron-down')
+		else
+			+e.head.dd-head-js
+				=txt
+				if icon
+					span
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block

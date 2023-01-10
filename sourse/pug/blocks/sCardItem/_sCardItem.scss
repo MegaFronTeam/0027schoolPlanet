@@ -1,11 +1,12 @@
 // start .sCardItem
 .sCardItem {
-	--sPT: #{rem(30)};
-	// --sPB: #{rem()};
+	// --sPT: #{rem(30)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(40)};
-	@include media-breakpoint-up(lg) {
-		--sTPB: #{rem(100)};
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	--sTPB: #{rem(100)};
+	// }
 	.filter {
 		@include media-breakpoint-down(lg) {
 			margin-bottom: rem(20);

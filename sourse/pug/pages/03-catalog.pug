@@ -25,7 +25,15 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCatalog()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('Каталог товаров', 'true', 'true', 'true', '', 'Товары (опт)', 'Мебель', 'Столы', 'Столы длиной 1800 мм')
+							+filter.d-block.d-lg-none
+						+sCatalog()
 	+footer()
       
 

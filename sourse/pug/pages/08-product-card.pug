@@ -25,7 +25,40 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sProductCard()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter2()
+					.col-lg-8.col-xxl-9
+						+page-head('', '', '', '', '', '', 'Фотогалерея', 'Мебель', 'Спортивный зал школы')
+						.d-block.d-lg-none
+							+filter2()
+						+sProductCard()
+						+e.inner-row.row
+							.col-12
+								h2 Похожие проекты
+							.col-md-6.col-xl-6.col-xxl-4
+								+gallery-item({
+									img: 'news-item-img-1.jpg',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									fancybox: 1,
+									imgLg: 'news-item-img-lg-1.jpg'
+								})
+							.col-md-6.col-xl-6.col-xxl-4
+								+gallery-item({
+									img: 'news-item-img-2.jpg',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									fancybox: 2,
+									imgLg: 'news-item-img-lg-2.png'
+								})
+							.col-md-6.col-xl-6.col-xxl-4
+								+gallery-item({
+									img: 'news-item-img-3.jpg',
+									title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+									fancybox: 3,
+									imgLg: 'news-item-img-lg-3.png'
+								})
 	+footer()
       
 

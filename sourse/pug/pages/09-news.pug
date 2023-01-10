@@ -25,7 +25,27 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sNewsBlock()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter2('true')
+						+tags()
+					.col-lg-8.col-xxl-9
+						+b.page-head
+							+e.inner-row.row
+								.col-lg
+									+breadcrumb('Главная', 'Новости и обзоры')
+									h1 Новости и обзоры
+								.col-12.d-block.d-lg-none
+									+filter2('true')
+								.col-lg-auto
+									+e.text
+										+icon('letter')
+										| Подписка на новости и обзоры
+									+e.search-wrap
+										+search('Введите ваш email', 'email', false)
+						+sNewsBlock()
 	+footer()
       
 

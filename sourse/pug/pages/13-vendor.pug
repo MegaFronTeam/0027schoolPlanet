@@ -12,7 +12,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= '' 
+	- let  mainPage= 'vendor-page' 
 	- let  bg= '02-categories.jpg'
 
 block title
@@ -26,5 +26,13 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sVendor()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('', '', '', '', '', '', 'Каталог', 'Услуги (опт)', 'Дизайн зданий, помещений, ландшафтный дизайн', 'Торговая компания МИХКО')
+							+filter.d-block.d-lg-none
+						+sVendor()
 	+footer()

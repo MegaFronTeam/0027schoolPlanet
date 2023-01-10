@@ -1,11 +1,13 @@
 // start .sVendor
 .sVendor {
-	--sPT: #{rem(30)};
-	--sPB: #{rem(40)};
+	// --sPT: #{rem(30)};
+	// --sPB: #{rem(40)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
-	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(100)};
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	--sPB: #{rem(100)};
+	// }
 	.page-head {
 		.breadcrumb {
 			@include media-breakpoint-up(lg) {

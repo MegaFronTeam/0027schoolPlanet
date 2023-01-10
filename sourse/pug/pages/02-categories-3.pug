@@ -25,14 +25,22 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCategories('Ванная мебель', '', '', '', '', '', 'Товары (опт)', 'Мебель', 'Ванная мебель')
-			+e.inner-row.row
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(31, 'Вешалки для полотенц')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(32, 'Унитазы, раковины, горшки')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(33, 'Шкафы для горшков')
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('Ванная мебель', '', '', '', '', '', 'Товары (опт)', 'Мебель', 'Ванная мебель')
+						+filter.d-block.d-lg-none
+						+sCategories()
+							+e.inner-row.row
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(31, 'Вешалки для полотенц')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(32, 'Унитазы, раковины, горшки')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(33, 'Шкафы для горшков')
 	+footer()
       
 

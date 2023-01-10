@@ -25,7 +25,14 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCabinet2()
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-9 
+						+page-head('Сменить пароль', '', '', '', '')
+						+sCabinet2()
+					.col-lg-3.order-lg-first
+						+cabinetNav
 	+footer()
       
 

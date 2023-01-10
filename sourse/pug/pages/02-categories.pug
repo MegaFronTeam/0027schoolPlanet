@@ -25,34 +25,42 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCategories('Товары (ОПТ)', 'true', '', '', '', '', 'Товары (опт)')
-			+e.inner-row.row
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(1, 'Мебель')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(2, 'Точка роста')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(3, 'Приборы и наглядное оборудование')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(4, 'Технологическое оборудование')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(5, 'Спортивное оборудование и инвентарь')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(6, 'Электроника')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(7, 'Санитарная защита')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(8, 'Стенды')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(9, 'Книги и канцелярские товары')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(10, 'Хозяйские принадлежности и санитария')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(11, 'Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(12, 'Продукты питания')
-				.col-sm-6.col-md-4.col-xxl-3
-					+categories-item(13, 'Игры, игрушки, куклы, костюмы')
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('Товары (ОПТ)', 'true', '', '', '', '', 'Товары (опт)')
+						+filter.d-block.d-lg-none
+						+sCategories()
+							+e.inner-row.row
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(1, 'Мебель')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(2, 'Точка роста')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(3, 'Приборы и наглядное оборудование')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(4, 'Технологическое оборудование')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(5, 'Спортивное оборудование и инвентарь')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(6, 'Электроника')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(7, 'Санитарная защита')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(8, 'Стенды')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(9, 'Книги и канцелярские товары')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(10, 'Хозяйские принадлежности и санитария')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(11, 'Доступная среда и поставщики для ОВЗ (ограниченные возможности здоровья)')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(12, 'Продукты питания')
+								.col-sm-6.col-md-4.col-xxl-3
+									+categories-item(13, 'Игры, игрушки, куклы, костюмы')
 	+footer()
       
 

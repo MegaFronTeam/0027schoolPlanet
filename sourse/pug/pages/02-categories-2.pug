@@ -25,42 +25,50 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+sCategories('Мебель', '', '', '', '', '', 'Товары (опт)', 'Мебель')
-			+e.inner-row.row
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(14, 'Ванная мебель')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(15, 'Вешалки')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(16, 'Игровая мебель')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(17, 'Кровати')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(18, 'Мебель для библиотеки')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(19, 'Мебель для гардероба')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(20, 'Мебель для столовой')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(21, 'Металлическая мебель')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(22, 'Мягкая мебель')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(23, 'Наклейки для шкафчиков')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(24, 'Скамьи, стулья')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(25, 'Столы')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(26, 'Текстиль')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(27, 'Уличное оборудование')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(28, 'Учебный кабинет')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(29, 'Шкафы, стеллажи, тумбы')
-				.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
-					+categories-item(30, 'Школьные доски, мольберты')
+		+b.main-content-wrapper
+			.container
+				+e.row.row
+					.col-lg-4.col-xxl-3.d-none.d-lg-block
+						+filter
+					.col-lg-8.col-xxl-9
+						+page-head('Мебель', '', '', '', '', '', 'Товары (опт)', 'Мебель')
+						+filter.d-block.d-lg-none
+						+sCategories()
+							+e.inner-row.row
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(14, 'Ванная мебель')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(15, 'Вешалки')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(16, 'Игровая мебель')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(17, 'Кровати')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(18, 'Мебель для библиотеки')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(19, 'Мебель для гардероба')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(20, 'Мебель для столовой')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(21, 'Металлическая мебель')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(22, 'Мягкая мебель')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(23, 'Наклейки для шкафчиков')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(24, 'Скамьи, стулья')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(25, 'Столы')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(26, 'Текстиль')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(27, 'Уличное оборудование')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(28, 'Учебный кабинет')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(29, 'Шкафы, стеллажи, тумбы')
+								.col-sm-6.col-md-4.col-lg-6.col-xl-4.col-xxl-3
+									+categories-item(30, 'Школьные доски, мольберты')
 	+footer()
       
 
