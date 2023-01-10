@@ -50,48 +50,51 @@ mixin page-head(t, btns, download, settings, caption, inputs=true, ...items)
 				+breadcrumb('Главная',...items)
 			if t
 				h1= t
-			if caption
-				+e.caption-row.row
-					.col-md
-						+e.caption После оформления заказа с Вами свяжется менеджер для уточнения деталей отправки заказа и озвучит стоимость заказа.
-					.col-md-auto
+
+mixin components(data)
+	+b.components
+		if data.caption
+			+e.caption-row.row
+				.col-md
+					+e.caption После оформления заказа с Вами свяжется менеджер для уточнения деталей отправки заказа и озвучит стоимость заказа.
+				.col-md-auto
+					+e.download(href='#')
+						+img('img/svg/xls.svg')
+						| Выгрузить в Excel
+		block
+		if data.settings
+			+e.filter
+				+e.filter-row.row
+					.col-12.order-xxl-1
+						+search
+					if data.inputs
+						.col-lg-auto.order-xxl-3
+							+e.wrap
+								+addblock
+								span -
+								+addblock
+								span.d-none.d-md-block ₽
+					.col-xxl-auto.order-xxl-2
+						+e.choseCity(data-src="modal-city" data-fancybox="modal")
+							+icon('pin')
+							| Выбрать регион
+		if data.btns
+			+e.row.row
+				.col-sm-auto
+					+e.btn.btn.btn-outline-secondary.active(href='#') Все товары
+				.col-sm-auto
+					+e.btn.btn.btn-outline-secondary(href='#') 
+						+icon('kindergarten')
+						| Для детского сада
+				.col-sm-auto
+					+e.btn.btn.btn-outline-secondary(href='#') 
+						+icon('book')
+						| Для школы
+				if data.download
+					.col-auto.ms-md-auto.ms-lg-0.ms-xl-auto 
 						+e.download(href='#')
 							+img('img/svg/xls.svg')
 							| Выгрузить в Excel
-			block
-			if settings
-				+e.settings
-					+e.settings-row.row
-						.col-12.order-xxl-1
-							+search
-						if inputs
-							.col-lg-auto.order-xxl-3
-								+e.wrap
-									+addblock
-									span -
-									+addblock
-									span.d-none.d-md-block ₽
-						.col-xxl-auto.order-xxl-2
-							+e.choseCity(data-src="modal-city" data-fancybox="modal")
-								+icon('pin')
-								| Выбрать регион
-			if btns
-				+e.row.row
-					.col-sm-auto
-						+e.btn.btn.btn-outline-secondary.active(href='#') Все товары
-					.col-sm-auto
-						+e.btn.btn.btn-outline-secondary(href='#') 
-							+icon('kindergarten')
-							| Для детского сада
-					.col-sm-auto
-						+e.btn.btn.btn-outline-secondary(href='#') 
-							+icon('book')
-							| Для школы
-					if download
-						.col-auto.ms-md-auto.ms-lg-0.ms-xl-auto 
-							+e.download(href='#')
-								+img('img/svg/xls.svg')
-								| Выгрузить в Excel
 
 mixin gallery-item(data)
 	+b.gallery-item

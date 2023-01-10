@@ -33,6 +33,9 @@ block pagecontent
 					.col-lg-8.col-xxl-9
 						+page-head('Товары (ОПТ)', 'true', '', '', '', '', 'Товары (опт)')
 						+filter.d-block.d-lg-none
+						+components({
+							btns: true
+						})
 						+sCategories()
 							+e.inner-row.row
 								.col-sm-6.col-md-4.col-xxl-3
