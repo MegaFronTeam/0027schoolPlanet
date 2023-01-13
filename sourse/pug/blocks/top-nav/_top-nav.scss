@@ -109,9 +109,10 @@
 						background-color: rgba($color: #ffff, $alpha: .9);
 					}
 				}
-				// @include media-breakpoint-up(lg) {
-				// 	background-color: rgba($color: #ffff, $alpha: .9);
-				// }
+				@include media-breakpoint-between(lg, xxl) {
+					color: $primary;
+					background-color: rgba($color: #ffff, $alpha: .9);
+				}
 			}
 			.search {
 				opacity: 1;
