@@ -22,14 +22,19 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col.col-lg-auto.d-flex
+				.col-auto.d-flex
 					+e.logo(href="#")
 						+img('img/logo.png')
-				.col-auto.d-flex
-					+e.link(href='#')
-						+icon('search')
-						span.d-none.d-xl-block поиск
-				.col-auto.col-lg.order-lg-0.order-last
+				.col.d-flex
+					+e.search-wrap
+						+e.link(href='#')
+							+icon('search')
+							span.d-none.d-xl-block поиск
+						+b.search 
+							+input('Начните поиск', 'text')
+							+e.search-btn.btn.btn-primary(type='submit') Найти
+							+icon('search')
+				.col-auto.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()

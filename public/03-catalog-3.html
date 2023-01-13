@@ -21,18 +21,30 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="top-nav__row row">
-							<div class="col col-lg-auto d-flex">
+							<div class="col-auto d-flex">
 								<a class="top-nav__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
 								</a>
 							</div>
-							<div class="col-auto d-flex">
-								<a class="top-nav__link" href="#">
-									<svg class="icon icon-search ">
-										<use xlink:href="img/svg/sprite.svg#search"></use>
-									</svg><span class="d-none d-xl-block">поиск</span>
-								</a>
+							<div class="col d-flex">
+								<div class="top-nav__search-wrap">
+									<a class="top-nav__link" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg><span class="d-none d-xl-block">поиск</span>
+									</a>
+									<div class="search"> 
+										<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder="Начните поиск"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button class="search__search-btn btn btn-primary" type="submit">Найти
+										</button>
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="col-auto col-lg order-lg-0 order-last">
+							<div class="col-auto order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>

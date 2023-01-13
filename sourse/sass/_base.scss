@@ -77,7 +77,7 @@ body {
 
 	}
 
-	&.fixed {
+	&.fixed, &.fixed2 {
 		overflow: hidden;
 		position: absolute;
 		width: 100%;
@@ -95,6 +95,9 @@ body {
 			z-index: 999;
 			opacity: 0.76;
 		}
+	}
+	&.fixed2 {
+		overflow: auto;
 	}
 }
 

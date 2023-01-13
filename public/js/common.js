@@ -479,7 +479,23 @@ function eventHandler() {
 			$(this).hide();
 			$('.sVendor__list li:hidden').slideDown();
 		});
-	}
+	};
+
+	document.addEventListener('mouseup', (event) => {
+		let searchParent = event.target.closest('.top-nav__search-wrap');
+		let searchParentElement = document.querySelector('.top-nav__search-wrap');
+		let searchLinkElement = document.querySelector('.top-nav__search-wrap .top-nav__link');
+		searchParentElement.classList.remove('active');
+		if (window.matchMedia("(max-width: 992px)").matches) {
+			document.querySelector('body').classList.remove('fixed2');
+		}
+		if (searchParent) {
+			searchParent.classList.add('active');
+			if (window.matchMedia("(max-width: 992px)").matches) {
+				document.querySelector('body').classList.add('fixed2');
+			}
+		};
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
