@@ -6,7 +6,7 @@ mixin sServices(data)
 				+e.item
 					+e.item-row.row
 						+e.col.col-sm
-							+e.img-wrap
+							+e.img-wrap(href='#')
 								.img-wrap-center
 									+e.icon-wrap
 										+icon('product')
@@ -14,7 +14,7 @@ mixin sServices(data)
 										+e.img
 											+img('img/company-logo-2.jpg')
 						.col-sm
-							h4!= title
+							a(href='#').h4!= title
 							+e.city!= city 
 							+e.categories!= categories
 							p
@@ -22,20 +22,23 @@ mixin sServices(data)
 								!= text
 							+e.btn-row.row
 								.col-auto
-									+e.btn(href='#' data-src='modal-call' data-fancybox="modal").btn.btn-primary.btn-base написать
+									+e.btn(href='#').btn.btn-primary.btn-base написать
 								.col-auto
 									+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#') Подробнее
 						if links
 							.col-auto.d-none.d-xxl-block
 								+e.wrap 
 									+e.content(href='#')
-										+img('img/sServices-img-1.jpg')
+										+e.content-img
+											+img('img/sServices-img-1.jpg')
 										p Ручки гелевые ЮНЛАНДИЯ, НАБОР 6 ЦВЕТОВ ...
 									+e.content(href='#')
-										+img('img/sServices-img-2.jpg')
+										+e.content-img
+											+img('img/sServices-img-2.jpg')
 										p Бумага для акварели 300 г/м2 360x460 мм крупное зерно ...
 									+e.content(href='#')
-										+img('img/sServices-img-3.jpg')
+										+e.content-img
+											+img('img/sServices-img-3.jpg')
 										p Закладки клейкие BRAUBERG НЕОНОВЫЕ ...
 			.col-12
 				+item('Торговая компания МИХКО', 'true', 'Ростов-на-Дону', 'Мебель, Уличное оборудование, Приборы и наглядное оборудование', 'Ростовская область, Московская область, Самарская область, Саратовская область', true)

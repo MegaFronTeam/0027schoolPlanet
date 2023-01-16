@@ -37,6 +37,11 @@
 			padding: rem(30);
 			margin-bottom: rem(30);
 		}
+		input {
+			&:focus {
+				border-color: $primary;
+			}
+		}
 	}
 	.pagination-wrapper {
 		ul {

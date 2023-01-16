@@ -10,7 +10,20 @@ mixin modal()
 					p.after-headline Опишите в деталях с какими сложностями вы столкнулись в работе с поставщиком
 
 				+input("Комментарий", 'textarea')(required)  
-				+input("Ваше Имя")(required)  
+				+input("Ваше имя")(required)  
+				+input("Ваш телефон", 'tel')(required)  
+				+input("Ваш регион", 'text')(required)  
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )  Отправить
+	// #modal-report
+
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h2 Задать вопрос
+
+				+input("Ваш вопроос", 'textarea')(required)  
+				+input("Ваше имя")(required)  
 				+input("Ваш телефон", 'tel')(required)  
 				+input("Ваш регион", 'text')(required)  
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  )  Отправить

@@ -160,12 +160,16 @@
 
 
 .product-item{
+	@include mt;
 	background-color: #fff;
 	border: 1px solid $gray-100;
 	border-radius: 10px;
 	padding: rem(20);
 	@include media-breakpoint-up(lg) {
 		padding: rem(30);
+	}
+	&:hover {
+		box-shadow: 1px 2px 12px 0px #bababa3d;
 	}
 	&__img-wrap {
 		@include block(115, 115);

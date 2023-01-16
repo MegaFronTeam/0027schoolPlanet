@@ -62,7 +62,7 @@ body {
 		@include mt;
 		// background-color: $body-color;
 		background-color: rgba($body-color, 0.8); 
-    backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
 		opacity: 0;
 		z-index: -1;
 		// left: 200px;
@@ -112,7 +112,7 @@ body {
 	// width: 100%; 
 	// height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	padding-top: rem(49);
+	padding-top: rem(48);
 	@include media-breakpoint-up(md) {
 		padding-top: rem(68.02);
 	}

@@ -18,7 +18,7 @@ mixin sCardItem(data)
 							| Школа
 						+e.delevery Поставщик: 
 							| 
-							span ООО “Адидас” 
+							a(href="#")  ООО “Адидас” 
 							| 
 							p Работает по условиям 44ФЗ и 223 ФЗ
 						+e.shipment Отгрузка товара:
@@ -70,7 +70,7 @@ mixin sCardItem(data)
 			+e.company-wrap
 				+e.company-row.row
 					+e.company-col.col-sm
-						+e.company-img-wrap
+						+e.company-img-wrap(href='#')
 							.img-wrap-center
 								+img('img/company-logo-2.jpg')
 					.col-sm

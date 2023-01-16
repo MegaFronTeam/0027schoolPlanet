@@ -120,6 +120,11 @@
 				align-items: center;
 				flex-direction: row;
 			}
+			a {
+				&:not(:hover) {
+					color: $body-color;
+				}
+			}
 		}
 		&__footer {
 			display: flex;
@@ -183,10 +188,12 @@
 		}
 		&__input-wrap {
 			position: relative;
-			max-width: rem(337);
 			margin-bottom: rem(20);
 			&:last-of-type {
 				margin-bottom: rem(30);
+			}
+			@include media-breakpoint-up(sm) {
+				max-width: rem(337);
 			}
 		}
 		&__input {

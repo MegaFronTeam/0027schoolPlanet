@@ -107,9 +107,16 @@
 					}
 				}
 				&.btn-tr {
+					@include media-breakpoint-down(lg) {
+						width: 100%;
+						display: flex;
+					}
 					td {
 						text-align: right;
 						padding: rem(15) rem(30);
+						@include media-breakpoint-down(lg)  {
+							margin-left: auto;
+						}
 					}
 				}
 			}
@@ -227,10 +234,10 @@
 		flex-wrap: wrap;
 		font-size: rem(14);
 		font-weight: 700;
-		margin-bottom: rem(20);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: 0;
-		}
+		// margin-bottom: rem(20);
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: 0;
+		// }
 		.num {
 			font-size: rem(26);
 			color: $primary;

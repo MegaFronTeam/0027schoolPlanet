@@ -468,6 +468,11 @@
 			form {
 				position: relative;
 			}
+			input {
+				&:focus {
+					border-color: $primary;
+				}
+			}
 		}
 	}
 	&__products-caption {

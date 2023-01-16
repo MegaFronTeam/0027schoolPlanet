@@ -9,7 +9,10 @@
 	}
 	&__inner-row {
 		--bs-gutter-x: #{rem(30)};
-		--bs-gutter-y: #{rem(31)};
+		--bs-gutter-y: #{rem(15)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(31)};
+		}
 
 		height: calc(100% + var(--bs-gutter-y));
 	}

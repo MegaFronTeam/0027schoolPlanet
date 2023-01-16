@@ -1,10 +1,11 @@
 mixin categories-item(i, t)
 	+b.categories-item(href="#")
-		+e.img-wrap
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/product-item-${i}.png`)
-		+e.title!= t
+		+e.inner
+			+e.img-wrap
+				//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
+				.img-wrap-center 
+					+img(`img/product-item-${i}.png`)
+			+e.title!= t
 	// /.product-item
 
 mixin sCategories(title, btns, ...items)

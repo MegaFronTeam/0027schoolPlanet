@@ -17,7 +17,7 @@ mixin sBasket(data)
 									tr.headline-tr
 										td(colspan="4")
 											+e.name Поставщик: 
-												span ООО “Адидас”
+												a(href="#")  ООО “Адидас”
 									tr.content
 										td
 											+e.wrap
@@ -40,10 +40,11 @@ mixin sBasket(data)
 											+e.wrap-price
 												+e.fullPrice 99 990 ₽
 												+e.delete(href="#"): +icon('delete')
-									tr.btn-tr.d-none.d-lg-table-row
+									//- .d-none.d-lg-table-row
+									tr.btn-tr
 										td(colspan="4")
 											a(href='#').btn.btn-primary.btn-base оформить заказ
-					+e.btn.btn.btn-outline-light(href="#")
+					+e.btn.btn.btn-outline-light.btn-base-secondary(href="#")
 						+icon('chevron-left')
 						| Продолжить покупки
 				.col-xl-3
@@ -55,5 +56,5 @@ mixin sBasket(data)
 							| Сумма заказа:
 							span.num 99 990 ₽
 							span.delivery + доставка
-						+e.resul-btn.btn.btn-primary.btn-base.d-lg-none(href="#") оформить заказ
+						//- +e.resul-btn.btn.btn-primary.btn-base.d-lg-none(href="#") оформить заказ
 	// end sBasket

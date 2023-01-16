@@ -78,6 +78,11 @@ mixin components(data)
 						+e.choseCity(data-src="modal-city" data-fancybox="modal")
 							+icon('pin')
 							| Выбрать регион
+					if data.reset
+						.col-auto.ms-auto.order-last
+							+e.reset(href='#')
+								| Сбросить
+								span 
 		if data.btns
 			+e.row.row
 				.col-sm-auto
@@ -103,10 +108,10 @@ mixin gallery-item(data)
 		+e.img-wrap
 			.img-wrap-center
 				+img(`img/${data.img}`, 'bg')
-		+e.content
+		+e.content(href='#')
 			.h4!= data.title
 			+e.btn-wrap
-				a(href='#').btn.btn-primary.btn-base подробнее
+				.btn.btn-primary.btn-base подробнее
 
 mixin news-item(data)
 	+b.news-item&attributes(attributes)
@@ -206,7 +211,7 @@ mixin filter2(isSecondVariant)
 	+b.innerFilter&attributes(attributes)
 		+ddGroup()
 			if isSecondVariant
-				+ddGroupItem('Развернуть фильтр', '', 'active')
+				+ddGroupItem('Развернуть фильтр', '', 'active', '', 'true')
 					+e.link.active(href="#") ВСЕ МАТЕРИАЛЫ
 					+e.link(href="#") дизайн, концепты и стройка
 					+ddGroupItem('товары')
@@ -225,7 +230,7 @@ mixin filter2(isSecondVariant)
 					+e.link(href="#") экономика отрасли, школы и труда
 					+e.link(href="#") про законодательство, санпин, 223 и 44 фз, фгос
 			else
-				+ddGroupItem('Развернуть фильтр', '', 'active')
+				+ddGroupItem('Развернуть фильтр', '', 'active', '', 'true')
 					+e.link.active(href="#") все
 					+e.link(href="#") Мебель
 					+e.link(href="#") Точка роста

@@ -126,7 +126,7 @@
 										<tbody>
 											<tr class="headline-tr">
 												<td colspan="4">
-													<div class="sBasket__name">Поставщик: <span>ООО “Адидас”</span>
+													<div class="sBasket__name">Поставщик: <a href="#"> ООО “Адидас”</a>
 													</div>
 												</td>
 											</tr>
@@ -194,12 +194,12 @@
 													</div>
 												</td>
 											</tr>
-											<tr class="btn-tr d-none d-lg-table-row">
+											<tr class="btn-tr">
 												<td colspan="4"><a class="btn btn-primary btn-base" href="#">оформить заказ</a></td>
 											</tr>
 											<tr class="headline-tr">
 												<td colspan="4">
-													<div class="sBasket__name">Поставщик: <span>ООО “Адидас”</span>
+													<div class="sBasket__name">Поставщик: <a href="#"> ООО “Адидас”</a>
 													</div>
 												</td>
 											</tr>
@@ -267,13 +267,13 @@
 													</div>
 												</td>
 											</tr>
-											<tr class="btn-tr d-none d-lg-table-row">
+											<tr class="btn-tr">
 												<td colspan="4"><a class="btn btn-primary btn-base" href="#">оформить заказ</a></td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
-								<a class="sBasket__btn btn btn-outline-light" href="#">
+								<a class="sBasket__btn btn btn-outline-light btn-base-secondary" href="#">
 									<svg class="icon icon-chevron-left ">
 										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
 									</svg>Продолжить покупки
@@ -286,8 +286,6 @@
 									<p>Товары: 4</p>
 									<div class="sBasket__sum">Сумма заказа:<span class="num">99 990 ₽</span><span class="delivery">+ доставка</span>
 									</div>
-									<a class="sBasket__resul-btn btn btn-primary btn-base d-lg-none" href="#">оформить заказ
-									</a>
 								</div>
 							</div>
 						</div>
@@ -366,7 +364,7 @@
 				</div>
 				<div class="footer__bottom">
 					<div class="container">
-						<div class="footer__bottom-text">&copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-<span></span>&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Дизайн интернет-магазина KANAYAN&nbsp;&mdash; Retail &amp;&nbsp;Development Consulting
+						<div class="footer__bottom-text">&copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-<span></span>
 						</div>
 					</div>
 				</div>
@@ -385,7 +383,34 @@
 						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Комментарий"></textarea> 
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваш регион" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-primary" type="submit"> Отправить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-report-->
+		<div id="modal-question" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h2">Задать вопрос
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш вопроос"></textarea> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/> 
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 

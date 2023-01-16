@@ -42,7 +42,7 @@ mixin sProductCard(data)
 						h5 Задача:
 						p Комплектация спортзала согласно проектной документации и Приказа.
 						h5 Поставщик:
-						+e.company
+						+e.company(href="#")
 							+e.company-img-wrap
 								.img-wrap-center
 									+img('img/company-logo.jpg')
@@ -53,5 +53,5 @@ mixin sProductCard(data)
 							.col-lg
 								+e.btn.btn.btn-primary.btn-base(href='#' data-src='modal-call' data-fancybox="modal") хочу также
 							.col-lg
-								+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#' data-src='modal-call' data-fancybox="modal") задать вопрос
+								+e.btn.btn.btn-outline-secondary.btn-base-secondary(href='#' data-src='modal-question' data-fancybox="modal") задать вопрос
 	// end sProductCard

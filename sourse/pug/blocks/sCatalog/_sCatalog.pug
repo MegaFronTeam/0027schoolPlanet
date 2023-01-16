@@ -13,7 +13,7 @@ mixin product-item(img, title, city, price, checkbox)
 						+e.provider
 							| Поставщик: 
 							| 
-							span ООО “Адидас”
+							a(href="#")  ООО “Адидас”
 						+e.works Работает по условиям 44ФЗ и 223 ФЗ
 						+e.shipment 
 							| Отгрузка товара:
@@ -26,7 +26,7 @@ mixin product-item(img, title, city, price, checkbox)
 									span.custom-input__text.custom-input__text--opt.form-check-label Опт: 
 										span 9 990 ₽
 								+in-c('radio', 'Розница: 10 000 ₽', 'price')
-					.col-lg-12
+					.col-lg-auto
 						+e.wrap.row
 							.col-12.col-lg-auto.me-auto
 								+e.price

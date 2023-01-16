@@ -4,11 +4,7 @@ mixin cabinetNav()
 			+e.link(class=(activeClass=='true' ? 'active' : "") href="#")
 				+icon(icon)
 				!= text
-		+link('orders', 'Заказы', 'true')
-		+link('user', 'Мой профиль')
-		+link('pass', 'Сменить пароль')
-		+link('store', 'Для поставщиков')
-		+link('logOut', 'Выйти')
+		block
 
 
 mixin sCabinet(data)
@@ -17,71 +13,79 @@ mixin sCabinet(data)
 		+ddGroup
 			+ddGroupItem('Заказ №72597', 'true')
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#")  Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.footer
 					+e.price.order-lg-last 99 990 ₽
 					+e.date 10 декабря 2022 16:30
 					+e.delivery Поставщик: 
-						span ООО “Адидас”
+						a(href="#")  ООО “Адидас”
 					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 			+ddGroupItem('Заказ №72597', 'true', 'active')
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.footer
 					+e.price.order-lg-last 99 990 ₽
 					+e.date 10 декабря 2022 16:30
 					+e.delivery Поставщик: 
-						span ООО “Адидас”
+						a(href="#") ООО “Адидас”
 					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 			+ddGroupItem('Заказ №72597', 'true')
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.footer
 					+e.price.order-lg-last 99 990 ₽
 					+e.date 10 декабря 2022 16:30
 					+e.delivery Поставщик: 
-						span ООО “Адидас”
+						a(href="#") ООО “Адидас”
 					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 			+ddGroupItem('Заказ №72597', 'true')
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.wrap
-					+img('img/sCabinet-img-1.png')
+					+e.img-wrap(href='#')
+						+img('img/sCabinet-img-1.png')
 					+e.text
-						p Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+						a(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 						.h5 1 x 99 990 ₽
 				+e.footer
 					+e.price.order-lg-last 99 990 ₽
 					+e.date 10 декабря 2022 16:30
 					+e.delivery Поставщик: 
-						span ООО “Адидас”
+						a(href="#") ООО “Адидас”
 					+e.report(href='#' data-src='modal-report' data-fancybox="modal") Пожаловаться на поставщика
 	// end sCabinet
 

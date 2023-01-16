@@ -188,20 +188,19 @@
 
 		
 		.toggle-menu-mobile { 
-			margin-left: -15%;
+			// margin-left: -15%;
 			position: absolute; 
-			left: 0;
-			right: auto;
-			color: #FFF;
+			right: 10px;
+			color: $body-color;
 			top: 10px;
 			z-index: 9999; 
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: #{$body-color};
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(55)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;

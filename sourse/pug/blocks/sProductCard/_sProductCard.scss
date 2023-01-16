@@ -100,9 +100,11 @@
 		align-items: center;
 		margin-bottom: rem(30);
 		p {
+			@include mt;
 			display: block;
 			line-height: 1.25em;
 			margin-bottom: rem(10);
+			color: $body-color;
 		}
 		span {
 			// display: inline-block;
@@ -111,6 +113,12 @@
 			background-color: $gray-200;
 			border-radius: 5px;
 			padding: rem(6) rem(10);
+			color: $body-color;
+		}
+		&:hover {
+			p {
+				color: $primary;
+			}
 		}
 	}
 	&__company-img-wrap {

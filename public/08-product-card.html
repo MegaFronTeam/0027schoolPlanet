@@ -110,7 +110,7 @@
 								<div class="innerFilter">
 									<div class="dd-group dd-group-js">
 										<div class="dd-group__item active">
-											<div class="dd-group__head dd-head-js">Развернуть фильтр
+											<div class="dd-group__head dd-head-js"><span class="show">Развернуть фильтр</span><span class="hide">Свернуть фильтр</span>
 											</div>
 											<div class="dd-group__content dd-content-js active">
 												<a class="dd-group__link active" href="#">все
@@ -167,7 +167,7 @@
 									<div class="innerFilter">
 										<div class="dd-group dd-group-js">
 											<div class="dd-group__item active">
-												<div class="dd-group__head dd-head-js">Развернуть фильтр
+												<div class="dd-group__head dd-head-js"><span class="show">Развернуть фильтр</span><span class="hide">Свернуть фильтр</span>
 												</div>
 												<div class="dd-group__content dd-content-js active">
 													<a class="dd-group__link active" href="#">все
@@ -312,7 +312,7 @@
 													<h5>Задача:</h5>
 													<p>Комплектация спортзала согласно проектной документации и Приказа.</p>
 													<h5>Поставщик:</h5>
-													<div class="sProductCard__company">
+													<a class="sProductCard__company" href="#">
 														<div class="sProductCard__company-img-wrap">
 															<div class="img-wrap-center"><img src="img/company-logo.jpg" alt="" loading="lazy"/>
 															</div>
@@ -320,14 +320,14 @@
 														<div>
 															<p>Торговая компания МИХКО</p><span>Ростов-на-Дону</span>
 														</div>
-													</div>
+													</a>
 													<div class="row">
 														<div class="col-lg">
 															<a class="sProductCard__btn btn btn-primary btn-base" href="#" data-src="modal-call" data-fancybox="modal">хочу также
 															</a>
 														</div>
 														<div class="col-lg">
-															<a class="sProductCard__btn btn btn-outline-secondary btn-base-secondary" href="#" data-src="modal-call" data-fancybox="modal">задать вопрос
+															<a class="sProductCard__btn btn btn-outline-secondary btn-base-secondary" href="#" data-src="modal-question" data-fancybox="modal">задать вопрос
 															</a>
 														</div>
 													</div>
@@ -352,11 +352,12 @@
 												<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-1.jpg" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="gallery-item__content">
+											<a class="gallery-item__content" href="#">
 												<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-												<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+												<div class="gallery-item__btn-wrap">
+													<div class="btn btn-primary btn-base">подробнее</div>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="col-md-6 col-xl-6 col-xxl-4">
@@ -370,11 +371,12 @@
 												<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-2.jpg" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="gallery-item__content">
+											<a class="gallery-item__content" href="#">
 												<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-												<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+												<div class="gallery-item__btn-wrap">
+													<div class="btn btn-primary btn-base">подробнее</div>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="col-md-6 col-xl-6 col-xxl-4">
@@ -388,11 +390,12 @@
 												<div class="img-wrap-center"><img class="object-fit-js" src="img/news-item-img-3.jpg" alt="" loading="lazy"/>
 												</div>
 											</div>
-											<div class="gallery-item__content">
+											<a class="gallery-item__content" href="#">
 												<div class="h4">Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования</div>
-												<div class="gallery-item__btn-wrap"><a class="btn btn-primary btn-base" href="#">подробнее</a>
+												<div class="gallery-item__btn-wrap">
+													<div class="btn btn-primary btn-base">подробнее</div>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -472,7 +475,7 @@
 				</div>
 				<div class="footer__bottom">
 					<div class="container">
-						<div class="footer__bottom-text">&copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-<span></span>&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Дизайн интернет-магазина KANAYAN&nbsp;&mdash; Retail &amp;&nbsp;Development Consulting
+						<div class="footer__bottom-text">&copy;&nbsp;&laquo;РОССКЛАСС&raquo; 2013-<span></span>
 						</div>
 					</div>
 				</div>
@@ -491,7 +494,34 @@
 						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Комментарий"></textarea> 
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваш регион" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-primary" type="submit"> Отправить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-report-->
+		<div id="modal-question" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h2">Задать вопрос
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш вопроос"></textarea> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/> 
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 

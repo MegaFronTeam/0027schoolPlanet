@@ -492,11 +492,22 @@ function eventHandler() {
 		}
 		if (searchParent) {
 			searchParent.classList.add('active');
-			if (window.matchMedia("(max-width: 992px)").matches) {
+			if (window.matchMedia("(max-width: 768px)").matches) {
 				document.querySelector('body').classList.add('fixed2');
 			}
 		};
 	});
+
+	let catalogDropdown = document.querySelector('.sCatalog .dd-group');
+	if(catalogDropdown) {
+		document.addEventListener('mouseup', (event) => {
+			if(event.target.closest('.sCatalog .dd-group') !== catalogDropdown) {
+				catalogDropdown.querySelector('.dd-group__item').classList.remove('active');
+				catalogDropdown.querySelector('.dd-group__content').classList.remove('active');
+				$(catalogDropdown.querySelector('.dd-group__content')).slideUp();
+			}
+		});
+	};
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

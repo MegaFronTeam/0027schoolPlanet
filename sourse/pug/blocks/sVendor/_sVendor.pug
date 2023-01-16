@@ -18,9 +18,9 @@ mixin sVendor(data)
 					.tabs__btn.swiper-slide Контакты
 					.tabs__btn.swiper-slide Фотогалерея
 					.tabs__btn.swiper-slide Статьи/обзоры
-			+e.row.row
-				.col-xxl
-					.tabs__content.active
+			.tabs__content.active
+				+e.row.row
+					.col-xxl
 						+e.inner-row.row
 							.col-12
 								+e.list
@@ -150,8 +150,26 @@ mixin sVendor(data)
 											.col-md-auto
 												a(href='#').btn.btn-primary.btn-base отправить
 											.col-md-auto
-												a.btn.btn-outline-secondary(href='#') запросить прайс-лист
-					.tabs__content
+												a.btn.btn-outline-secondary.btn-base-secondary(href='#' data-src='modal-call' data-fancybox="modal") запросить прайс-лист
+					.col-xxl-auto
+						+e.contacts
+							+e.tel(href='tel:88004447610')
+								+icon('tel')
+								strong 8 (800) 444-76-10
+							+e.tel(href='tel:88004447074')
+								+icon('tel')
+								strong 8 (800) 444-70-74
+							+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+							+e.link(href="mailto:info@mikho.ru") 
+								+icon('mail')
+								| info@mikho.ru
+							+e.link(href="https://mikho.ru" target='_blank') 
+								+icon('www')
+								| mikho.ru
+							a(href='#').btn.btn-primary.btn-base написать поставщику
+			.tabs__content
+				+e.row.row
+					.col-xxl
 						+e.products
 							.h3 Товары
 							+e.products-caption В каталоге указаны розничные цены. Оптовые цены уточняйте у менеджера при оформлении заказа.
@@ -176,24 +194,124 @@ mixin sVendor(data)
 							.col-12
 								+product-item('prod-img-2.png', 'Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)', 'Москва', '990 ₽', 'true')
 						+pugin
-					.tabs__content 3
-					.tabs__content 4
-					.tabs__content 5
-				.col-xxl-auto
-					+e.contacts
-						+e.tel(href='tel:88004447610')
-							+icon('tel')
-							strong 8 (800) 444-76-10
-						+e.tel(href='tel:88004447074')
-							+icon('tel')
-							strong 8 (800) 444-70-74
-						+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
-						+e.link(href="mailto:info@mikho.ru") 
-							+icon('mail')
-							| info@mikho.ru
-						+e.link(href="https://mikho.ru" target='_blank') 
-							+icon('www')
-							| mikho.ru
-						a(href='#' data-src='modal-call' data-fancybox="modal").btn.btn-primary.btn-base написать поставщику
+					.col-xxl-auto
+						+e.contacts
+							+e.tel(href='tel:88004447610')
+								+icon('tel')
+								strong 8 (800) 444-76-10
+							+e.tel(href='tel:88004447074')
+								+icon('tel')
+								strong 8 (800) 444-70-74
+							+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+							+e.link(href="mailto:info@mikho.ru") 
+								+icon('mail')
+								| info@mikho.ru
+							+e.link(href="https://mikho.ru" target='_blank') 
+								+icon('www')
+								| mikho.ru
+							a(href='#').btn.btn-primary.btn-base написать поставщику
+			.tabs__content
+				+e.row.row
+					.col-xxl
+						+item('Контакты')
+							+e.UL.contact-list
+								li(style='--itemIcon: url("../img/svg/tel.svg")')
+									.h5 Тип компании
+									a.sVendor__link(href="tel:88004447610") 8 (800) 444-76-10
+									a.sVendor__link(href="tel:88004447074") 8 (800) 444-70-74
+									a(href="#" data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+								li(style='--itemIcon: url("../img/svg/email.svg")')
+									.h5 Email
+									a.sVendor__link(href="mailto:info@mikho.ru") info@mikho.ru
+								li(style='--itemIcon: url("../img/svg/chat.svg")')
+									.h5 Другие контакты
+									a.sVendor__link(href="mailto:sales@mihko.ru") sales@mihko.ru - отдел продаж
+									a.sVendor__link(href="mailto:zakupki@mihko.ru") zakupki@mihko.ru - отдел закупок
+								li(style='--itemIcon: url("../img/svg/delivery.svg")')
+									.h5 Отгрузка товара
+									p г. Москва
+								li(style='--itemIcon: url("../img/svg/adress.svg")')
+									.h5 Адрес
+									p Москва, Россия 117648,микрорайон Северное Чертаново, 4А, 1 этаж, офис 102
+									a(href="#") Посмотреть на карте
+								li(style='--itemIcon: url("../img/svg/clock.svg")')
+									.h5 Время работы
+									p Пн-пт: 10:00 - 18:00<br>Сб-вс: выходной
+								li(style='--itemIcon: url("../img/svg/item.svg")')
+									.h5 Регионы поставок
+									ul
+										li Самарская область
+										li Московская область
+										li Ростовская область
+							+e.send
+								.h5 Отправить сообщение
+								+input('Запрос прайс-листа и условий сотрудничества', 'textarea')
+								.row
+									.col-md-auto
+										a(href='#').btn.btn-primary.btn-base отправить
+									.col-md-auto
+										a.btn.btn-outline-secondary.btn-base-secondary(href='#' data-src='modal-call' data-fancybox="modal") запросить прайс-лист
+					.col-xxl-auto
+						+e.contacts
+							+e.tel(href='tel:88004447610')
+								+icon('tel')
+								strong 8 (800) 444-76-10
+							+e.tel(href='tel:88004447074')
+								+icon('tel')
+								strong 8 (800) 444-70-74
+							+e.call-back(href='#' data-src='modal-call' data-fancybox="modal") Попросить перезвонить
+							+e.link(href="mailto:info@mikho.ru") 
+								+icon('mail')
+								| info@mikho.ru
+							+e.link(href="https://mikho.ru" target='_blank') 
+								+icon('www')
+								| mikho.ru
+							a(href='#').btn.btn-primary.btn-base написать поставщику
+			.tabs__content
+				+e.inner-row.row
+					.col-md-6.col-xl-6.col-xxl-4
+						+gallery-item({
+							img: 'news-item-img-1.jpg',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							fancybox: 1,
+							imgLg: 'news-item-img-lg-1.jpg'
+						})
+					.col-md-6.col-xl-6.col-xxl-4
+						+gallery-item({
+							img: 'news-item-img-2.jpg',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							fancybox: 2,
+							imgLg: 'news-item-img-lg-2.png'
+						})
+					.col-md-6.col-xl-6.col-xxl-4
+						+gallery-item({
+							img: 'news-item-img-3.jpg',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							fancybox: 3,
+							imgLg: 'news-item-img-lg-3.png'
+						})
+			.tabs__content
+				+e.inner-row.row
+					.col-sm-6.col-xxl-4
+						+news-item({
+							img: 'news-item-img-4.png',
+							item: 'Дизайн, концепты и стройка',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							date: '4 декабря 2022',
+						})
+					.col-sm-6.col-xxl-4
+						+news-item({
+							img: 'news-item-img-4.png',
+							item: 'Дизайн, концепты и стройка',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							date: '4 декабря 2022',
+						})
+					.col-sm-6.col-xxl-4
+						+news-item({
+							img: 'news-item-img-4.png',
+							item: 'Дизайн, концепты и стройка',
+							title: 'Потолочная система электроснабжения применяется для обеспечения электропитанием оборудования',
+							date: '4 декабря 2022',
+						})
 
 	// end sVendor
