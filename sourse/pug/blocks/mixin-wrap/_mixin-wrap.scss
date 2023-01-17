@@ -301,6 +301,9 @@
 	--bs-btn-hover-bg: #{$primary};
 	--bs-btn-hover-border-color: #{$primary};
 	--bs-btn-hover-color: #fff;
+	--bs-btn-active-bg: #{$primary};
+	--bs-btn-active-border-color: #{$primary};
+	--bs-btn-active-color: #fff;
 	&:hover{
 		.icon {
 			color: #fff;
