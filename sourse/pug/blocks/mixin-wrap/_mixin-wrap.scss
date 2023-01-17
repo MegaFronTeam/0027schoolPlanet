@@ -1086,8 +1086,8 @@
 		}
 		.addBlock{
 			color: var(--color, #{$gray-600});
-			border: 1px solid $gray-300;
-			border-radius: 5px;
+			border: none;
+			// border-radius: 5px;
 			display: flex;
 			position: relative;
 			overflow: hidden;
@@ -1098,7 +1098,8 @@
 			input{
 				color: inherit;
 				text-align: left;
-				border: none;
+				border: 1px solid $gray-300;
+				border-radius: 5px;
 				height: rem(45);
 				padding-right: rem(25);
 				padding-left: rem(20);

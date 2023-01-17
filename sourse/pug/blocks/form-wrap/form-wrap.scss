@@ -42,6 +42,11 @@
 	}
 }
 
+input {
+	&:focus {
+		border-color: $primary !important;
+	}
+}
 
 .parsley-error{
 	border-image: none;
