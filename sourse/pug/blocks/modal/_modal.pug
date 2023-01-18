@@ -28,6 +28,21 @@ mixin modal()
 				+input("Ваш регион", 'text')(required)  
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  )  Отправить
 	// #modal-report
+
+	div(id="modal-question2"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h2 Задать вопрос
+
+				+input("Ваше имя")(required)  
+				+input("Ваш телефон", 'tel')(required)  
+				+input("E-mail", 'email')(required)  
+				+input("Ваш вопроос", 'textarea')(required)   
+				+input("Прикрепить файл", 'file')(required)
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )  Отправить
+				+policy
+	// #modal-report
 	
 	div(id="modal-report-send"  style="display: none" )
 		+b.modal-win

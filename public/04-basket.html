@@ -69,7 +69,7 @@
 								</div>
 							</div>
 							<div class="col-auto d-flex">
-								<a class="top-nav__link" href="#" data-src="modal-call" data-fancybox="modal">
+								<a class="top-nav__link" href="#" data-src="modal-question2" data-fancybox="modal">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg><span class="d-none d-xl-block">задать вопрос</span>
@@ -420,6 +420,40 @@
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn btn-primary" type="submit"> Отправить
 						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-report-->
+		<div id="modal-question2" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h2">Задать вопрос
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш вопроос"></textarea>  
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-primary" type="submit"> Отправить
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Я даю свое <a href="#">согласие</a> на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a></small>
+							</label>
+						</div>
 					</form>
 				</div>
 			</div>
