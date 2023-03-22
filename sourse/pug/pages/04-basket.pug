@@ -26,6 +26,10 @@ block pagecontent
 		//- +topLine
 	main
 		+page-head('Ваша корзина', '', '', '', 'true')
+		.container
+			+components({
+				caption: true
+			})
 		+sBasket()
 	+footer()
       

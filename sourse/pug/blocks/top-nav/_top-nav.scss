@@ -20,6 +20,9 @@
 		display: block;
 		max-width: rem(139);
 		align-self: center;
+		@media screen and (max-width: 400px) {
+			max-width: rem(110);
+		}
 		@include media-breakpoint-up(md) {
 			max-width: rem(193);
 		}
@@ -39,6 +42,9 @@
 		padding: 0 10px;
 		position: relative;
 		z-index: 1;
+		@media screen and (max-width: 400px) {
+			padding: 0 6px;
+		}
 		@include media-breakpoint-up(xxl) {
 			padding: 0 5px;
 		}
@@ -49,9 +55,9 @@
 				position: absolute;
 				display: block;
 				width: 100%;
-				height: calc(100% + 20px);
+				height: calc(100% + 24px);
 				left: 0;
-				top: -10px;
+				top: -12px;
 				background-color: transparent;
 				z-index: -1;
 			}
@@ -71,6 +77,9 @@
 			flex: 0 0 auto;
 			font-size: rem(24);
 			// margin-right: rem(5);
+			@media screen and (max-width: 400px) {
+				font-size: rem(19);
+			}
 			@include media-breakpoint-up(xl) {
 				margin-right: rem(5);
 			}
