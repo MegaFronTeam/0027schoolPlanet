@@ -211,7 +211,7 @@ mixin filter2(isSecondVariant)
 	+b.innerFilter&attributes(attributes)
 		+ddGroup()
 			if isSecondVariant
-				+ddGroupItem('Развернуть фильтр', '', 'active', '', 'true')
+				+ddGroupItem('Развернуть фильтр', '', '', '', 'true')
 					+e.link.active(href="#") ВСЕ МАТЕРИАЛЫ
 					+e.link(href="#") дизайн, концепты и стройка
 					+ddGroupItem('товары')
@@ -230,7 +230,7 @@ mixin filter2(isSecondVariant)
 					+e.link(href="#") экономика отрасли, школы и труда
 					+e.link(href="#") про законодательство, санпин, 223 и 44 фз, фгос
 			else
-				+ddGroupItem('Развернуть фильтр', '', 'active', '', 'true')
+				+ddGroupItem('Развернуть фильтр', '', '', '', 'true')
 					+e.link.active(href="#") все
 					+e.link(href="#") Мебель
 					+e.link(href="#") Точка роста
