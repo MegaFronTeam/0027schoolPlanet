@@ -765,6 +765,9 @@
 		}
 		&__content {
 			display: none;
+			@include media-breakpoint-up(lg) {
+				display: block;
+			}
 			&.active {
 				display: block;
 			}
