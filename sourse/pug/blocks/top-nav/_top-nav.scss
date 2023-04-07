@@ -4,6 +4,7 @@
 	min-height: rem(49);
 	display: flex;
 	align-items: center;
+	min-height: rem(53);
 	@include media-breakpoint-up(lg) {
 		padding: 0;
 	}
