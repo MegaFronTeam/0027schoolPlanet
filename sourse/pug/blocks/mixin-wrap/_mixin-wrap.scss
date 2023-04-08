@@ -486,8 +486,17 @@
 		& > .dd-group__item {
 			color: $body-color;
 			// text-transform: uppercase;
+			&:not(:last-child) {
+				& > .dd-group__head {
+					border-bottom: 1px solid $gray-100;
+				}
+				& > .dd-group__content {
+					border-bottom: 1px solid $gray-100;
+				}
+			}
 			&.page-active {
 				& > .dd-group__head {
+					font-weight: 700;
 					&:before {
 						background-color: $primary;
 					}
@@ -507,7 +516,7 @@
 			}
 			& > .dd-group__head {
 				padding: rem(16) rem(20);
-				border-bottom: 1px solid $gray-100;
+				// border-bottom: 1px solid $gray-100;
 				// cursor: pointer;
 				position: relative;
 				text-transform: uppercase;
@@ -527,7 +536,7 @@
 			}
 			& > .dd-group__content {
 				padding: rem(16) rem(20);
-				border-bottom: 1px solid $gray-100;
+				// border-bottom: 1px solid $gray-100;
 				.dd-group__item {
 					padding-left: rem(30);
 					&.page-active {

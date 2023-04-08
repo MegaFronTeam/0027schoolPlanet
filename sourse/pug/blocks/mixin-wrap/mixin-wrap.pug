@@ -205,7 +205,9 @@ mixin filter()
 					+ddGroupItem('Шкафы, стеллажи, тумбы', '', '', 'true')
 						+adress('Игровая мебель')
 					+adress('Школьные доски, мольберты')
-			+e.link(href='#') Частным лицам (розница)
+			+e.item
+				+e.head 
+					a(href="#")  Частным лицам (розница)
 
 mixin filter2(isSecondVariant)
 	+b.innerFilter&attributes(attributes)
