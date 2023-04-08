@@ -479,6 +479,9 @@ function eventHandler() {
 			$(this).hide();
 			$('.sVendor__list li:hidden').slideDown();
 		});
+		if(vendorList.querySelectorAll('li').length < 3) {
+			$(vendorList.querySelector('a')).hide();
+		}
 	};
 
 	let searchLinkElement = document.querySelector('.top-nav__search-wrap .top-nav__link');
