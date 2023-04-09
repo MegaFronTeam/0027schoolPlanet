@@ -1036,10 +1036,19 @@
 		@include media-breakpoint-up(sm) {
 			justify-content: flex-start;
 		}
-		.icon {
+		svg {
 			flex: 0 0 auto;
 			margin-right: rem(10);
 			font-size: rem(20);
+
+			fill: currentColor;
+			// stroke: currentColor;
+			display: inline-block;
+			height: 1em;
+			width: 1em;
+			path[fill] {
+				fill: currentColor !important;
+			}
 		}
 		&.active {
 			--bs-btn-font-weight: 700;

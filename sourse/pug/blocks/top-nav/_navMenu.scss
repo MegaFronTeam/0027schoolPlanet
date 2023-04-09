@@ -51,26 +51,33 @@
 	}
 	&-item {
 		&-has-children {
-			span {
+			a {
 				position: relative;
-				.icon {
+				&:after {
+					content: '';
+					display: block;
+					@include mt;
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
 					right: rem(20);
-					fill: none;
-					stroke: currentColor;
-					stroke-width: 2px;
-					font-size: rem(21);
+					// fill: none;
+					// stroke: currentColor;
+					// stroke-width: 2px;
+					width: rem(21);
+					height: rem(21);
+
+					background-image: url("data:image/svg+xml,<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.5 8.5L9.5 11.5L6.5 8.5' stroke='%23ADACAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 					@include media-breakpoint-up(lg) {
 						display: none;
 					}
 				}
-				&.active {
+				&.active, &:hover {
 					background-color: $primary !important;
 					color: #fff !important;
-					.icon {
-						transform: translateY(-50%) rotate(180deg);
+					&:after {
+						transform: translateY(-50%) rotateX(180deg);
+						background-image: url("data:image/svg+xml,<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.5 8.5L9.5 11.5L6.5 8.5' stroke='#fff' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 					}
 				}
 			}

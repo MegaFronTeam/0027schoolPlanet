@@ -89,11 +89,11 @@ mixin components(data)
 					+e.btn.btn.btn-outline-secondary.active(href='#') Все товары
 				.col-sm-auto
 					+e.btn.btn.btn-outline-secondary(href='#') 
-						+icon('kindergarten')
+						+img('img/svg/kindergarten.svg').img-svg-js
 						| Для детского сада
 				.col-sm-auto
-					+e.btn.btn.btn-outline-secondary(href='#') 
-						+icon('book')
+					+e.btn.btn.btn-outline.img-svg-js-secondary(href='#') 
+						+img('img/svg/book.svg').img-svg-js
 						| Для школы
 				if data.download
 					.col-auto.ms-md-auto.ms-lg-0.ms-xl-auto 

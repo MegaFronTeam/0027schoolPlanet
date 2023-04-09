@@ -302,6 +302,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.getCurrentYear('.footer span');
+	JSCCommon.imgToSVG();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
@@ -380,11 +381,13 @@ function eventHandler() {
 	let menuHasChildrens = document.querySelectorAll('.menu-item-has-children');
 	if (menuHasChildrens.length > 0) {
 		for (let menuHasChildren of menuHasChildrens) {
-			menuHasChildren.querySelector('span').addEventListener('click', function () {
+			menuHasChildren.firstChild.addEventListener('click', function (e) {
+				e.preventDefault();
 				if (window.matchMedia("(max-width: 992px)").matches) {
-					menuHasChildren.querySelector('span').classList.toggle('active');
+					menuHasChildren.firstChild.classList.toggle('active');
 					menuHasChildren.querySelector('.sub-menu').classList.toggle('active');
 				}
+				// this.insertAdjacentHTML(beforeend, '///')
 			})
 		}
 	};

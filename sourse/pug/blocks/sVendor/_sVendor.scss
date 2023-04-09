@@ -96,6 +96,7 @@
 			padding: rem(19) rem(7.5);
 			line-height: 1.25em;
 			position: relative;
+			color: $body-color;
 			@include media-breakpoint-up(md) {
 				padding: rem(19) rem(15);
 			}
@@ -119,6 +120,7 @@
 				color: $primary;
 			}
 			&.active {
+				color: $primary;
 				&::after {
 					background-color: $primary;
 				}
