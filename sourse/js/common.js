@@ -396,7 +396,7 @@ function eventHandler() {
 	if(passChangers) {
 		for (const passChanger of passChangers) {
 			passChanger.addEventListener('click', function() {
-				let passInput = this.previousSibling;
+				let passInput = this.previousElementSibling;
 				this.classList.toggle('active');
 				passInput.type = passInput.type=='password' ? 'text' : 'password';
 			})
