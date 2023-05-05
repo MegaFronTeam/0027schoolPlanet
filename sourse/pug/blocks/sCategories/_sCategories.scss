@@ -61,9 +61,12 @@
 	overflow: hidden;
 	position: relative;
 	// padding: rem(21);
-	@include media-breakpoint-up(sm) {
-		@include block();
-	}
+	// @include media-breakpoint-up(sm) {
+	// 	@include block();
+	// }
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	&:hover {
 		box-shadow: 0px 4px 19px rgba(159, 157, 157, 0.16);
 		.categories-item__title {
@@ -76,8 +79,9 @@
 		background-color: #FFFFFF; 
 		border: 1px solid $gray-100;
 		border-radius: 10px;
+		height: 100%;
 		@include media-breakpoint-up(sm) {
-			@include a-cent;
+			// @include a-cent;
 			flex-direction: column;
 		}
 		@include media-breakpoint-down(sm) {

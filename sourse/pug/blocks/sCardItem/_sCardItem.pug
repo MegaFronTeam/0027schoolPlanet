@@ -13,10 +13,17 @@ mixin sCardItem(data)
 						+e.img-wrap.d-xl-none
 							.img-wrap-center
 								+img('img/sCardItem-img-1.jpg')
-						+e.type
-							//- +img('img/book.png')
-							+img('img/svg/book.svg').img-svg-js
-							| Школа
+						+e.type-row.row
+							.col-auto
+								+e.type
+									//- +img('img/book.png')
+									+img('img/svg/book.svg').img-svg-js
+									| Школа
+							.col-auto
+								+e.type
+									//- +img('img/book.png')
+									+img('img/svg/book.svg').img-svg-js
+									| Школа
 						+e.delevery Поставщик: 
 							| 
 							a(href="#")  ООО “Адидас” 

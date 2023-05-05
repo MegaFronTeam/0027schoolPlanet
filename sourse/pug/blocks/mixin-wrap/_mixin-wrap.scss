@@ -602,11 +602,14 @@
 			text-transform: none;
 		}
 		&__item {
+			// padding-bottom: rem(6);
 		}
 		&__head {
 			display: flex;
 			align-items: center;
 			position: relative;
+			padding-bottom: rem(3);
+			padding-top: rem(3);
 			// cursor: pointer;
 			a {
 				color: $body-color;
@@ -637,6 +640,8 @@
 			padding-left: rem(30);
 			color: $body-color;
 			display: block;
+			padding-bottom: rem(3);
+			padding-top: rem(3);
 			&:hover {
 				color: $primary;
 			}
@@ -670,6 +675,13 @@
 .pagination-wrapper {
 	ul {
 		border-radius: 5px;
+		li {
+			.page-numbers {
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+		}
 	}
 	.page-numbers {
 		--bs-pagination-padding-y: #{rem(5.920)};
@@ -869,10 +881,10 @@
 	padding: rem(12) rem(50) rem(12) rem(20);
 	border-radius: 0px 5px 5px 0px;
 	background-color: $gray-200;
-	bottom: rem(30);
+	top: rem(85);
 	width: calc(100% - rem(40));
 	right: rem(20);
-	z-index: 1;
+	z-index: 100;
 	overflow: hidden;
 	opacity: 0;
 	pointer-events: none;
@@ -902,7 +914,7 @@
 		pointer-events: all;
 	}
 	@include media-breakpoint-up(md) {
-		right: rem(60);
+		right: rem(40);
 		width: auto;
 	}
 	span {

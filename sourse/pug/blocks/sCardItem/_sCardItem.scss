@@ -42,6 +42,9 @@
 			line-height: 1.35em;
 		}
 	}
+	&__type-row {
+		--bs-gutter-x: #{rem(16)};
+	}
 	&__type {
 		display: flex;
 		align-items: center;
@@ -55,7 +58,7 @@
 		svg {
 			flex: 0 0 auto;
 			font-size: rem(20);
-			margin-right: rem(16);
+			margin-right: rem(8);
 
 			fill: currentColor;
 			display: inline-block;
@@ -256,6 +259,7 @@
 		background-color: #FFFFFF;
 		border: 1px solid $gray-300;
 		border-radius: 10px;
+		overflow: hidden;
 	}
 	&__btn-row {
 		--bs-gutter-x: #{rem(10)};

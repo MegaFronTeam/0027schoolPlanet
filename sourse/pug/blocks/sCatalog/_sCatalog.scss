@@ -223,13 +223,20 @@
 		color: $gray-600;
 	}
 	&__shipment {
+		@include roww('6px', m);
+		--bs-gutter-y: #{rem(6)};
 		font-size: rem(14);
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
 		span {
 			line-height: 1;
 			// display: block;
 			padding: rem(5) rem(10);
 			background-color: $gray-200;
 			border-radius: 5px;
+			display: inline-block;
 		}
 	}
 	&__price {

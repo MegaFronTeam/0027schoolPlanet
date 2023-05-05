@@ -54,6 +54,7 @@
 		max-width: rem(135);
 		width: 100%;
 		margin-bottom: rem(15);
+		overflow: hidden;
 		@include media-breakpoint-up(sm) {
 			margin-right: rem(30);
 			margin-bottom: 0;
@@ -83,47 +84,48 @@
 		margin-bottom: rem(15);
 		display: inline-block;
 	}
-	.tabs__content {
+	&__inner-content {
 		display: none;
 		&.active {
 			display: block;
 		}
 	}
-	.tabs__caption {
-		.tabs__btn {
+	&__btn-wrap {
+	}
+	&__tabs-btn {
+		@include mt;
+		width: auto;
+		padding: rem(19) rem(7.5);
+		line-height: 1.25em;
+		position: relative;
+		color: $body-color;
+		cursor: pointer;
+		@include media-breakpoint-up(md) {
+			padding: rem(19) rem(15);
+		}
+		&::after {
 			@include mt;
-			width: auto;
-			padding: rem(19) rem(7.5);
-			line-height: 1.25em;
-			position: relative;
-			color: $body-color;
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% - 15px);
+			left: rem(7.5);
+			bottom: 0;
+			height: 3px;
+			background-color: transparent;
+			border-radius: 5px 5px 0px 0px;
 			@include media-breakpoint-up(md) {
-				padding: rem(19) rem(15);
+				width: calc(100% - 30px);
+				left: rem(15);
 			}
+		}
+		&:hover {
+			color: $primary;
+		}
+		&.active {
+			color: $primary;
 			&::after {
-				@include mt;
-				content: '';
-				position: absolute;
-				display: block;
-				width: calc(100% - 15px);
-				left: rem(7.5);
-				bottom: 0;
-				height: 3px;
-				background-color: transparent;
-				border-radius: 5px 5px 0px 0px;
-				@include media-breakpoint-up(md) {
-					width: calc(100% - 30px);
-					left: rem(15);
-				}
-			}
-			&:hover {
-				color: $primary;
-			}
-			&.active {
-				color: $primary;
-				&::after {
-					background-color: $primary;
-				}
+				background-color: $primary;
 			}
 		}
 	}
@@ -325,19 +327,25 @@
 		--bs-gutter-x: #{rem(15)};
 		--bs-gutter-y: #{rem(15)};
 	}
+	&__img-item-wrap {
+		@include block(1, 1);
+		max-width: rem(165);
+		margin-left: auto;
+		margin-right: auto;
+	}
 	&__item {
 		display: block;
 		text-align: center;
 		&:not(:hover) {
 			color: $body-color;
 		}
-		img {
-			width: 100%;
-			max-width: rem(165);
-			object-fit: cover;
-			margin-left: auto;
-			margin-right: auto;
-		}
+		// img {
+		// 	width: 100%;
+		// 	max-width: rem(165);
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// 	object-fit: cover;
+		// }
 		p {
 			margin-bottom: 0;
 			line-height: 1.25em;

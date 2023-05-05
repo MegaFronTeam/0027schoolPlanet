@@ -264,6 +264,20 @@ const JSCCommon = {
 					});
 
 				});
+
+				let filterLinks = document.querySelectorAll('.filter a');
+				if (filterLinks.length > 0) {
+					for (const filterLink of filterLinks) {
+						filterLink.addEventListener('click', function() {
+							if (window.matchMedia("(max-width: 992px)").matches) {
+								$('.dd-group__item').removeClass('active');
+								$('.dd-group__item .dd-content-js').slideUp(function () {
+									$(this).removeClass('active');
+								});
+							}
+						})
+					}
+				}
 			}
 		}
 	},
