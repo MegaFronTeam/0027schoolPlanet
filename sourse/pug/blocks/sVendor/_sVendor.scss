@@ -335,7 +335,7 @@
 	}
 	&__item {
 		display: block;
-		text-align: center;
+		// text-align: center;
 		&:not(:hover) {
 			color: $body-color;
 		}

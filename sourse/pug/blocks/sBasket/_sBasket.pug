@@ -20,9 +20,10 @@ mixin sBasket(data)
 												a(href="#")  ООО “Адидас”
 									tr.content
 										td
-											+e.wrap
-												+img('img/prod-img-1.png')
-												+e.title(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+											+e.wrap(href="#")
+												+e.img-wrap
+													+img('img/prod-img-1.png')
+												+e.title Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 										td: +e.price 99 990 ₽
 										td: +addblock
 										td
@@ -31,9 +32,10 @@ mixin sBasket(data)
 												+e.delete(href="#"): +icon('delete')
 									tr.content
 										td
-											+e.wrap
-												+img('img/prod-img-2.png')
-												+e.title(href="#") Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
+											+e.wrap(href="#")
+												+e.img-wrap
+													+img('img/prod-img-2.png')
+												+e.title Стол детский регулируемый (0-3 гр, 700х700х400-580 мм, ЛДСП, м/к, цвет по согласованию)
 										td: +e.price 99 990 ₽
 										td: +addblock
 										td

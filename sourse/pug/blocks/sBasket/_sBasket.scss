@@ -153,12 +153,17 @@
 			align-items: flex-start;
 		}
 		img {
-			flex: 0 0 auto;
 			width: 100%;
-			max-width: rem(73);
+			height: 100%;
 			object-fit: cover;
-			margin-right: rem(30);
 		}
+	}
+	&__img-wrap {
+		flex: 0 0 auto;
+		width: 100%;
+		margin-right: rem(30);
+		max-width: rem(73);
+
 	}
 	&__wrap-price {
 		display: flex;
